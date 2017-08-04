@@ -1,0 +1,18 @@
+
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>{{title}}</ion-title>
+  </ion-navbar>
+<h6 padding *ngIf="qnsDetails" text-wrap>{{qnsDetails.qus}}</h6>
+</ion-header>
+
+
+<ion-content padding>
+
+  
+
+<div *ngIf="qnsDetails">
+  <p text-wrap [innerHTML]="qnsDetails.ans"></p>
+</div>
+</ion-content>
