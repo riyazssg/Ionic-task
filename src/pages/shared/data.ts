@@ -1405,7 +1405,64 @@ app.config(['$routeProvider',
         
     ];
     public sqlServer=[
-        
+       new qList(`What is SQL?`,`<p>SQL stands for Structured Query Language , and it is used to communicate with the Database. <br>
+       This is a standard language used to perform tasks such as retrieval, updation, insertion and deletion of data from a database.<br><br>Standard SQL Commands are Select.</p>`),
+       new qList(`What is a Database?`,`<p>Database is nothing but an organized form of data for easy access, storing, retrieval and managing of data.
+       <br> This is also known as structured form of data which can be accessed in many ways<br><br>Example: School Management Database, Bank Management Database</p>`),
+       new qList(`What are tables and Fields?`,`<p>A table is a set of data that are organized in a model with Columns and Rows. Columns can be categorized as vertical, and Rows are horizontal.
+        A table has specified number of column called fields but can have any number of rows which is called record</p>`),
+       new qList(`What is a primary key?`,`<p>A primary key is a combination of fields which uniquely specify a row. This is a special kind of unique key, and it has implicit NOT NULL constraint. It means, Primary key values cannot be NULL</p>`),
+       new qList(`What is a unique key?`,`<p>A Unique key constraint uniquely identified each record in the database. This provides uniqueness for the column or set of columns</p>
+       <p>A Primary key constraint has automatic unique constraint defined on it. But not, in the case of Unique Key</p>
+       <p>There can be many unique constraint defined per table, but only one Primary key constraint defined per table.</p>`),
+       new qList(`What is a foreign key?`,`<p>A foreign key is one table which can be related to the primary key of another table. Relationship needs to be created between two tables by referencing foreign key with the primary key of another table.</p>`),
+       new qList(`What is a join?`,`<p>This is a keyword used to query data from more tables based on the relationship between the fields of the tables. Keys play a major role when JOINs are used.</p>`),
+       new qList(`What are the types of join and explain each?`,`<p>There are various types of join which can be used to retrieve data and it depends on the relationship between tables.</p>
+       <ul><li><b>Inner join</b>-Inner join return rows when there is at least one match of rows between the tables.</li><br>
+       <li><b>Right Join</b>-Right join return rows which are common between the tables and all rows of Right hand side table. Simply, it returns all the rows from the right hand side table even though there are no matches in the left hand side table.</li><br>
+       <li><b>Left Join</b>-Left join return rows which are common between the tables and all rows of Left hand side table. Simply, it returns all the rows from Left hand side table even though there are no matches in the Right hand side table.</li><br>
+       <li><b>Full Join</b>-Full join return rows when there are matching rows in any one of the tables. This means, it returns all the rows from the left hand side table and all the rows from the right hand side table.</li></ul>`),
+       new qList(`What is normalization?`,`<p>Normalization is the process of minimizing redundancy and dependency by organizing fields and table of a database. The main aim of Normalization is to add, delete or modify field that can be made in a single table.</p>`),
+       new qList(`What is Denormalization?`,`<p>DeNormalization is a technique used to access the data from higher to lower normal forms of database. It is also process of introducing redundancy into a table by incorporating data from the related tables.</p>`),
+       new qList(`. What are all the different normalizations?`,`<p>The normal forms can be divided into 5 forms, and they are explained below-</p>
+       <ul><li><b>First Normal Form (1NF)-</b>This should remove all the duplicate columns from the table. Creation of tables for the related data and identification of unique columns.</li><br>
+       <li><b>Second Normal Form (2NF)-</b>Meeting all requirements of the first normal form. Placing the subsets of data in separate tables and Creation of relationships between the tables using primary keys.</li><br>
+       <li><b>Third Normal Form (3NF)-</b>This should meet all requirements of 2NF. Removing the columns which are not dependent on primary key constraints</li><br>
+       <li><b>Fourth Normal Form (3NF)-</b>Meeting all the requirements of third normal form and it should not have multi- valued dependencies</li></ul>`),
+       new qList(`What is a View?`,`<p>A view is a virtual table which consists of a subset of data contained in a table. Views are not virtually present, and it takes less space to store. View can have data of one or more tables combined, and it is depending on the relationship</p>`),
+       new qList(`What is an Index?`,`<p>An index is performance tuning method of allowing faster retrieval of records from the table.<br> An index creates an entry for each value and it will be faster to retrieve data.</p>`),
+       new qList(`What are all the different types of indexes?`,`<p>There are three types of indexes -</p>
+       <ul><li><b>Unique Index-</b>This indexing does not allow the field to have duplicate values if the column is unique indexed. Unique index can be applied automatically when primary key is defined.</li><br>
+       <li><b>Clustered Index-</b>This type of index reorders the physical order of the table and search based on the key values. Each table can have only one clustered index.</li><br>
+       <li><b>NonClustered Index-</b>NonClustered Index does not alter the physical order of the table and maintains logical order of data. Each table can have 999 nonclustered indexes</li></ul>`),
+       new qList(`What is a Cursor?`,`<p>A database Cursor is a control which enables traversal over the rows or records in the table. This can be viewed as a pointer to one row in a set of rows. Cursor is very much useful for traversing such as retrieval, addition and removal of database records</p>`),
+       new qList(`What is a relationship and what are they?`,`<p>Database Relationship is defined as the connection between the tables in a database. There are various data basing relationships, and they are as follows-</p>
+       <ul><li>One to One Relationship</li><br>
+       <li>One to Many Relationship.</li><br>
+       <li>Many to One Relationship</li><br>
+       <li>Self-Referencing Relationship</li></ul>`),
+       new qList(`What is a query?`,`<p>A DB query is a code written in order to get the information back from the database. Query can be designed in such a way that it matched with our expectation of the result set. Simply, a question to the Database.</p>`),
+       new qList(`What is subquery?`,`<p>A subquery is a query within another query. The outer query is called as main query, and inner query is called subquery. SubQuery is always executed first, and the result of subquery is passed on to the main query.</p>`),
+       new qList(`What is a trigger?`,`<p>A DB trigger is a code or programs that automatically execute with response to some event on a table or view in a database. Mainly, trigger helps to maintain the integrity of the database</p>
+       <p>Example: When a new student is added to the student database, new records should be created in the related tables like Exam, Score and Attendance tables.</p>`),
+       new qList(`What is the difference between DELETE and TRUNCATE commands?`,`<p>DELETE command is used to remove rows from the table, and WHERE clause can be used for conditional set of parameters. Commit and Rollback can be performed after delete statement.</p>
+       <p>TRUNCATE removes all rows from the table. Truncate operation cannot be rolled back</p>`),
+       new qList(`What is Self-Join?`,`<p>Self-join is set to be query used to compare to itself. This is used to compare values in a column with other values in the same column in the same table. ALIAS ES can be used for the same table comparison</p>`),
+       new qList(`What is Cross-Join?`,`<p>Cross join defines as Cartesian product where number of rows in the first table multiplied by number of rows in the second table. If suppose, WHERE clause is used in cross join then the query will work like an INNER JOIN.</p>`),
+       new qList(`What is user defined functions?`,`<p>User defined functions are the functions written to use that logic whenever required. It is not necessary to write the same logic several times. Instead, function can be called or executed whenever needed</p>`),
+       new qList(`What are all types of user defined functions?`,`<p>Three types of user defined functions are-</p>
+       <ul><li>Scalar Functions.</li><br>
+       <li>Inline Table valued functions.</li><br>
+       <li>Multi statement valued functions</li></ul>
+       <p>Scalar returns unit, variant defined the return clause. Other two types return table as a return.</p>`),
+       new qList(`What is collation?`,`<p>Collation is defined as set of rules that determine how character data can be sorted and compared. This can be used to compare A and, other language characters and also depends on the width of the characters.</p>`),
+       new qList(`Advantages and Disadvantages of Stored Procedure?`,`<p>Stored procedure can be used as a modular programming – means create once, store and call for several times whenever required.
+       <br> This supports faster execution instead of executing multiple queries. This reduces network traffic and provides better security to the data.</p>
+       <p>Disadvantage is that it can be executed only in the Database and utilizes more memory in the database server.</p>`),
+       new qList(`What is the difference between TRUNCATE and DROP statements?`,`<p>TRUNCATE removes all the rows from the table, and it cannot be rolled back. DROP command removes a table from the database and operation cannot be rolled back.</p>`),
+       new qList(`How can you create an empty table from an existing table?`,`<p>Select * into studentcopy from student where 1=2</p>`),
+       new qList(`How to fetch common records from two tables?`,`<pre>Select studentID from student. <strong>INTERSECT </strong> Select StudentID from Exam</pre>`)
+
     ];
     public aspDotNetMVC=[
         new qList(`What is Model-View-Controller?`,`
