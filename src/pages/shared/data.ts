@@ -1524,7 +1524,45 @@ app.config(['$routeProvider',
 
     ];
     public Linq=[
-        
+        new qList(`Explain what is LINQ? Why is it required?`,`<p>Language Integrated Query or LINQ is the collection of standard query operators which provides query facilities into.NET framework language like C#, VB.NET.
+        <br>LINQ is required as it bridges the gap between the world of data and world of objects.</p>`),
+        new qList(`Explain how LINQ is useful than Stored Procedures?`,`<ul><li><b>Debugging</b>-It is difficult to debug a stored procedure but as LINQ is part of.NET, visual studios debugger can be used to debug the queries</li><br>
+        <li><b>Deployment</b>-For stored procedure, additional script should be provided but with LINQ everything gets compiled into single DLL hence deployment becomes easy</li><br>
+        <li><b>Type Safety</b>-LINQ is type safe, so queries errors are type checked at compile time</li></ul>`),
+        new qList(`List out the three main components of LINQ? Explain what is the extension of the file, when LINQ to SQL is used?`,`<p>Three main components of LINQ are</p>
+        <ul><li>Standard Query Operators</li><br>
+        <li>Language Extensions</li><br>
+        <li>LINQ Providers</li></ul>`),
+        new qList(`Explain what is lambda expressions in LINQ?`,`<p>Lambda expression is referred as a unique function use to form delegates or expression tree types, where right side is the output and left side is the input to the method. For writing LINQ queries particularly, Lambda expression is used.</p>`),
+        new qList(`Explain how LINQ with databases can be used?`,`<p>LINQ supports XML, SQL, Dataset and Objects. Through LINQ to objects or LINQ to Datasets one can use LINQ with other databases.<br><br> The objects and datasets take care of database particular operations, and LINQ only needs to deal with those objects and not the database operations directly</p>`),
+        new qList(`Mention what is the role of DataContext classes in LINQ?`,`<p>DataContext class acts as a bridge between SQL Server database and the LINQ to SQL. For accessing the database and also for changing the data in the database, it contains connections string and the functions.</p>`),
+        new qList(`Explain what are LINQ query expressions?`,`<p>Query expression is nothing but an LINQ query. It is a combination of query clauses that identifies the data sources for a query. It contains information for sorting, filtering, grouping or joining to apply to the source data. It determines what information should be retrieved from the data source.CV.</p>`),
+        new qList(`Explain what are compiled queries?`,`<p>In compiled LINQ queries, the plan is cached in a static class and static class is a global cache. Rather than preparing the query plan from scratch, LINQ prepares plan using stating class object.</p>`),
+        new qList(`Explain how standard query operators useful in LINQ?`,`<p>Standard Query Operators useful in LINQ are:-</p>
+        <ul><li>Get a total count of elements in the collection</li><br>
+        <li>Order the results of a collection</li><br>
+        <li>Grouping</li><br>
+        <li>Computing average</li><br>
+        <li>Joining two collections based on matching keys</li></ul>`),
+        new qList(`Explain what is the purpose of LINQ providers in LINQ?`,`<p>LINQ providers are set of classes that take an LINQ query which generates method that executes an equivalent query against a particular data source</p>`),
+        new qList(`Explain how you can retrieve a single row with LINQ?`,`<p>To retrieve a single row with LINQ we need</p>
+        <pre>Public User GetUser (string userName)
+            {
+            DBNameDataContext myDB = new DBNameDataContext ( ) ;
+            User user = myDB. Users. Single ( u, u.UserName => userName );
+            Return user;
+            }
+            </pre>`),
+        new qList(`LINQ query is executed in which statement?`,`<p>In VB, an LINQ query is executed in the For Each Statement, and in the foreach statement for C#.</p>`),
+        new qList(`Explain what is “LINQ to Objects”?`,`<p>When LINQ queries any IEnumerable(Of T) collection or IEnumerable directly without the use of an intermediate LINQ provider or API such as LINQ to SQL or LINQ to XML is referred as “LINQ to Objects.”</p>`),
+        new qList(`Explain how you can differentiate between Conversion Operator “ToDictionary” and “IEnumerable” of LINQ?`,`<p>To solve the conversion type problems “IEnumerable” and “ToDictionary” conversion operator are used.</p>
+        <p>“ToDictionary” conversion operator is the instance of Dictionary (k, T). The “keySelector” predicate recognizes the key of each item, while “elementSelector”, is used to extract each single item, if it is given.</p>
+        <p>Extension method on “IEnumerable” is.AsEnumerable. AsEnumerable simply returns the source sequence as an object of type IEnumerable <T>.</p>`),
+        new qList(`What is the difference between First() and FirstOrDefault() selector methods in LINQ?`,`<p>First() always expects at least one element in result set, if there isn't any element is result, then First() returns an exception. While FirstOrDefault() is fine with a result set having 0 elements, it does not throw any exception</p>`),
+        new qList(`What are the benefits of LINQ on dataset?`,`<p>Quick turn around for development Queries can be dynamically Tables are automatically created into class Columns are automatically created into properties Relationship are automatically appeaded to classes Lambda expressions are awesome Data is easy to setup and use.</p>`),
+        new qList(`What are the advantages of LINQ over stored procedure?`,`<p>Debugging – LINQ supports .Net debugger, so we can easily debug a LINQ query using .NET debugger but it is not supported by SQL stored procedure so it is hard to debug the stored procedure</p>
+        <p>Deployment – To deploy stored procedure it is necessary to write one more script to run them, while LINQ will complie by a single DLL statement and so the deployment will be simple. </p>
+        <p>Type Safety - As LINQ supports type safety so errors can be type checked in LINQ queries in compile time. It is better to use LINQ as it enable us to identify the errors while compilation rather than runtime execution.</p>`)
     ];
      public SqlQueries=[
         
