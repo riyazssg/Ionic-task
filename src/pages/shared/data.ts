@@ -697,15 +697,361 @@ new qList(`What is a tuple?`, `
         
     ];
     public aspDotNet=[
-        
+        new qList(`What is ASP.NET?`,`<p>Answer: ASP.NET was developed in direct response to the problems that developers had with classic ASP. Since ASP is in such wide use, however, Microsoft ensured that ASP scripts execute without modification on a machine with the .NET Framework</p>
+        <br><b>Advantages of ASP.NET</b><ul><li>Separation of Code from HTML: </li><br>
+        <li>Support for compiled languages</li><br>
+        <li>Use services provided by the .NET Framework</li><br>
+        <li>Graphical Development Environment</li><br>
+        <li>State management</li><br>
+        <li>Update files while the server is running</li></ul>`),
+        new qList(`What are the different validators in ASP.NET?`,`<p>ASP.NET validation controls define an important role in validating the user input data. Whenever the user gives the input, it must always be validated before sending it across to various layers of an application. If we get the user input with validation, then chances are that we are sending the wrong data. So, validation is a good idea to do whenever we are taking input from the user.</p>
+        <p>There are the following two types of validation in ASP.NET:</p>
+        <ul><li>Client-Side Validation</li><br>
+        <li>Client-Side Validation</li></ul>`),
+        new qList(`What is View State?`,`<p>View State is the method to preserve the Value of the Page and Controls between round trips. It is a Page-Level State Management technique. View State is turned on by default and normally serializes the data in every control on the page regardless of whether it is actually used during a post-back. </p>
+        <p>A web application is stateless. That means that a new instance of a page is created every time when we make a request to the server to get the page and after the round trip our page has been lost immediately</p>`),
+        new qList(`What are the different Session state management options available in ASP.NET?`,`<p>State Management in ASP.NET</p>
+        <ul><li>A new instance of the Web page class is created each time the page is posted to the server</li><br>
+        <li>In traditional Web programming, all information that is associated with the page, along with the controls on the page, would be lost with each roundtrip</li><br>
+        <li>The Microsoft ASP.NET framework includes several options to help you preserve data on both a per-page basis and an application-wide basis</li></ul>
+        <br><li>Client-Side State Management Options</li><br>
+        <li>Server-Side State Management Options</li>`),
+        new qList(`What is MVC?`,`<p>Model-View-Controller (MVC) is a pattern to separate an application into the following three main components:</p>
+        <ul><li>Model</li><br>
+        <li>View</li><br>
+        <li>Controller</li></ul><p>The ASP.NET MVC framework provides an alternative to the ASP.NET Web Forms pattern for creating web applications. The ASP.NET MVC Framework is a lightweight, highly testable presentation framework that (as with Web Forms-based applications) is integrated with existing ASP.NET features, such as master pages and membership-based authentications. The MVC framework is defined in the System.Web.Mvc assembly</p>`),
+        new qList(`What are Cookies in ASP.NET?`,`<p>Cookies are a State Management Technique that can store the values of control after a post-back. Cookies can store user-specific Information on the client's machine like when the user last visited your site. </p>
+        <p>List of properties containing the HttpCookies Class:</p><ul><li>Domain-Using these properties we can set the domain of the cookie.</li><br>
+        <li>Expires-This property sets the Expiration time of the cookies</li><br>
+        <li>HasKeys-If the cookies have a subkey then it returns True</li><br>
+        <li>Name-Contains the name of the Key.</li><br>
+        <li>Path-Contains the Virtual Path to be submitted with the Cookies</li><br>
+        <li>Secured-If the cookies are to be passed in a secure connection then it only returns True.</li><br>
+        <li>Value-Contains the value of the cookies</li></ul>`),
+        new qList(`What is Ajax in ASP.NET?`,`<p>Ajax stands for Asynchronous JavaScript and XML; in other words Ajax is the combination of various technologies such as a JavaScript, CSS, XHTML, DOM, etc.</p>
+        <p>AJAX allows web pages to be updated asynchronously by exchanging small amounts of data with the server behind the scenes. This means that it is possible to update parts of a web page, without reloading the entire page</p>
+        <p>Ajax is platform-independent; in other words AJAX is a cross-platform technology that can be used on any Operating System since it is based on XML & JavaScript</p>`),
+        new qList(`What are Web Services in ASP.NET?`,`<p>A Web Service is a software program that uses XML to exchange information with other software via common internet protocols. In a simple sense, Web Services are a way for interacting with objects over the Internet.</p>
+        <b>A web service is:</b><ul><li>Language Independent</li><br>
+        <li>Protocol Independent</li><br>
+        <li>Platform Independent</li><br>
+        <li>It assumes a stateless service architecture.</li><br>
+        <li>Programmable (encapsulates a task).</li><br>
+        <li>Based on XML (open, text-based standard).</li><br>
+        <li>Self-describing (metadata for access and use).</li></ul>`),
+        new qList(`What are the Advantages of ASP.NET?`,`<p>ASP.NET provides services to allow the creation, deployment, and execution of Web Applications and Web Services like ASP, ASP.NET is a server-side technology. Web Applications are built using Web Forms. ASP.NET comes with built-in Web Form controls, which are responsible for generating the user interface. They mirror typical HTML widgets such as text boxes or buttons. If these controls do not fit your needs, you are free to create your own user controls.</p>
+        <b>Advantages of ASP.NET:</b><ul><li>Separation of Code from HTML</li><br>
+        <li>Support for compiled languages</li><br>
+        <li>Use services provided by the .NET Framework</li><br>
+        <li>Graphical Development Environment</li><br>
+        <li>Update files while the server is running</li><br>
+        <li>XML-Based Configuration Files</li></ul>`),
+        new qList(`What is the Web.config file in ASP?`,`<p>Configuration file is used to manage various settings that define a website. The settings are stored in XML files that are separate from your application code. 
+        <br>In this way you can configure settings independently from your code. Generally a website contains a single Web.config file stored inside the application root directory. However there can be many configuration files that manage settings at various levels within an application.</p>`),
+        new qList(`What is tracing in .NET?`,`<p>Tracing helps to see the information of issues at the runtime of the application. By default Tracing is disabled.</p>
+        <p>Tracing has the following important features:</p><ul><li>We can see the execution path of the page and application using the debug statement.</li><br>
+        <li>We can access and manipulate trace messages programmatically.</li><br>
+        <li>We can see the most recent tracing of the data.</li></ul>`),
+        new qList(`What are the data controls available in ASP.NET?`,`<p>The Controls having DataSource Property are called Data Controls in ASP.NET. ASP.NET allows powerful feature of data binding, you can bind any server control to simple properties, collections, expressions and/or methods. When you use data binding, you have more flexibility when you use data from a database or other means.</p>
+        <ul><li>Repeater Control</li><br>
+        <li>DataGrid Control</li><br>
+        <li>DataList Control</li><br>
+        <li>GridView Control</li><br>
+        <li>DetailsView</li><br>
+        <li>FormView</li><br>
+        <li>DropDownList</li><br>
+        <li>RadioButtonList</li></ul>`),
+        new qList(`What is the authentication and authorization in ASP.NET?`,`<p>In ASP.NET authentication means to identify the user or in other words its nothing but to validate that he exists in your database and he is the proper user.</p>
+        <ul><li>Authentication: Prove genuineness</li><br>
+        <li>Authorization: process of granting approval or permission on resources.</li></ul>
+        <p><b>Types of authentication and authorization in ASP.NET</b></p>
+        <ul><li><b>Windows authentication:</b> In this methodology ASP.NET web pages will use local windows users and groups to authenticate and authorize resources.</li><br>
+        <li><b>Forms Authentication:</b> This is a cookie based authentication where username and password are stored on client machines as cookie files or they are sent through URL for every request</li><br>
+        <li><b>Passport authentication:</b> Passport authentication is based on the passport website provided by the Microsoft .So when user logins with credentials it will be reached to the passport website</li><br>
+        <li><b>Anonymous access:</b> If you do not want any kind of authentication then you will go for Anonymous access</li></ul>`),
+        new qList(`What are the authentication modes in ASP.NET for security?`,`<p>When you begin a program for a customer using ASP.NET, you should consider about security.
+        <br><br> Security is one of the most important components of any application. Security is even more important when you are making a web application which is exposed to million of users. ASP.NET provides classes and methods that ensure that the application is secure from outside attacks. In this article we will investigate the different types of authentication provided by ASP.NET. In web.config file you can set authentication mode value 'windows' or 'forms'.</p>
+        <pre>
+        1.	<authentication mode="Windows">  
+        2.	   <forms name=" AuthenticationDemo" loginUrl="logon.aspx" protection="All" path="/"timeout="30" />  
+        3.	</authentication>  
+        </pre>`),
+        new qList(`What is the web API in ASP.NET?`,`<p>It is a framework provided by Microsoft for writing HTTP services. There are many frameworks available to build HTTP based services. They follow a common guideline of international standardization but with different flavors.</p>
+        <p>For example, all framework must adhere to these status codes-</p>
+        <ul><li>1xx - Informational Message</li><br>
+        <li>2xx - Successful</li><br>
+        <li>3xx - Redirection</li><br>
+        <li>4xx - Client Error</li><br>
+        <li>5xx - Server Error</li></ul>`),
+        new qList(`What is the code behind and Inline Code?`,`<p><b>Code Behind</b></p>
+        </p>Code Behind refers to the code for an ASP.NET Web page that is written in a separate class file that can have the extension of .aspx.cs or .aspx.vb depending on the language used. Here the code is compiled into a separate class from which the .aspx file derives. You can write the code in a separate .cs or .vb code file for each .aspx page</p>
+        <p><b>Inline Code</b></p><p>Inline Code refers to the code that is written inside an ASP.NET Web Page that has an extension of .aspx. It allows the code to be written along with the HTML source code using a <Script> tag. It's major point is that since it's physically in the .aspx file it's deployed with the Web Form page whenever the Web Page is deployed.</p>`),
+        new qList(`What is the ASP.NET page life Cycle?`,`<p>: When a page is requested by the user from the browser, the request goes through a series of steps and many things happen in the background to produce the output or send the response back to the client. The periods between the request and response of a page is called the "Page Life Cycle".</p>
+        <p>There are four stages that occur during the Page Life Cycle before the HTML Response is returned to the client. Later in this article we"ll study all these stages and their sub events.</p>
+        <ul><li>Initialization</li><br>
+        <li>Loading</li><br>
+        <li>Rendering</li><br>
+        <li>Unloading</li></ul>`),
+        new qList(`What is the ASP.NET page life cycle events?`,`<p>We have many events in ASP.NET page life cycle let’s see some most important events:</p>
+        <ul><li><b>Page initialization </b>-At this stage, the controls on the page are assigned unique ID by setting the UniqueID property and themes are applied. For a new request postback data is loaded and the control properties are restored to the view-state values.</li><br>
+        <li><b>Page load </b>-At this stage, control properties are set using the view state and control state values</li><br>
+        <li><b>Validation </b>-Validate method of the validation control is called and if it runs successfully, the IsValid property of the page is set to true</li><br>
+        <li><b>Postback event handling </b>-If the request is a postback (old request), the related event handler is called.</li><br>
+        <li><b>Page rendering </b>-At this stage, view state for the page and all controls are saved. The page calls the Render method for each control and the output of rendering is written to the OutputStream class of the Page's Response property</li></ul>`),
+        new qList(`What is the Difference between session and caching?`,`<p>The first main difference between session and caching is: a session is per-user based but caching is not per-user based, So what does that mean? Session data is stored at the user level but caching data is stored at the application level and shared by all the users.</p>
+        <p>It means that it is simply session data that will be different for the various users for all the various users, session memory will be allocated differently on the server but for the caching only one memory will be allocated on the server and if one user modifies the data of the cache for all, the user data will be modified.</p>`),
+        new qList(`What is page directives in ASP.NET?`,`<p>Basically Page Directives are commands. These commands are used by the compiler when the page is compiled.</p>
+        <p>It is not difficult to add a directive to an ASP.NET page. It is simple to add directives to an ASP.NET page. You can write directives in the following format:
+        <br><br><%@[Directive][Attributes]%><br><br>
+        Here is the full list of directives:</p>
+        <ul><li>@Page</li><br>
+        <li>@Master</li><br>
+        <li>@Control</li><br>
+        <li>@Import</li><br>
+        <li>@Implements</li><br>
+        <li>@Register</li><br>
+        <li>@Assembly</li><br>
+        <li>@MasterType</li><br>
+        <li>@Output Cache</li><br>
+        <li>@PreviousPageType</li></ul>`),
+        new qList(`What is HTTP Handler?`,`<p>Every request into an ASP.NET application is handled by a specialized component known as an HTTP handler. The HTTP handler is the most important ingredient while handling ASP.NET requests</p>`),
+        new qList(``,`<p></p>`)
     ];
     public htmlCss=[
         
     ];
     public javaScrips=[
-        
+        new qList(`What is JavaScript?`,`
+        <p>JavaScript is a client-side as well as server side scripting language that can be inserted into
+        HTML pages and is understood by web browsers. JavaScript is also an Object Oriented
+        Programming language</p>`),
+        new qList(`What is the use of isNaN function?`,`
+        <p>isNan function returns true if the argument is not a number otherwise it is false.</p>`),
+        new qList(`What are undeclared and undefined variables?`,`
+        <p>Undeclared variables are those that do not exist in a program and are not declared. If the program tries to read the value of an undeclared variable, then a runtime error is encountered.</p>
+        <p>Undefined variables are those that are declared in the program but have not been given any value. If the program tries to read the value of an undefined variable, an undefined value is returned.</p>`),
+        new qList(`Write the code for adding new elements dynamically?`,`
+        <pre><html> 
+        <head> <title>t1</title> 
+        <script type="text/javascript"> 
+        function addNode() { 
+            var newP = document.createElement("p"); 
+            var textNode = document.createTextNode(" This is a new text node"); 
+            newP.appendChild(textNode); document.getElementById("firstP").appendChild(newP); } 
+        </script> 
+        </head> 
+        <body> 
+        <p id="firstP">firstP<p> 
+        </body> 
+        </html>
+        </pre>`),
+         new qList(`What are global variables? How are these variable declared and what are the problems associated with using them?`,`
+         <p>Global variables are those that are available throughout the length of the code, that is, these have no scope. The var keyword is used to declare a local variable or object. If the var keyword is omitted, a global variable is declared.</p>
+         <p>The problems that are faced by using global variables are the clash of variable names of local and global scope. Also, it is difficult to debug and test the code that relies on global variables.</p>`),
+         new qList(`What is ‘this’ keyword in JavaScript?`,`<p>‘This’ keyword refers to the object from where it was called.</p>`),
+         new qList(`What is === operator?`,`<p>=== is called as strict equality operator which returns true when the two operands are having the same value without any type conversion.</p>`),
+         new qList(`How can the style/class of an element be changed?`,`
+         <p>It can be done in the following way:</p>
+         <pre>document.getElementById(“myText”).style.fontSize = “20?;
+            Or
+            document.getElementById(“myText”).className = “anyclass”;
+            </pre>`),
+        new qList(`What are all the looping structures in JavaScript?`,`
+        <p>Following are looping structures in Javascript:</p>
+        <ul><li>For</li><br><li>While</li><br><li>do-while loops</li></ul>`),
+        new qList(`How can you convert the string of any base to integer in JavaScript?`,`
+        <p>The parseInt() function is used to convert numbers between different bases. parseInt() takes the string to be converted as its first parameter, and the second parameter is the base of the given string.</p>
+        <br><p>In order to convert 4F (of base 16) to integer, the code used will be – <br><br>parseInt ("4F", 16);</p>`),
+        new qList(`Explain the difference between “==” and “===”?`,`
+        <p>“==” checks only for equality in value whereas “===” is a stricter equality test and returns false if either the value or the type of the two variables are different</p>`),
+        new qList(`What would be the result of 3+2+”7″?`,`
+        <p>Since 3 and 2 are integers, they will be added numerically. And since 7 is a string, its concatenation will be done. So the result would be 57.</p>`),
+        new qList(`What do mean by NULL in Javascript?`,`
+        <p>The NULL value is used to represent no value or no object.  It implies no object or null string, no valid boolean value, no number and no array object.</p>`),
+        new qList(`What is an undefined value in JavaScript?`,`
+        <p>Undefined value means the</p><ul><li>Variable used in the code doesn’t exist</li><br>
+        <li>Variable is not assigned to any value</li><br>
+        <li>Property doesn’t exist</li></ul>`),
+        new qList(`What is the use of Void(0)?`,`
+        <p>Void(0) is used to prevent the page from refreshing and parameter “zero” is passed while calling.<br><br>Void(0) is used to call another method without refreshing the page</p>`),
+        new qList(`What is the data type of variables of in JavaScript?`,`<p>All variables in the JavaScript are object data types.</p>`),
+        new qList(`What is the difference between an alert box and a confirmation box?`,`
+        <p>An alert box displays only one button which is the OK button.<br><br>But a Confirmation box displays two buttons namely OK and cancel.</p>`),
+        new qList(`What are the two basic groups of datatypes in JavaScript?`,`<p>They are as –<br><br>•	Primitive<br>•	Reference types.</p><p>Primitive types are number and Boolean data types. Reference types are more complex types like strings and dates.</p>`),
+        new qList(`How generic objects can be created?`,`<p>Generic objects can be created as:<br><br><b>var I = new object();</b></p>`),
+        new qList(`What is the use of type of operator?`,`<p>‘Typeof’ is an operator which is used to return a string description of the type of a variable.</p>`),
+        new qList(`Which keywords are used to handle exceptions?`,`<p>Try… Catch—finally is used to handle exceptions in the JavaScript</p>
+        <pre>Try{
+                Code
+                }
+                Catch(exp){
+                Code to throw an exception
+                }
+                Finally{
+                Code runs either it finishes successfully or after catch
+                }
+                </pre>`),
+        new qList(`Which keyword is used to print the text in the screen?`,`<p>document.write(“Welcome”) is used to print the text – Welcome in the screen</p>`),
+        new qList(`What is the use of blur function?`,`<p>Blur function is used to remove the focus from the specified object.</p>`),
+        new qList(`What are the different types of errors in JavaScript?`,`
+        <p>There are three types of errors:</p>
+        <ul><li><b>Load time errors</b> Errors which come up when loading a web page like improper syntax errors are known as Load time errors and it generates the errors dynamically.</li><br>
+        <li><b>Run time errors</b> Errors that come due to misuse of the command inside the HTML language.</li><br>
+        <li><b>Logical Errors</b> These are the errors that occur due to the bad logic performed on a function which is having different operation.</li></ul>`),
+        new qList(`What is the use of Push method in JavaScript?`,`
+        <p>The push method is used to add or append one or more elements to the end of an Array. Using this method, we can append multiple elements by passing multiple arguments</p>`),
+        new qList(`What is unshift method in JavaScript?`,`
+        <p>Unshift method is like push method which works at the beginning of the array.  This method is used to prepend one or more elements to the beginning of the array.</p>
+        <br><pre>var name = [ "john" ];<br>
+            name.unshift( "charlie" );<br>
+            name.unshift( "joseph", "Jane" );<br>
+            console.log(name);<br>
+            The output is shown below:<br>
+            [" joseph "," Jane ", " charlie ", " john "]
+            </pre>`),
+        new qList(`What is the difference between JavaScript and Jscript?`,`<p>Both are almost similar. JavaScript is developed by Netscape and Jscript was developed by Microsoft .</p>`),
+        new qList(`Explain what is pop()method in JavaScript?`,`
+        <p>The pop() method is similar as the shift() method but the difference is that the Shift method works at the start of the array.  Also the pop() method take the last element off of the given array and returns it. The array on which is called is then altered.</p><br>
+        <pre>Example:
+            var cloths = [“Shirt”, “Pant”, “TShirt”];<br>
+            cloths.pop();<br>
+            //Now cloth becomes Shirt,Pant
+            </pre>`),
+        new qList(`What is the ‘Strict’ mode in JavaScript and how can it be enabled?`,`
+        <p>Strict Mode adds certain compulsions to JavaScript. Under the strict mode, JavaScript shows errors for a piece of codes, which did not show an error before, but might be problematic and potentially unsafe. Strict mode also solves some mistakes that hamper the JavaScript engines to work efficiently.</p><br>
+        <p>Strict mode can be enabled by adding the string literal “use strict” above the file. This can be illustrated by the given example:</p><br>
+        <pre>function myfunction()
+            {
+            “use strict";
+            var v = “This is a strict mode function";
+            }
+            </pre>`),
+        new qList(`What is the way to get the status of a CheckBox?`,`
+        <p>The status can be acquired as follows –<br><br>
+            alert(document.getElementById(‘checkbox1’).checked);<br><br>
+            If the CheckBox will be checked, this alert will return TRUE</p>`),
+        new qList(`Explain window.onload and onDocumentReady?`,`
+        <p>The onload function is not run until all the information on the page is loaded. This leads to a substantial delay before any code is executed.</p><br>
+        <p>onDocumentReady loads the code just after the DOM is loaded. This allows early manipulation of the code.</p>`),
+        new qList(`How can a value be appended to an array?`,`<p>A value can be appended to an array in the given manner –<br><br>arr[arr.length] = value;</p>`),
+        new qList(`Describe the properties of an anonymous function in JavaScript?`,`
+        <p>A function that is declared without any named identifier is known as an anonymous function. In general, an anonymous function is inaccessible after its declaration.</p>
+        <pre>Anonymous function declaration –<br>
+            var anon = function() {
+            alert('I am anonymous');
+            };
+            anon();
+            </pre>`),
+        new qList(`Is JavaScript case sensitive? Give an example?`,`
+        <p>Yes, JavaScript is case sensitive. For example, a function parseInt is not same as the function Parseint.</p>`),
+        new qList(`What boolean operators can be used in JavaScript?`,`
+        <p>The ‘And’ Operator (&&), ‘Or’  Operator (||) and the ‘Not’ Operator (!) can be used in JavaScript.<br><br>*Operators are without the parenthesis.</p>`),
+        new qList(`What are the decodeURI() and encodeURI()?`,`<p>EncodeURl() is used to convert URL into their hex coding. And DecodeURI() is used to convert the encoded URL back to normal</p>
+        <pre><script>
+            var uri="my test.asp?name=ståle&car=saab";
+            document.write(encodeURI(uri)+ "<br>");
+            document.write(decodeURI(uri));
+            </script>
+            </pre>
+            <p>Output –<br><br>my%20test.asp?name=st%C3%A5le&car=saab<br>my test.asp?name=ståle&car=saab</p>`),
+        new qList(`What does the following statement declares?`,`<p>var myArray = [[[]]];<br><br>It declares a three dimensional array.</p>`),
+        new qList(`How are JavaScript and ECMA Script related?`,`<p>ECMA Script are like rules and guideline while Javascript is a scripting language used for web development.</p>`),
+        new qList(`What is namespacing in JavaScript and how is it used?`,`
+        <p>Namespacing is used for grouping the desired functions, variables etc. under a unique name. It is a name that has been attached to the desired functions, objects and properties. This improves modularity in the coding and enables code reuse.</p>`),
+        new qList(`Define unescape() and escape() functions?`,`<p>The escape () function is responsible for coding a string so as to make the transfer of the information from one computer to the other, across a network.<br><br>For Example:</p>
+        <pre><script>
+                document.write(escape(“Hello? How are you!”));
+                </script>
+                Output: Hello%3F%20How%20are%20you%21<br>
+                The unescape() function is very important as it decodes the coded string.<br>
+                It works in the following way. For example:<br>
+                <script>
+                document.write(unescape(“Hello%3F%20How%20are%20you%21”));
+            </script>
+            </pre>
+            <p>Output: Hello? How are you!</p>`),
+            new qList(`What does "1"+2+4 evaluate to? `,`<p>Since 1 is a string, everything is a string, so the result is 124.</p>`)
     ];
     public jQuery=[
+        new qList(`What is jQuery?`,`<p>jQuery is not a programming language but a well written JavaScript code. It is a JavaScript code, which do document traversing, event handling, Ajax interactions and Animations.</p>`),
+        new qList(`Why jQuery is needed?`,`<p>jQuery is needed for the following list:</p>
+        <ul><li>Used to develop browser compatible web applications</li><br>
+        <li>Improve the performance of an application</li><br>
+        <li>Very fast and extensible</li><br>
+        <li>UI related functions are written in minimal lines of codes</li></ul>`),
+        new qList(`Whether jQuery HTML work for both HTML and XML documents?`,`<p>No, jQuery HTML only works for HTML documents not for XML Documents.</p>`),
+        new qList(`What are the methods used to provide effects?`,`<p>Some of the effects methods are:</p>
+        <ul><li>Show()</li><br>
+        <li>Hide()</li><br>
+        <li>Toggle()</li><br>
+        <li>FadeIn() and</li><br>
+        <li>FadeOut()</li></ul>`),
+        new qList(`What is the advantage of using minimized version of jQuery?`,`
+        <p>Efficiency of web page increases when minimized version of jQuery is used.min.js file will be more than 50% less than the normal js file. Reduction in the file size makes the web page faster.</p>`),
+        new qList(`Is jQuery is a JavaScript or JSON library file?`,`<p>jQuery is a library of JavaScript file and it consists of DOM, event effects and the Ajax functions. jQuery is said to be a single JavaScript file.</p>`),
+        new qList(`In what scenarios jQuery can be used?`,`<p>jQuery can be used in following scenarios:</p>
+        <ul><li>Apply CSS static or dynamic</li><br>
+        <li>Calling functions on events</li><br>
+        <li>Manipulation purpose</li><br>
+        <li>Mainly for Animation effects</li></ul>`),
+        new qList(`What is the difference between find and children methods?`,`<p>Find method is used to find all levels down the DOM tree but children find single level down the DOM tree</p>`),
+        new qList(`What is jQuery connect?`,`<p>A ‘ jQuery connect’  is a plugin used to connect or bind a function with another  function. Connect is used to execute function from any other function or plugin is executed.</p>`),
+        new qList(`How to use connect?`,`<p>Connect can be used by downloading jQuery connect file from jQuery.com and then include that file in the HTML file. Use $.connect function to connect a function to another function.</p>`),
+        new qList(`What are the basic selectors in jQuery?`,`<p>Following are the basic selectors in jQuery:</p>
+        <ul><li>Element ID</li><br>
+        <li>CSS Name</li><br>
+        <li>Tag Name</li><br>
+        <li>DOM hierarchy</li></ul>`),
+        new qList(`Can we call C# code behind using jQuery?`,`<p>Yes, we can call C# code from jQuery as it supports .net application</p>`),
+        new qList(`What is the use jQuery.data method?`,`<p>jQuery.data methods is used to associate the data with the DOM nodes and the objects. This data method makes the jQuery code clear and concise.</p>`),
+        new qList(`What is the use of each function in jQuery?`,`<p>Each function is used to iterate each and every element of an object. It is used to loop DOM elements, arrays and the object properties.</p>`),
+        new qList(`What is the difference between size and length of jQuery?`,`<p>Size and length both returns the number of element in an object. But length is faster than the size because length is a property and size is a method.</p>`),
+        new qList(`Can we add more than one ‘document.ready’ function in a page?`,`<p>Yes, we can add more than one document.ready function in a page. But, body.onload can be added once in a page.</p>`),
+        new qList(`What is the use of jQuery load method?`,`<p>jQuery load method is a powerful AJAX method which is used to load the data from a server and assign the data into the element without loading the page.</p>`),
+        new qList(`Whether our own specific characters are used in place of $ in jQuery?`,`<p>Yes, We can use our own variable in place of $ by using the method called no Conflict () method.<br><br>var sample = $.noConflict()</p>`),
+        new qList(`What are the four parameters used for jQuery Ajax method?`,`<p>The four parameters are</p>
+        <ul><li>URL – Need to specify the URL to send the request</li><br>
+        <li>type – Specifies type of request(Get or Post)</li><br>
+        <li>data – Specifies data to be sent to server</li><br>
+        <li>Cache – Whether the browser should cache the requested page</li></ul>`),
+        new qList(`What is the use of jQuery filter?`,`<p>The jQuery filter is used to filter the certain values from the object list based on the criteria. Example is to filter certain products from the master list of products in a cart website.</p>`),
+        new qList(`What is CDN?`,`<p>CDN is abbreviated as Content Distribution network and it is said to be a group of companies in different location with network containing copies of data files to maximize bandwidth in accessing the data</p>`),
+        new qList(`What are the two types of CDNs?`,`<p>There are two types of CDNs:<br><br>1. Microsoft – Load jQuery from Ajax CDN<br>2. Google – Load jQuery from Google libraries API</p>`),
+        new qList(`Which sign is used as a shortcut for jQuery?`,`<p>Dollar ($) sign is used as a shortcut for jQuery</p>`),
+        new qList(`Is jQuery is a client or server scripting?`,`<p>jQuery is a client scripting.</p>`),
+        new qList(`What is the script build up by jQuery?`,`<p>jQuery is a Javascript file and it is single javascript file that contains common DOM, event effects and Ajax functions.</p>`),
+        new qList(`How can we debug jQuery?`,`<p>There are two ways to debug jQuery:<br><br>Debugger keyword</p>
+        <ul><li>Add the debugger to the line from where we have to start debugging and then run Visual Studio in Debug mode with F5 function key.</li><br>
+        <li>Insert a break point after attaching the process</li></ul>`),
+        new qList(`. What are all the ways to include jQuery in a page?`,`<p>Following are the ways to include jQuery in a page:</p>
+        <ul><li>Local copy inside script tag</li><br>
+        <li>Remote copy of jQuery.com</li><br>
+        <li>Remote copy of Ajax API</li><br>
+        <li>Local copy of script manager control</li></ul>`),
+        new qList(`What is the use of jQuery.ajax method ()?`,`<p>jQuery.ajax method is used for asynchronous HTTP requests.</p>`),
+        new qList(`Is jQuery is a replacement of JavaScript?`,`<p>No, jQuery is not a replacement of JavaScript.</p>`),
+        new qList(`What is called chaining?`,`<p>Chaining is used to connect multiple events and functions in a selector.</p>`),
+        new qList(`What are the advantages of jQuery?`,`<p>Following are the advantages of jQuery:</p>
+        <ul><li>Just a JavaScript enhancement</li><br>
+        <li>Coding is simple, clear, reusable</li><br>
+        <li>Removal of writing more complex conditions and loops</li></ul>`),
+        new qList(`What is the use of jQuery.data() method?`,`<p>jQuery data method is used to associate data with DOM nodes and JavaScript objects. This method will make a code very concise and neat.</p>`),
+        new qList(`What is the difference between onload() and document.ready()?`,`<p>In a page, we can have only one onload function but we can have more than one document.ready function. Document.ready function is called when DOM is loaded but onload function is called when DOM and images are loaded on the page.</p>`),
+        new qList(`Why jQuery is better than JavaScript?`,`<p>jQuery is a library used for developing Ajax application and it helps to write the code clean and concise. It also handles events, animation and Ajax support applications.</p>`),
+        new qList(`What are the types of selectors in jQuery?`,`<p>There are three types of selectors in jQuery:</p>
+        <ul><li>CSS Selector</li><br>
+        <li>XPath Selector</li><br>
+        <li>Custom Selector</li></ul>`),
+        new qList(`What does dollar sign ($) means in jQuery?`,`<p>Dollar Sign is nothing but it's an alias for JQuery. Take a look at below jQuery code.</p>
+        <pre>$(document).ready(function(){
+            });
+            </pre>
+            <p>Over here $ sign can be replaced with "jQuery" keyword</p>
+            <pre>jQuery(document).ready(function(){
+                });
+                </pre>`),
+        new qList(`What is the difference between .js and .min.js?`,`<p>jQuery library comes in 2 different versions Production and Deployment. The deployment version is also known as minified version.
+        <br><br> So .min.js is basically the minified version of jQuery library file. Both the files are same as far as functionality is concerned. but .min.js is quite small in size so it loads quickly and saves bandwidth.</p>`)
         
     ];
     public adoDotNet=[
@@ -1062,10 +1408,120 @@ app.config(['$routeProvider',
         
     ];
     public aspDotNetMVC=[
-        
+        new qList(`What is Model-View-Controller?`,`
+        <p>MVC is a software architecture pattern for developing web application. It is handled by three objects Model-View-Controller.</p>`),
+        new qList(`What does Model-View-Controller represent in an MVC application?`,`
+        <p>In an MVC model,</p> <ul><li><b>Model–</b>It represents the application data domain. In other words applications business logic is contained within the model and is responsible for maintaining data</li></br>
+        <li><b>View–</b>It represents the user interface, with which the end users communicates. In short all the user interface logic is contained within the VIEW</li></br>
+        <li><b>Controller–</b>It is the controller that answers to user actions. Based on the user actions, the respective controller responds within the model and choose a view to render that display the user interface.  The user input logic is contained with-in the controller</li></ul>`),
+        new qList(`List out few different return types of a controller action method?`,`
+        <ul><li>View Result</li><li>Javascript Result</li><li>Redirect Result</li><li>JSON Result</li><li>Content Result</li></ul>`),
+        new qList(`What is the difference between adding routes, to a webform application and an MVC application?`,`
+        <p>To add routes to a webform application, we can use MapPageRoute() method of the RouteCollection class, where adding routes to an MVC application, you can use MapRoute() method. <br><br>
+        <img src="assets/Images/mvc-architecture.png"></p>`),
+        new qList(`What is the advantages of MVC?`,`<ul><li>MVC segregates your project into a different segment, and it becomes easy for developers to work on</li>
+        <li>It is easy to edit or change some part of your project that makes project less development and maintenance cost</li>
+        <li></li>MVC makes your project more systematic</ul>`),
+        new qList(`What “beforFilter()”,“beforeRender” and “afterFilter” functions do in Controller?`,`
+        <ul><li><b>beforeFilter(): </b>This function is run before every action in the controller. It’s the right place to check for an active session or inspect user permissions.</li>
+        <li><b>beforeRender():  </b>This function is called after controller action logic, but before the view is rendered. This function is not often used, but may be required If you are calling render() manually before the end of a given action</li>
+        <li><b>afterFilter(): </b>This function is called after every controller action, and after rendering is done. It is the last controller method to run</li></ul>`),
+        new qList(`Explain what is routing? What are the three segments for routing is important?`,`
+        <p>Routing helps you to decide a URL structure and map the URL with the Controller.</p><br>
+        <p>The three segments that are important for routing is</p>
+        <ul><li>ControllerName</li>
+        <li>ActionMethodName</li>
+        <li>Parameter</li></ul>`),
+        new qList(`Explain how routing is done in MVC pattern?`,`
+        <p>There is a group of routes called the RouteCollection, which consists of registered routes in the application.  
+        The RegisterRoutes method records the routes in this collection.  A route defines a URL pattern and a handler to use if the request matches the pattern. The first parameter to the MapRoute method is the name of the route. The second parameter will be the pattern to which the URL matches.  
+        The third parameter might be the default values for the placeholders if they are not determined.</p>`),
+        new qList(`What is the difference between Temp data, View, and View Bag?`,`
+        <ul><li>Temp data: It helps to maintain data when you shift from one controller to other controller.</li>
+        <li>View data: It helps to maintain data when you move from controller to view</li>
+        <li>View Bag: It’s a dynamic wrapper around view data</li></ul>`),
+        new qList(`What is the difference between “ActionResult” and “ViewResult” ?`,`
+        <p>“ActionResult” is an abstract class while “ViewResult” is derived from “AbstractResult” class.  “ActionResult” has a number of derived classes like “JsonResult”, “FileStreamResult” and “ViewResult” .</p>
+        <br><p>“ActionResult” is best if you are deriving different types of view dynamically.</p>`),
+        new qList(`What is the difference between View and Partial View?`,`
+        <b>View</b><br> <ul><li>It contains the layout page</li>
+        <li>Before any view is rendered, viewstart page is rendered</li>
+        <li>View might have markup tags like body, html, head, title, meta etc.</li>
+        <li>View is not lightweight as compare to Partial View</li></ul>
+        <br><br><b>Partial View</b><br><ul><li>It does not contain the layout page</li>
+        <li>Partial view does not verify for a viewstart.cshtml. We cannot put common code for a partial view within the <b>viewStart.cshtml.page</b></li>
+        <li>Partial view is designed specially to render within the view and just because of that it does not consist any mark up</li>
+        <li>We can pass a regular view to the RenderPartial method</li></ul>`),
+        new qList(`What are the file extensions for razor views?`,`
+        <p>For razor views the file extensions are</p>
+        <ul><li>.cshtml: If C# is the programming language</li><li>.vbhtml: If VB is the programming language</li></ul>`),
+        new qList(`What you mean by Routing in MVC?`,`
+        <p>Routing is a pattern matching mechanism of incoming requests to the URL patterns which are registered in route table. Class – “UrlRoutingModule” is used for the same process.</p>`),
+        new qList(`Explain Bundle.Config in MVC4?`,`
+        <p>"BundleConfig.cs" in MVC4 is used to register the bundles by the bundling and minification system. Many bundles are added by default including jQuery libraries like - jquery.validate, Modernizr, and default CSS references.</p>`),
+        new qList(`What is ViewStart Page in MVC?`,`
+        <p>This page is used to make sure common layout page will be used for multiple views. Code written in this file will be executed first when application is being loaded.</p>`)
     ];
     public webAPI=[
-        
+        new qList(`What is Web API?`,`
+        <p>It is a framework which helps us to build/develop HTTP services. So there will a client server communication using HTTP protocol.</p>`),
+        new qList(`What is Representational state transfer or REST?`,`
+        <p>REST is architectural style, which has defined guidelines for creating services which are scalable. REST used with HTTP protocol using its verbs GET, POST, PUT and DELETE.</p>`),
+        new qList(`Explain Web API Routing?`,`
+        <p>Routing is the mechanism of pattern matching as we have in MVC. These routes will get registered in Route Tables. Below is the sample route in Web API –</p>
+        <br><pre>Routes.MapHttpRoute(
+            Name: "MyFirstWebAPIRoute",
+            routeTemplate: “api/{controller}/{id}
+            defaults: new { id = RouteParameter.Optional
+            }
+            };
+            </pre>`),
+        new qList(`What are the advantages of Web API?`,`
+        <p>Below are the list of support given by Web API –</p>
+        <ul><li>OData</li><br>
+        <li>Filters</li><br>
+        <li>Content Negotiation</li><br>
+        <li>Self Hosting</li><br>
+        <li>Routing</li><br>
+        <li>Model Bindings</li></ul>`),
+        new qList(`What is ASP.NET Web API?`,`
+        <p>ASP.NET Web API is a framework that simplifies building HTTP services for broader range of clients (including browsers as well as mobile devices) on top of .NET Framework.</p>
+        <p>Using ASP.NET Web API, we can create non-SOAP based services like plain XML or JSON strings, etc. with many other advantages including:</p>
+        <ul><li>Create resource-oriented services using the full features of HTTP</li><br>
+        <li>Exposing services to a variety of clients easily like browsers or mobile devices, etc.</li></ul>`),
+        new qList(`How to Return View from ASP.NET Web API Method?`,`
+        <p>No, we can't return view from ASP.NET Web API method. We discussed in the earlier interview question about the difference between ASP.NET MVC and Web API that ASP.NET Web API creates HTTP services that renders raw data. <br>Although, it's quite possible in ASP.NET MVC application.<p>`),
+        new qList(`Can we use Web API with ASP.NET Web Form?`,`
+        <p>Yes, ASP.NET Web API is bundled with ASP.NET MVC framework but still it can be used with ASP.NET Web Form.</p>
+        <p>It can be done in three simple steps as follows:</p> <ul><li>Create a Web API Controller<li><br>
+        <li>Add a routing table to Application_Start method of Global.asax<li><br>
+        <li>Make a jQuery AJAX Call to Web API method and get data<li></ul>`),
+        new qList(`What are Exception Filters?`,`
+        <p>Exception filters will be executed when some of the exceptions are unhandled and thrown from a controller method. The reason for the exception may be anything. Exception filters will implement "IExceptionFilter" interface.</p>`),
+        new qList(`What is Attribute Routing in ASP.NET Web API 2.0?`,`
+        <p>ASP.NET Web API v2 now support “Attribute Routing” along with convention-based approach. In convention-based routes, the route templates are already defined as follows:</p>
+        <pre>Config.Routes.MapHttpRoute(
+        name: "DefaultApi",
+        routeTemplate: "api/{Controller}/{id}",
+        defaults: new { id = RouteParameter.Optional }
+        );
+        </pre>`),
+        new qList(`What is ASP.NET Web API OData?`,`
+        <p>The Open Data Protocol (OData) is a data access protocol created for the web. OData gives a consistent procedure to query and manipulates data sets via CRUD operations (Create, Retrieve, Update, and Delete). ASP.NET web API supports each of the v3 and v4 protocol.</p>`),
+        new qList(`Differences between WCF and Web API?`,`
+        <p><b>WCF </b></p>
+        <ul><li>WCF is a framework used for buil/develop service oriented applications. </li><br>
+        <li>WCF can be consumed by clients which can understand XML. </li><br>
+        <li>WCF supports wide range of protocols like HTTP, TCP, Named Pipes and more.</li><br>
+        <li>For each method there has to be attributes like – “WebGet” and “WebInvoke”</li><br>
+        <li>For REST service we need to use attribute “WebInvoke”.</li></ul><br>
+        <b>Web API:</b><br>
+        <ul><li>Web API is a framework used to build/develop HTTP based services.</li><br>
+        <li>Web API is an open source platform.</li><br>
+        <li>It supports only HTTP protocol.</li><br>
+        <li>Web API can be hosted in IIS or in application.</li><br>
+        <li>his returns XML or JSON to client.</li></ul>`)
+
     ];
     public Linq=[
         
