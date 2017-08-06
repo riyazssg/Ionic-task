@@ -818,7 +818,84 @@ new qList(`What is a tuple?`, `
         new qList(``,`<p></p>`)
     ];
     public htmlCss=[
-        
+        new qList(`What is CSS ?`,`<p>The full form of CSS is Cascading Style Sheets. It is a styling language which is simple enough for HTML elements. It is popular in web designing, and its application is common in XHTML also.</p>`),
+        new qList(`What is the origin of CSS ?`,`<p>Standard Generalized Markup Language marked the beginning of style sheets in 1980s.</p>`),
+        new qList(`What are the limitations of CSS ?`,`<p>Limitations are:</p>
+        <ul><li>Ascending by selectors is not possible</li><br>
+        <li>Limitations of vertical control</li><br>
+        <li>No expressions</li><br>
+        <li>No column declaration</li><br>
+        <li>Pseudo-class not controlled by dynamic behavior</li><br>
+        <li>Rules, styles, targeting specific text not possible</li></ul>`),
+        new qList(`What are the advantages of CSS ?`,`<p>Advantages are:</p>
+        <ul><li>Bandwidth</li><br>
+        <li>Site-wide consistency</li><br>
+        <li>Page reformatting</li><br>
+        <li>Accessibility</li><br>
+        <li>Content separated from presentation</li></ul>`),
+        new qList(`What are CSS frameworks?`,`<p>It is a pre-planned libraries, which allows easier and more standards-compliant webpage styling, using CSS language.</p>`),
+        new qList(`How block elements can be centered with CSS1?`,`<p>Block level elements can be centered by:<br><br>The margin-left and margin-right properties can be set to some explicit value:</p>
+        <pre>BODY {
+ 
+                    width: 40em;
+                    
+                    background: fluorescent;
+                    
+                    }
+                    
+                    P {
+                    
+                    width: 30em;
+                    
+                    margin-right: auto;
+                    
+                    margin-left: auto
+                    
+                    }</pre>`),
+        new qList(`Who maintains the CSS specifications?`,`<p>World Wide Web Consortium maintains the CSS specifications.</p>`),
+        new qList(`In how many ways can a CSS be integrated as a web page?`,`<p>CSS can be integrated in three ways:</p>
+        <ul><li>Inline: Style attribute can be used to have CSS applied HTML elements.</li><br>
+        <li>Embedded: The Head element can have a Style element within which the code can be placed.</li><br>
+        <li>Linked/ Imported: CSS can be placed in an external file and linked via link element.</li></ul>`),
+        new qList(`What benefits and demerits do External Style Sheets have? `,`<p>Benefits:</p><ul><li>One file can be used to control multiple documents having different styles.</li><br>
+        <li>Multiple HTML elements can have many documents, which can have classes.</li><br>
+        <li>To group styles in composite situations, methods as selector and grouping are used.</li></ul>
+        <p>Demerits:</p><ul><li>Extra download is needed to import documents having style information.</li><br>
+        <li>To render the document, the external style sheet should be loaded.</li><br>
+        <li>Not practical for small style definitions.</li></ul>`),
+        new qList(`What does CSS selector mean?`,`<p>A string equivalent of HTML elements by which declarations or a set of it, is declared and is a link that can be referred for linking HTML and Style sheet is CSS selector.</p>`),
+        new qList(`Enlist the media types CSS allows? `,`<p>he design and customization of documents are rendered by media. By applying media control over the external style sheets, they can be retrieved and used by loading it from the network.</p>`),
+        new qList(`Differentiate Style Sheet concept from HTML?`,`<p>While HTML provides easy structure method, it lacks styling, unlike Style sheets. Moreover, style sheets have better browser capabilities and formatting options.</p>`),
+        new qList(`Describe ‘ruleset’?`,`<p>Ruleset : Selectors can be attached to other selectors to be identified by ruleset.<br><br>It has two parts:</p>
+        <ul><li>Selector, e.g. R and</li><br>
+        <li>declaration {text-indent: 11pt}</li></ul>`),
+        new qList(`omment on the Case-sensitivity of CSS ?`,`<p>Although, there are no case-sensitivity of CSS, nevertheless font families, URL’s of images, etc is. Only when XML declarations along with XHTML DOCTYPE are being used on the page, CSS is case -sensitive.</p>`),
+        new qList(`Enlist the various fonts’ attributes?`,`<p>They are:</p><ul><li>Font-style</li><br>
+        <li>Font-variant</li><br>
+        <li>Font-weight</li><br>
+        <li>Font-size/line-height</li><br>
+        <li>Font-family</li><br>
+        <li>Caption</li><br>
+        <li>Icon</li></ul>`),
+        new qList(`Why is it easy to insert a file by importing it?`,`<p>Importing enables combining external sheets to be inserted in many sheets. Different files and sheets can be used to have different functions. Syntax:</p>
+        <pre>@import notation, used with <Style> tag.</pre>`),
+        new qList(`Differentiate Class selector from ID selector?`,`<p>While an overall block is given to class selector, ID selector prefers only a single element differing   from other elements</p>`),
+        new qList(`How to overrule underlining Hyperlinks?`,`<p>Control statements and external style sheets are used to overrule underlining Hyperlinks.<br>Ex-</p>
+        <pre>B {
+ 
+                    text-decoration: none;
+                    
+                    }
+                    
+                    <B href="career.html" style="text-decoration: none">link text</B></pre>`),
+        new qList(`Define Image sprites with context to CSS ?`,`<p>When a set of images is collaborated into one image, it is known as ‘Image Sprites’. As the loading every image on a webpage consumes time, using image sprites lessens the time taken and gives information quickly.</p>
+        <p>CSS coding:</p><pre>img.add { width: 60px; height: 55px; background: url (image.god) 0 0; }</pre>`),
+        new qList(`Define property?`,`<p>A style, that helps in influencing CSS. E.g. FONT. They have corresponding values or properties within them, like FONT has different style like bold, italic etc.</p>`),
+        new qList(`Define Attribute Selector ?`,`<p>It is defined by a set of elements, value and its parts.</p>`),
+        new qList(`Are quotes mandatory in URL’s?`,`<p>Quotes are optional in URL’s, and it can be single or double.</p>`),
+        new qList(`Why is @import only at the top?`,`<p>@import is preferred only at the top, to avoid any overriding rules. Generally, ranking order is followed in most programming languages such as Java, Modula, etc. In C, the # is a prominent example of a @import being at the top.</p>`),
+        new qList(`Which among the following is more precedent: CSS properties or HTML procedures?`,`<p>CSS is more precedent over HTML procedures. Browsers, which do not have CSS support, display HTML attributes.</p>`),
+        new qList(`What is Inline style?`,`<p>The Inline style in a CSS is used to add up styling to individual HTML elements.</p>`)
     ];
     public javaScrips=[
         new qList(`What is JavaScript?`,`
@@ -1625,6 +1702,42 @@ app.config(['$routeProvider',
         
     ];
      public EF=[
+         new qList(`What is Entity Framework?`,`<p>ADO.NET entity is an ORM (object relational mapping) which creates a higher abstract object model over ADO.NET components. So rather than getting into dataset, datatables, command, and connection objects , you work on higher level domain objects like customers, suppliers, etc.</p>`),
+         new qList(`What are the benefits of using EF?`,`<p>The main and the only benefit of EF is it auto-generates code for the Model (middle layer), Data Access Layer, and mapping code, thus reducing a lot of development time.</p>`),
+         new qList(`What is the importance of EDMX file in Entity Framework?`,`<p>EDMX (Entity Data Model XML) is an XML file which contains all the mapping details of how your objects map with SQL tables. The EDMX file is further divided into three sections: CSDL, SSDL, and MSL.</p> <img src="/assets/Images/a3.jpg"></img>`),
+         new qList(`What are T4 templates?`,`<p>T4 (Text Template Transformation Toolkit) is a template based code generation engine. You can go and write C# code in T4 templates (.tt is the extension) files and those C# codes execute to generate the file as per the written C# logic.</p><pre><#@ template language=""C#"" #>
+      Hello <# Write("World!") #> 
+     </pre><br><b>Will generate the following C# output:</b><br><pre>Hello
+      World !
+      </pre>`),
+      new qList(`How can we read records using Entity Framework classes?`,`<p>In order to browse through records you can create the object of the context class and inside the context class you will get the records.
+    For instance, in the below code snippet we are looping through a customer object collection. This customer collection is the output given by the context class CustomermytextEntities.
+     </p><pre>CustomermytestEntities obj = new CustomermytestEntities();
+    foreach (Customer objCust in obj.Customers)
+    {}
+    </pre>`),
+    new qList(`People say Entity Framework runs slow`,`<p>By default EF has lazy loading behavior. Due to this default behavior if you are loading a large number of records and especially if they have foreign key relationships, you can have performance issues. So you need to be cautious if you really need lazy loading behavior for all scenarios. For better performance, disable lazy loading when you are loading a large number of records or use stored procedures.</p>`),
+    new qList(`Can you explain lazy loading in a detailed manner?`,`<p>Lazy loading is a concept where we load objects on demand rather than loading everything in one go. Consider a situation where you have 1 to many relationships between the Customer and Address objects. Now let’s say you are browsing the customer data but you do not want address data to be loaded at that moment. But the time you start accessing the address object you would like to load address data from the database.</p>
+    <pre>MyEntities context = new MyEntities();
+
+var Customers = context.Customers.ToList();
+
+foreach (Customercust in Customers) // In this line no address object loaded
+{
+     foreach(Address add in cust.Addresses){}// Address object is loaded here
+}
+   </pre>`),
+   new qList(`What is Code First approach in Entity Framework?`,`<p>In Code First approach we avoid working with the Visual Designer of Entity Framework. In other words the EDMX file is excluded from the solution. So you now have complete control over the context class as well as the entity classes.</p>`),
+   new qList(`How can we do pessimistic locking in Entity Framework?`,`<p>We cannot do pessimistic locking using Entity Framework. You can invoke a stored procedure from Entity Framework and do pessimistic locking by setting the isolation level in the stored procedure. But directly, Entity Framework does not support pessimistic locking.</p>`),
+   new qList(`What are complex types in Entity Framework?`,`<p>There can be situations where you have common properties across entities. For example, consider the below figure where we have Customer and Supplier entities. They have three fields in common: Address1, Address2, and PhoneNo. These fields have been duplicated both in the Customer and Supplier entities.</p>
+  <p>So to remove these duplicate and redundant fields, we can move them to a common complex type called Address. Complex types group common fields so that they can be reused across entities.<img src="/assets/Images/a11.jpg"></img></p>`),
+   new qList(`What’s the difference between LINQ to SQL and Entity Framework?`,`<ul><li>LINQ to SQL is good for rapid development with SQL Server. EF is for enterprise scenarios and works with SQL Server as well as other databases</li>
+   <li>LINQ maps directly to tables. One LINQ entity class maps to one table. EF has a conceptual model and that conceptual model maps to the storage model via mappings. So one EF class can map to multiple tables, or one table can map to multiple classes.</li>
+   <li>LINQ is more targeted towards rapid development while EF is for enterprise level where the need is to develop a loosely coupled framework.</li></ul>`),
+   new qList(`In POCO classes do we need EDMX files?`,`<p>Yes, you will still need EDMX files because the context object reads the EDMX files to do the mapping.</p>`),
+   new qList(`How can we turn off lazy loading?`,`<p>The opposite of lazy loading is eager loading. In eager loading we load the objects beforehand. So the first thing is we need to disable lazy loading by setting <b>LazyLoadingEnabled to false.<b> </p>
+   <pre>context.ContextOptions.LazyLoadingEnabled = false;</pre><br><p>Now we have to explicitly tell EF what objects we want to load by using the include function. Below is a simple sample code where we tell EF to load customer as well as address objects by using the include function.</p>
+   <p>Now the customer object and the related address objects will be loaded in one query rather than multiple queries.</p><pre>var employees = context.Customers.Include("Addresses").Take(5);</pre>`)
         
     ];
      public practical=[
