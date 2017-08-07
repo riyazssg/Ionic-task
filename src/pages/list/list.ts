@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { NavController, NavParams, LoadingController } from 'ionic-angular';
 import {Questions} from '../shared/data';
 import { AnsDetailsPage} from '../ans-details/ans-details'
+import { HomePage} from '../home/home';
+
 @Component({
   selector: 'page-list',
   templateUrl: 'list.html'
@@ -17,12 +19,39 @@ export class ListPage {
    public loadingController:LoadingController) {   
   
   }
-  
+  goToHome(){
+this.navCtrl.setRoot(HomePage);
+  }
+  Tempitems:any;
+items:any;
+ getItems(ev) {
+     // set val to the value of the ev target
+    var val = ev.target.value;
+
+    // rest the filtered value
+    this.Tempitems=this.questionList;
+    
+    let filteredTeams = [];
+
+// searching condition  based on qustions 
+  if (val && val.trim() != '') {
+      this.items = this.Tempitems.filter((item) => {
+        
+        if(item.qus.toLowerCase().indexOf(val.toLowerCase()) > -1){
+          filteredTeams.push(item);
+        }
+      })
+      this.Tempitems=filteredTeams;
+    }
+
+  }
+
+
 ionViewDidLoad(){ 
-  //this.r="<h1>Program 4: Factorial series in c</h1><pre class='prettyprint linenums'><ol class='linenums'><li class='L0'><span class='com'>#include</span><span class='str'>&lt;stdio.h&gt;</span></li><li class='L1'><span class='kwd'>int</span><span class='pln'> main</span><span class='pun'>(){</span></li><li class='L2'><span class='pln'>  </span><span class='kwd'>long</span><span class='pln'> f</span><span class='pun'>=</span><span class='lit'>1</span><span class='pun'>;</span></li><li class='L3'><span class='pln'>  </span><span class='kwd'>int</span><span class='pln'> i</span><span class='pun'>,</span><span class='pln'>num</span><span class='pun'>,</span><span class='pln'>min</span><span class='pun'>,</span><span class='pln'>max</span><span class='pun'>;</span></li><li class='L4'><span class='pln'>&nbsp;</span></li><li class='L5'><span class='pln'>  printf</span><span class='pun'>(</span><span class='str'>'Enter the minimum range: '</span><span class='pun'>);</span></li><li class='L6'><span class='pln'>  scanf</span><span class='pun'>(</span><span class='str'>'%d'</span><span class='pun'>,&amp;</span><span class='pln'>min</span><span class='pun'>);</span></li><li class='L7'><span class='pln'>&nbsp;</span></li><li class='L8'><span class='pln'>  printf</span><span class='pun'>(</span><span class='str'>'Enter the maximum range: '</span><span class='pun'>);</span></li><li class='L9'><span class='pln'>  scanf</span><span class='pun'>(</span><span class='str'>'%d'</span><span class='pun'>,&amp;</span><span class='pln'>max</span><span class='pun'>);</span></li><li class='L0'><span class='pln'>&nbsp;</span></li><li class='L1'><span class='pln'>  printf</span><span class='pun'>(</span><span class='str'>'Factorial series in given range: '</span><span class='pun'>);</span></li><li class='L2'><span class='pln'>  </span><span class='kwd'>for</span><span class='pun'>(</span><span class='pln'>num</span><span class='pun'>=</span><span class='pln'>min</span><span class='pun'>;</span><span class='pln'>num</span><span class='pun'>&lt;=</span><span class='pln'>max</span><span class='pun'>;</span><span class='pln'>num</span><span class='pun'>++){</span></li><li class='L3'><span class='pln'>    f</span><span class='pun'>=</span><span class='lit'>1</span><span class='pun'>;</span></li><li class='L4'><span class='pln'>&nbsp;</span></li><li class='L5'><span class='pln'>    </span><span class='kwd'>for</span><span class='pun'>(</span><span class='pln'>i</span><span class='pun'>=</span><span class='lit'>1</span><span class='pun'>;</span><span class='pln'>i</span><span class='pun'>&lt;=</span><span class='pln'>num</span><span class='pun'>;</span><span class='pln'>i</span><span class='pun'>++)</span></li><li class='L6'><span class='pln'>      f</span><span class='pun'>=</span><span class='pln'>f</span><span class='pun'>*</span><span class='pln'>i</span><span class='pun'>;</span></li><li class='L7'><span class='pln'>&nbsp;</span></li><li class='L8'><span class='pln'>    printf</span><span class='pun'>(</span><span class='str'>'%ld '</span><span class='pun'>,</span><span class='pln'>f</span><span class='pun'>);</span></li><li class='L9'><span class='pln'>  </span><span class='pun'>}</span></li><li class='L0'><span class='pln'>&nbsp;</span></li><li class='L1'><span class='pln'>  </span><span class='kwd'>return</span><span class='pln'> </span><span class='lit'>0</span><span class='pun'>;</span></li><li class='L2'><span class='pun'>}</span></li></ol></pre>";
+  
     console.log(this.navParams.data);
    this.selectedItem = this.navParams.data;
-   //this.navParams.data;
+ 
   this.apiKey=this.selectedItem.apiKey;
 
     if(this.apiKey==="cProgramming") 
@@ -78,6 +107,9 @@ ionViewDidLoad(){
 
        else if(this.apiKey==="practical") 
        this.questionList=this.questions.practical;
+
+
+       this.Tempitems=this.questionList;
 console.log(this.questionList);
 //   let loader = this.loadingController.create({
 //       content: `Getting Questions...`
