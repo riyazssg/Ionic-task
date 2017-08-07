@@ -2151,18 +2151,169 @@ There are four different ways for returning/rendering a view in ASP.NET MVC as g
 
     ];
     public Linq=[
-        new qList(`Explain what is LINQ? Why is it required?`,`<p>Language Integrated Query or LINQ is the collection of standard query operators which provides query facilities into.NET framework language like C#, VB.NET.
-        <br>LINQ is required as it bridges the gap between the world of data and world of objects.</p>`),
-        new qList(`Explain how LINQ is useful than Stored Procedures?`,`<ul><li><b>Debugging</b>-It is difficult to debug a stored procedure but as LINQ is part of.NET, visual studios debugger can be used to debug the queries</li><br>
-        <li><b>Deployment</b>-For stored procedure, additional script should be provided but with LINQ everything gets compiled into single DLL hence deployment becomes easy</li><br>
-        <li><b>Type Safety</b>-LINQ is type safe, so queries errors are type checked at compile time</li></ul>`),
-        new qList(`List out the three main components of LINQ? Explain what is the extension of the file, when LINQ to SQL is used?`,`<p>Three main components of LINQ are</p>
-        <ul><li>Standard Query Operators</li><br>
-        <li>Language Extensions</li><br>
-        <li>LINQ Providers</li></ul>`),
-        new qList(`Explain what is lambda expressions in LINQ?`,`<p>Lambda expression is referred as a unique function use to form delegates or expression tree types, where right side is the output and left side is the input to the method. For writing LINQ queries particularly, Lambda expression is used.</p>`),
+        new qList(`What is LINQ and why to use it?`,`<p>LINQ stands for "Language Integrated Query" and pronounced as "LINK". LINQ was introduced with .NET Framework 3.5 including Visual Studio 2008, C# 3.0 and VB.NET 2008 (VB 9.0). It enables you to query the data from the various data sources like SQL databases, XML documents, ADO.NET Datasets, Web services and any other objects such as Collections, Generics etc. 
+        by using a SQL Query like syntax with .NET framework languages like C# and VB.NET.</p><p>LINQ has full type checking at compile-time and IntelliSense support in Visual Studio, since it used the .NET framework languages like C# and VB.NET. This powerful feature helps you to avoid run-time errors.
+        </p><p>LINQ also provides a uniform programming model (i.e. common query syntax) to query various data sources. Hence you don’t need to learn the different ways to query different data sources.</p>`),
+        new qList(`What are advantages & disadvantages of LINQ?`,`<b>There are following advantages of using LINQ:</b>
+
+<ul>
+<li>It provides a uniform programming model (i.e. common query syntax) to query data sources (like SQL databases, XML documents, ADO.NET Datasets, Various Web services and any other objects such as Collections, Generics etc.)</li>
+<li>It has full type checking at compile-time and IntelliSense support in Visual Studio. This powerful feature helps you to avoid run-time errors.</li>
+<li>It supports various powerful features like filtering, ordering and grouping with minimum code.</li>
+<li>Its Query can be reused.</li>
+<li>It also allows debugging through .NET debugger.</li>
+</ul>
+
+<b>There are following disadvantages of using LINQ:</b>
+
+<ul>
+<li>LINQ is not good to write complex queries like SQL.</li>
+<li>LINQ doesn’t take the full advantage of SQL features like cached execution plan for stored procedure.</li>
+<li>Performance is degraded if you don't write the LINQ query correctly.</li>
+<li>If you have done some changes in your query, you have to recompile it and redeploy its dll to the server.</li>
+</ul>`),
+new qList(`What are different methods to write LINQ Query?`,`<p>
+Data Annotations help us to define the rules to the model classes or properties for data validation and displaying suitable messages to end users.
+</p>
+<b>1. Query Expression (Query Syntax)</b>
+
+<p>Query expression syntax is like as SQL query syntax with just a few minor deviations. The result of a query expression is a query object, which is usually a collection of type IEnumerable<T> or IQueryable<T>. This syntax is easy to read and write and at compile time, query expression is converted into Method Invocation.</p>
+<b>Query Expression Syntax:</b>
+<pre>
+List&ltint> numbers = new List&ltint>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+// Query based syntax
+IEnumerable&ltint> query =
+from num in numbers
+where num &gt 5 && num&lt 10
+select num; //result: 6,7,8,9
+</pre>
+<b>2. Method Invocation (Method Syntax)</b>
+<p>
+Method syntax is complex as compared to Query expression since it uses lambda expression to write LINQ query. It is easily understood by .NET CLR. Hence at compile time, Query expression is converted into Method Invocation. The result of a Method syntax is also a query object, which is usually a collection of type IEnumerable<T> or IQueryable<T>.
+
+</p>
+<b>Method Invocation Example:</b>
+<pre>
+// Datasource
+List&ltint> numbers = new List&ltint>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+// Method based syntax
+IEnumerable&ltint> query = numbers.Where(num => num > 5 && num < 10);
+//result: 6,7,8,9
+</pre>
+<b>3. Mixed Syntax</b>
+<p>You can use a mixture of both syntax by enclosing a query expression inside parentheses and make a call to method.</p>
+<pre>
+// Datasource
+List&ltint> numbers = new List&ltint>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+// Mixed syntax
+int query = (from num in numbers
+where num > 5 && num < 10
+select num).Count();
+//result: 4
+Note: There are no semantic differences (in terms of performance, execution) between Query Syntax and Method Syntax.
+</pre>`),
+new qList(`What is difference between IEnumerable and IQueryable?`,`<p>There are following differences between ADO.NET and Entity Framework:</p>
+<table border="1">
+<tr>
+<th>IEnumerable</th>
+<th>IQueryable</th>
+</tr>
+<tr>
+<td><p>Exists in System.Collections Namespace</p></td>
+<td><p>Exists in System.Linq Namespace</p></td>
+</tr>
+<tr>
+
+<tr>
+<td><p>Best to query data from in-memory collections like List, Array etc.</p></td>
+<td><p>Best to query data from out-memory (like remote database, service) collections.</p>
+</tr>
+</table>`) ,
+new qList(`What is difference between ADO.NET and LINQ to SQL?`,`<p>There are following differences between ADO.NET and Entity Framework:</p>
+<table border="1">
+<tr>
+<th>ADO.NET</th>
+<th>LINQ to SQL</th>
+</tr>
+<tr>
+<td><p>It is a part of .NET Framework since .NET Framework 1.0</p></td>
+<td><p>It is a part of .NET Framework since .NET Framework 3.5</p></td>
+</tr>
+<tr>
+
+<tr>
+<td><p>SqlConnection/OleDbConnection is used for database connectivity.</p></td>
+<td><p>We can use context for database connectivity.</p>
+</tr>
+<tr>
+<td><p>Difficult to debug and cause syntax errors at run-time.</p></td>
+<td><p>Easy to debug and cause syntax errors at compile-time.</p>
+</tr>
+<tr>
+<td><p>It has full type checking at run-time and no IntelliSense support in Visual Studio, since it used the T-SQL to query the database.</p></td>
+<td><p>It has full type checking at compile-time and IntelliSense support in Visual Studio, since it used the .NET Framework languages like C# and VB.</p>
+</tr>
+<tr>
+<td><p>It used T-SQL to query the data to query the database and some other syntax for querying the other data source.</p></td>
+<td><p>It used LINQ to query the data which provides the uniform programming model (means common query syntax) to query the various data sources.</p>
+</tr>
+
+</table>`),
+new qList(`What is difference between LINQ and Stored Procedures?`, `<p>There are the following differences between LINQ and Stored Procedures.</p>
+
+<ul>
+<li>Stored procedures are faster as compared to LINQ query since they have a predictable execution plan and can take the full advantage of SQL features. Hence, when a stored procedure is being executed next time, the database used the cached execution plan to execute that stored procedure.</li>
+<li>LINQ has full type checking at compile-time and IntelliSense support in Visual Studio as compared to stored procedure. This powerful feature helps you to avoid run-time errors.</li>
+<li>LINQ allows debugging through .NET debugger as compared to stored procedure.</li>
+<li>LINQ also supports various .NET framework features like multi –threading as compared to stored procedures.</li>
+<li>LINQ provides the uniform programming model (means common query syntax) to query the multiple databases while you need to re-write the stored procedure for different databases.</li>
+<li>Stored procedure is a best way for writing complex queries as compared to LINQ.</li>
+<li>Deploying LINQ based application is much easy and simple as compared to stored procedures based. Since in case of stored procedures, you need to provide a SQL script for deployment but in case of LINQ everything gets complied into the DLLs. Hence you need to deploy only DLLs.</li>
+
+</ul>`),
+        
+        new qList(`Explain what is lambda expressions in LINQ?`,`<p>
+The concept of lambda expression was introduced in C# 3.0. Typically, lambda expression is a more concise syntax of anonymous method. It is just a new way to write anonymous method. At compile time all the lambda expressions are converted into anonymous methods according to lambda expression conversion rules. The left side of the lambda operator "=>" represents the arguments of anonymous method and the right side represents the method body.
+</p>
+<b>Lambda expression Syntax</b>
+
+<p>(Input-parameters) => expression-or-statement-block</p>
+<b>Types of Lambda expression</b>
+
+<p>
+<b>1. Statement Lambda -</b> Statement lambda has a statement block on the right side of the lambda operator "=>". <pre>x => { return x * x; };</pre>
+</p>
+
+<p>
+<b>2. Expression Lambda -</b> Expression lambda has only an expression (no return statement or curly braces), on the right side of the lambda operator "=>".
+x => x * x; // here x*x is expression Like - del d2 = (x, y) => { return x * y; };
+</p>`),
+new qList(`What is difference among Single, SingleOrDefault, First and FirstOrDefault?`,`<p>
+<b>Single -</b> It returns a single specific element from a collection of elements if element match found. An exception is thrown, if none or more than one match found for that element in the collection.
+</p>
+
+<p>
+<b>SingleOrDefault - </b>It returns a single specific element from a collection of elements if element match found. An exception is thrown, if more than one match found for that element in the collection. A default value is returned, if no match is found for that element in the collection.
+</p>
+
+<p>
+<b>First -</b> It returns first specific element from a collection of elements if one or more than one match found for that element. An exception is thrown, if no match is found for that element in the collection.
+</p>
+
+<p>
+<b>FirstOrDefault -</b> It returns first specific element from a collection of elements if one or more than one match found for that element. A default value is returned, if no match is found for that element in the collection.
+</p>`),
+new qList(`Which one is fast between SingleOrDefault and FirstOrDefault?`, `<p>FirstOrDefault usually perform faster as compared SingleOrDefault, since these iterate the collection until they find the first match. While SingleOrDefault iterate the whole collection to find one single match.</p>`),
+new qList(`What are advantages of using LINQ on DataSet?`, `<p>LINQ to DataSet is useful to run strongly typed queries on multiple datasets. SQL query is able to populate the dataset from the database but not able to retrieve a particular value from the dataset. LINQ is the best way to do further data manipulation operations (like searching, filtering, sorting) on Dataset in an efficient way.</p>`),
         new qList(`Explain how LINQ with databases can be used?`,`<p>LINQ supports XML, SQL, Dataset and Objects. Through LINQ to objects or LINQ to Datasets one can use LINQ with other databases.<br><br> The objects and datasets take care of database particular operations, and LINQ only needs to deal with those objects and not the database operations directly</p>`),
-        new qList(`Mention what is the role of DataContext classes in LINQ?`,`<p>DataContext class acts as a bridge between SQL Server database and the LINQ to SQL. For accessing the database and also for changing the data in the database, it contains connections string and the functions.</p>`),
+        new qList(`Mention what is the role of DataContext classes in LINQ?`,`<p>Data context class is a LINQ to SQL class that acts as a medium between a SQL server database and LINQ to SQL entities classes mapped to that database. It has following responsibilities:</p>
+
+<ul>
+<li>Contains the connection string information, methods to connect to the database and manipulating the data in the database.</li>
+<li>Contains several methods that send updated data from LINQ to SQL entity classes to the database.</li>
+<li>Methods can also be mapped to stored procedures and functions.</li>
+<li>With data context, we can perform select, insert, update and delete operations over the data in the database.</li>
+</ul>`),
         new qList(`Explain what are LINQ query expressions?`,`<p>Query expression is nothing but an LINQ query. It is a combination of query clauses that identifies the data sources for a query. It contains information for sorting, filtering, grouping or joining to apply to the source data. It determines what information should be retrieved from the data source.CV.</p>`),
         new qList(`Explain what are compiled queries?`,`<p>In compiled LINQ queries, the plan is cached in a static class and static class is a global cache. Rather than preparing the query plan from scratch, LINQ prepares plan using stating class object.</p>`),
         new qList(`Explain how standard query operators useful in LINQ?`,`<p>Standard Query Operators useful in LINQ are:-</p>
@@ -2187,9 +2338,9 @@ There are four different ways for returning/rendering a view in ASP.NET MVC as g
         <p>Extension method on “IEnumerable” is.AsEnumerable. AsEnumerable simply returns the source sequence as an object of type IEnumerable <T>.</p>`),
         new qList(`What is the difference between First() and FirstOrDefault() selector methods in LINQ?`,`<p>First() always expects at least one element in result set, if there isn't any element is result, then First() returns an exception. While FirstOrDefault() is fine with a result set having 0 elements, it does not throw any exception</p>`),
         new qList(`What are the benefits of LINQ on dataset?`,`<p>Quick turn around for development Queries can be dynamically Tables are automatically created into class Columns are automatically created into properties Relationship are automatically appeaded to classes Lambda expressions are awesome Data is easy to setup and use.</p>`),
-        new qList(`What are the advantages of LINQ over stored procedure?`,`<p>Debugging – LINQ supports .Net debugger, so we can easily debug a LINQ query using .NET debugger but it is not supported by SQL stored procedure so it is hard to debug the stored procedure</p>
-        <p>Deployment – To deploy stored procedure it is necessary to write one more script to run them, while LINQ will complie by a single DLL statement and so the deployment will be simple. </p>
-        <p>Type Safety - As LINQ supports type safety so errors can be type checked in LINQ queries in compile time. It is better to use LINQ as it enable us to identify the errors while compilation rather than runtime execution.</p>`)
+        new qList(`What are the advantages of LINQ over stored procedure?`,`<p><b>Debugging –</b> LINQ supports .Net debugger, so we can easily debug a LINQ query using .NET debugger but it is not supported by SQL stored procedure so it is hard to debug the stored procedure</p>
+        <p><b>Deployment –</b> To deploy stored procedure it is necessary to write one more script to run them, while LINQ will complie by a single DLL statement and so the deployment will be simple. </p>
+        <p><b>Type Safety -</b> As LINQ supports type safety so errors can be type checked in LINQ queries in compile time. It is better to use LINQ as it enable us to identify the errors while compilation rather than runtime execution.</p>`)
     ];
      public SqlQueries=[
         
