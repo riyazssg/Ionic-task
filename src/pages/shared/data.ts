@@ -1542,41 +1542,540 @@ app.config(['$routeProvider',
 
     ];
     public aspDotNetMVC=[
-        new qList(`What is Model-View-Controller?`,`
-        <p>MVC is a software architecture pattern for developing web application. It is handled by three objects Model-View-Controller.</p>`),
-        new qList(`What does Model-View-Controller represent in an MVC application?`,`
-        <p>In an MVC model,</p> <ul><li><b>Model–</b>It represents the application data domain. In other words applications business logic is contained within the model and is responsible for maintaining data</li></br>
+        new qList(`What is MVC?`,`
+        <p>MVC stands for Model-View-Controller. It is a software design pattern which was introduced in 1970s. Also, MVC pattern forces a separation of concerns, it means domain model and controller logic are decoupled from user interface (view).
+         As a result maintenance and testing of the application become simpler and easier.</p><img src="/assets/Images/mvc-architecture.jpg">`),
+        new qList(`Explain MVC design pattern? Or What does Model-View-Controller represent in an MVC application?`,`
+        <p>MVC design pattern splits an application into three main aspects: Model, View and Controller,</p> <ul><li><b>Model–</b>It represents the application data domain. In other words applications business logic is contained within the model and is responsible for maintaining data</li></br>
         <li><b>View–</b>It represents the user interface, with which the end users communicates. In short all the user interface logic is contained within the VIEW</li></br>
-        <li><b>Controller–</b>It is the controller that answers to user actions. Based on the user actions, the respective controller responds within the model and choose a view to render that display the user interface.  The user input logic is contained with-in the controller</li></ul>`),
-        new qList(`List out few different return types of a controller action method?`,`
-        <ul><li>View Result</li><li>Javascript Result</li><li>Redirect Result</li><li>JSON Result</li><li>Content Result</li></ul>`),
-        new qList(`What is the difference between adding routes, to a webform application and an MVC application?`,`
-        <p>To add routes to a webform application, we can use MapPageRoute() method of the RouteCollection class, where adding routes to an MVC application, you can use MapRoute() method. <br><br>
-        <img src="assets/Images/mvc-architecture.png"></p>`),
-        new qList(`What is the advantages of MVC?`,`<ul><li>MVC segregates your project into a different segment, and it becomes easy for developers to work on</li>
-        <li>It is easy to edit or change some part of your project that makes project less development and maintenance cost</li>
-        <li></li>MVC makes your project more systematic</ul>`),
-        new qList(`What “beforFilter()”,“beforeRender” and “afterFilter” functions do in Controller?`,`
-        <ul><li><b>beforeFilter(): </b>This function is run before every action in the controller. It’s the right place to check for an active session or inspect user permissions.</li>
-        <li><b>beforeRender():  </b>This function is called after controller action logic, but before the view is rendered. This function is not often used, but may be required If you are calling render() manually before the end of a given action</li>
-        <li><b>afterFilter(): </b>This function is called after every controller action, and after rendering is done. It is the last controller method to run</li></ul>`),
-        new qList(`Explain what is routing? What are the three segments for routing is important?`,`
-        <p>Routing helps you to decide a URL structure and map the URL with the Controller.</p><br>
+        <li><b>Controller–</b>It is the controller that answers to user actions. Based on the user actions, the respective controller
+         responds within the model and choose a view to render that display the user interface.  The user input logic is contained with-in the 
+         controller</li></ul><img src="/assets/Images/mvcDesignPattern.JPG">`),
+         new qList(`What is MVVM pattern?`, `<p>
+MVVM stands for Model-View-View Model. This pattern supports two-way data binding between view and View model. This enables automatic propagation of changes, 
+within the state of view model to the View. Typically, the view model uses the observer pattern to notify changes in the view model to model.
+</p>
+<p>
+<b>Model -</b> The Model represents a set of classes that describes the business logic and data. It also defines business rules for data means how the data can be changed and manipulated.
+</p>
+<p>
+<b>View -</b> The View represents the UI components like CSS, jQuery, html etc. It is only responsible for displaying the data that is received from the controller as the result. This also transforms the model(s) into UI.
+</p>
+<p>
+<b>View Model - </b>The View Model is responsible for exposing methods, commands, and other properties that helps to maintain the state of the view, manipulate the model as the result of actions on the view, and trigger events in the view itself.
+</p><img src="/assets/Images/mvvm.JPG">`),        
+        new qList(`What is the advantages of MVC over Webform?`,`<p>
+There are following advantages of ASP.NET MVC over Web Forms (ASP.NET):
+</p>
+<p>
+<b>Separation of concern -</b> MVC design pattern divides the ASP.NET MVC application into three main aspects Model, View and Controller which make it easier to manage the application complexity.
+</p>
+<p>
+<b>TDD -</b> The MVC framework brings better support to test-driven development.
+</p>
+<p>
+<b>Extensible and pluggable -</b>MVC framework components were designed to be pluggable and extensible and therefore can be replaced or customized easier then Web Forms.
+</p>
+<p>
+<b>Full control over application behaviour - </b>MVC framework doesn’t use View State or server based forms like Web Forms. This gives the application developer more control over the behaviors of the application and also reduces the bandwidth of requests to the server.
+</p>
+<p>
+<b>ASP.NET features are supported-</b>MVC framework is built on top of ASP.NET and therefore can use most of the features that ASP.NET include such as the providers architecture, authentication and authorization scenarios, membership and roles, caching, session and more.
+</p>
+<p>
+<b>URL routing mechanism -</b>MVC framework supports a powerful URL routing mechanism that helps to build a more comprehensible and searchable URLs in your application. This mechanism helps to the application to be more addressable from the eyes of search engines and clients and can help in search engine optimization.
+</p>`),
+new qList(`What is difference between 3-layer architecture and MVC architecture?`,`<p>
+3-layer architecture separates the application into 3 components which consists of Presentation Layer Business Layer and Data Access Layer. In 3-layer architecture, user interacts with the Presentation layer. 3-layer is a linear architecture.
+</p>
+<img src="/assets/Images/3tierarchi.JPG">
+<p>
+MVC architecture separates the application into three components which consists of Model, View and Controller. In MVC architecture, user interacts with the controller with the help of view. MVC is a triangle architecture.
+</p>
+<img src="/assets/Images/mvcDesignPattern.JPG">
+<p>
+MVC does not replace 3-layer architecture. Typically 3-layer and MVC are used together and MVC acts as the Presentation layer.
+</p>`),
+new qList(`What is difference between ASP.NET WebForm and ASP.NET MVC?`, `<p>
+The main differences between ASP.NET Web Form and ASP.NET MVC are given below:
+</p>
+<table border="1" style="padding:10px;">
+<tr>
+<th>ASP.NET Web Forms</th>
+<th>ASP.NET MVC</th>
+</tr>
+<tr>
+<td>ASP.NET Web Form follows a traditional event driven development model.</td>
+<td>ASP.NET MVC is a lightweight and follow MVC (Model, View, and Controller) pattern based development model.</td>
+</tr>
+<tr>
+<td>ASP.NET Web Form has server controls.</td>
+<td>ASP.NET MVC has html helpers.</td>
+</tr>
+<tr>
+<td>ASP.NET Web Form has state management (like as view state, session) techniques.</td>
+<td>ASP.NET MVC has no automatic state management techniques.</td>
+</tr>
+<tr>
+<td>ASP.NET Web Form has file-based URLs means file name exist in the URLs must have its physically existence.</td>
+<td>ASP.NET MVC has route-based URLs means URLs are divided into controllers and actions and moreover it is based on controller not on physical file.</td>
+</tr>
+<tr>
+<td>ASP.NET Web Form follows WebForm Syntax</td>
+<td>ASP.NET MVC follow customizable syntax (Razor as default)</td>
+</tr>
+<tr>
+<td>In ASP.NET Web Form, Web Forms (ASPX) i.e. views are tightly coupled to Code behind (ASPX.CS) i.e. logic.</td>
+<td>In ASP.NET MVC, Views and logic are kept separately.</td>
+</tr>
+<tr>
+<td>ASP.NET Web Form has Master Pages for consistent look and feels.</td>
+<td>ASP.NET MVC has Layouts for consistent look and feels.</td>
+</tr>
+<tr>
+<td>ASP.NET Web Form has User Controls for code re-usability.</td>
+<td>ASP.NET MVC has Partial Views for code re-usability.</td>
+</tr>
+<tr>
+<td>ASP.NET Web Form has built-in data controls and best for rapid development with powerful data access.</td>
+<td>ASP.NET MVC is lightweight, provide full control over mark-up and support many features that allow fast & agile development. Hence it is best for developing interactive web application with latest web standards.</td>
+</tr>
+<tr>
+<td>ASP.NET Web Form is not Open Source.</td>
+<td>ASP.NET Web MVC is an Open Source.</td>
+</tr>
+</table>`),
+        new qList(`What is ViewModel in ASP.NET MVC?`,`<p>
+In ASP.NET MVC, ViewModel is a class that contains the fields which are represented in the strongly-typed view. It is used to pass data from controller to strongly-typed view.
+</p>
+<b>Key Points about ViewModel</b>
+<ul>
+<li>ViewModel contain fields that are represented in the view (for LabelFor, EditorFor, DisplayFor helpers)</li>
+<li>ViewModel can have specific validation rules using data annotations.</li>
+<li>ViewModel can have multiple entities or objects from different data models or data source.</li>
+</ul>`),
+        new qList(`What is Routing in ASP.NET MVC?`,`
+        <p>Routing is a pattern matching system that monitor the incoming request and figure out what to do with that request. At runtime, Routing engine use the Route table for matching the incoming request's URL pattern against the URL patterns defined in the Route table. 
+        You can register one or more URL patterns to the Route table at Application_Start event.</p><br>
         <p>The three segments that are important for routing is</p>
         <ul><li>ControllerName</li>
         <li>ActionMethodName</li>
-        <li>Parameter</li></ul>`),
-        new qList(`Explain how routing is done in MVC pattern?`,`
-        <p>There is a group of routes called the RouteCollection, which consists of registered routes in the application.  
-        The RegisterRoutes method records the routes in this collection.  A route defines a URL pattern and a handler to use if the request matches the pattern. The first parameter to the MapRoute method is the name of the route. The second parameter will be the pattern to which the URL matches.  
-        The third parameter might be the default values for the placeholders if they are not determined.</p>`),
-        new qList(`What is the difference between Temp data, View, and View Bag?`,`
-        <ul><li>Temp data: It helps to maintain data when you shift from one controller to other controller.</li>
-        <li>View data: It helps to maintain data when you move from controller to view</li>
-        <li>View Bag: It’s a dynamic wrapper around view data</li></ul>`),
+        <li>Parameter</li></ul><img src="/assets/Images/routing.JPG">`),
+        new qList(`What is difference between Routing and URL Rewriting?`, `<p>
+Many developers compare routing to URL rewriting since both look similar and can be used to make SEO friendly URLs. But both the approaches are very much different. The main difference between routing and url rewriting is given below:
+</p>
+<ul>
+<li>URL rewriting is focused on mapping one URL (new url) to another URL (old url) while routing is focused on mapping a URL to a resource.</li>
+<li>URL rewriting rewrites your old url to new one while routing never rewrite your old url to new one but it map to the original route.</li>
+
+</ul>`),
+new qList(`What are important namespaces in ASP.NET MVC?`, `<p>
+There are some important namespaces as given below:
+</p>
+
+<p>
+<b>System.Web.Mvc -</b>This namespace contains classes and interfaces that support the MVC pattern for ASP.NET Web applications. This namespace includes classes that represent controllers, controller factories, action results, views, partial views, and model binders.
+</p>
+<p>
+<b>System.Web.Mvc.Ajax - </b>This namespace contains classes that supports Ajax scripting in an ASP.NET MVC application. The namespace includes support for Ajax scripts and Ajax option settings as well.
+</p>
+<p>
+<b>System.Web.Mvc.Html –</b>This namespace contains classes that help render HTML controls in an MVC application. This namespace includes classes that support forms, input controls, links, partial views, and validation.
+</p>`),
+new qList(`What is View Engine?`, `<p>A View Engine is a MVC subsystem which has its own markup syntax. It is responsible for converting server-side template into HTML markup and rendering it to the browser. Initially, ASP.NET MVC ships with one view engine, web forms (ASPX) and from ASP.NET MVC3 a new view engine, Razor is introduced. With ASP.NET MVC, you can also use other view engines like Spark, NHaml etc.</p>`),
+new qList(`What is Razor View Engine?`, `<p>Razor Engine is an advanced view engine that was introduced with MVC3. This is not a new language but it is a new markup syntax. Razor has new and advance syntax that are compact, expressive and reduces typing. Razor syntax are easy to learn and much clean than Web Form syntax. Razor uses @ symbol to write markup as:</p><pre>@Html.ActionLink("SignUp", "SignUp")</pre>`),
+new qList(`What is difference between Razor and WebForm engine?`, `<p>
+The main differences between ASP.NET Web Form and ASP.NET MVC are given below:
+</p>
+
+<table border="1">
+<tr>
+<th>Razor View Engine</th>
+<th>Webform View Engine</th>
+</tr>
+<tr>
+<td><p text-wrap>Razor Engine is an advanced view engine that was introduced with MVC3. This is not a new language but it is a new markup syntax.</p></td>
+<td><p text-wrap>Web Form Engine is the default view engine for the Asp.net MVC that is included with Asp.net MVC from the beginning.</p></td>
+</tr>
+<tr>
+<td><p text-wrap>Razor Engine is an advanced view engine that was introduced with MVC3. This is not a new language but it is a new markup syntax.</p></td>
+<td><p text-wrap>Web Form Engine is the default view engine for the Asp.net MVC that is included with Asp.net MVC from the beginning.</p></td>
+</tr>
+<tr>
+<td><p text-wrap>The namespace for Razor Engine is System.Web.Razor.</p></td>
+<td><p text-wrap>The namespace for Webform Engine is System.Web.Mvc.WebFormViewEngine.</p></td>
+</tr>
+<tr>
+<td><p text-wrap>The file extensions used with Razor Engine are different from Web Form Engine. It has .cshtml (Razor with C#) or .vbhtml (Razor with VB) extension for views, partial views, editor templates and for layout pages.</p></td>
+<td><p text-wrap>The file extensions used with Web Form Engine are also like Asp.net Web Forms. It has .aspx extension for views, .ascx extension for partial views & editor templates and .master extension for layout/master pages.</p></td>
+</tr>
+<tr>
+<td><p text-wrap>Razor has new and advance syntax that are compact, expressive and reduces typing.</p></td>
+<td><p text-wrap>Web Form Engine has the same syntax like Asp.net Web Forms uses for .aspx pages.</p></td>
+</tr>
+<tr>
+<td><p text-wrap>Razor syntax are easy to learn and much clean than Web Form syntax. Razor uses @ symbol to make the code like as:
+@Html.ActionLink("SignUp", "SignUp")</p></td>
+<td><p text-wrap>Web Form syntax are borrowed from Asp.net Web Forms syntax that are mixed with html and sometimes make a view messy. Webform uses <% and %> delimiters to make the code like as:
+<%: Html.ActionLink("SignUp", "SignUp") %></p></td>
+</tr>
+<tr>
+<td><p text-wrap>By default, Razor Engine prevents XSS attacks (Cross-Site Scripting Attacks) means it encodes the script or html tags like <, > before rendering to view.</p></td>
+<td><p text-wrap>Web Form Engine does not prevent XSS attacks means any script saved in the database will be fired while rendering the page</p></td>
+</tr>
+</table>`),
+new qList(`What are HTML Helpers in ASP.NET MVC?`, `<p>An HTML Helper is just a method that returns a HTML string. The string can represent any type of content that you want. For example, you can use HTML Helpers to render standard HTML tags like HTML <input>, <button> and <img> tags etc.
+You can also create your own HTML Helpers to render more complex content such as a menu strip or an HTML table for displaying database data.</p>`),
+new qList(`What are different types of HTML Helpers?`, `<p>
+There are three types of HTML helpers as given below:
+</p>
+
+
+<p>
+<b>1. Inline Html Helpers -</b>These are create in the same view by using the Razor @helper tag. These helpers can be reused only on the same view.
+
+@helper ListingItems(string[] items)
+{
+<ol>
+@foreach (string item in items)
+{
+<li>@item</li>
+}
+</ol>
+}
+<h3>Programming Languages:</h3>
+@ListingItems(new string[] { "C", "C++", "C#" })
+<h3>Book List:</h3>
+@ListingItems(new string[] { "How to C", "how to C++", "how to C#" })
+
+</p>
+<p>
+<b>2. Built-In Html Helpers -</b>Built-In Html Helpers are extension methods on the HtmlHelper class. The Built-In Html helpers can be divided into three categories-
+</p>
+<p>
+<b>Standard Html Helpers -</b>These helpers are used to render the most common types of HTML elements like as HTML text boxes, checkboxes etc. A list of most common standard html helpers is given below:
+</p>
+
+<table border="1">
+<tr>
+<th>HTML Element</th>
+<th>Example</th>
+</tr>
+<tr>
+<td><p>TextBox</p></td>
+<td><p>@Html.TextBox("Textbox1", "val")
+Output:
+&ltinput id="Textbox1" name="Textbox1" type="text" value="val" /></p></td>
+</tr>
+<tr>
+
+<tr>
+<td><p>CheckBox</p></td>
+<td><p>@Html.CheckBox("Checkbox1", false)
+Output:
+&ltinput id="Checkbox1" name="Checkbox1" type="checkbox" value="true" />
+&ltinput name="myCheckbox" type="hidden" value="false" /></p>
+</tr>
+</table>
+
+<p>
+<b>Strongly Typed HTML Helpers -</b> These helpers are used to render the most common types of HTML elements in strongly typed view like as HTML text boxes, checkboxes etc. The HTML elements are created based on model properties.
+The strongly typed HTML helpers work on lambda expression. The model object is passed as a value to lambda expression, and you can select the field or property from model object to be used to set the id, name and value attributes of the HTML helper. A list of most common strongly-typed html helpers is given below:
+
+</p>
+<table border="1">
+<tr>
+<th>HTML Element</th>
+<th>Example</th>
+</tr>
+<tr>
+<td><p>TextBox</p></td>
+<td><p>@Html.TextBoxFor(m=>m.Name)
+Output:
+&ltinput id="Name" name="Name" type="text" value="Name-val" /></p></td>
+</tr>
+<tr>
+
+<tr>
+<td><p>CheckBox</p></td>
+<td><p>@Html.CheckBoxFor(m=>m.IsApproved)
+Output:
+&ltinput id="Checkbox1" name="Checkbox1" type="checkbox" value="true" />
+&ltinput name="myCheckbox" type="hidden" value="false" /></p>
+</tr>
+<tr>
+<td><p>RadioButton</p></td>
+<td><p>@Html.RadioButtonFor(m=>m.IsApproved, "val")
+Output:
+&ltinput checked="checked" id="Radiobutton1" name="Radiobutton1"type="radio" value="val" /></p>
+</tr>
+</table>
+
+<p>
+<b>Templated HTML Helpers -</b>These helpers figure out what HTML elements are required to render based on properties of your model class. This is a very flexible approach for displaying data to the user, although it requires some initial care and attention to set up. To setup proper HTML element with Templated HTML Helper, make use of DataType attribute of DataAnnitation class.
+For example, when you use DataType as Password, A templated helper automatically render Password type HTML input element.
+</p>
+
+<table border="1">
+<tr>
+<th>Templated Helper</th>
+<th>Example</th>
+</tr>
+<tr>
+<td><p>Display</p></td>
+<td><p>Renders a read-only view of the specified model property and selects an appropriate HTML element based on property’s data type and metadata.
+Html.Display("Name")</p></td>
+</tr>
+<tr>
+
+<tr>
+<td><p>DisplayFor</p></td>
+<td><p>Strongly typed version of the previous helper</p>
+</tr>
+</table>
+
+
+
+<p>
+<b>Extensible and pluggable -</b>MVC framework components were designed to be pluggable and extensible and therefore can be replaced or customized easier then Web Forms.
+</p>`),
+new qList(`What are Url Helpers?`, `<p>
+Url helpers allows you to render HTML links and raw URLs. The output of these helpers is dependent on the routing configuration of your ASP.NET MVC application.
+</p>
+
+
+<table border="1">
+<tr>
+<th>HTML Element</th>
+<th>Example</th>
+</tr>
+<tr>
+<td><p>Relative URL</p></td>
+<td><p>@Url.Content("~/Files/asp.netmvc.pdf")
+Output: /Files/asp.netmvc.pdf</p></td>
+</tr>
+<tr>
+
+<tr>
+<td><p>Based on
+action/controller</p></td>
+<td><p>@Html.ActionLink("About Us", "About", "Home")
+Output: &lta href="/Home/About">About Us&lt/a></p>
+</tr>
+<tr>
+<td><p>Raw URL for
+Action</p></td>
+<td><p>Url.Action("About", "Home")
+Output: /Home/About</p>
+</tr>
+</table>`),
+new qList(`What are AJAX Helpers? & What is unobtrusive AJAX?`, `<p>AJAX Helpers are used to create AJAX enabled elements like as Ajax enabled forms and links which performs request asynchronously.
+ AJAX Helpers are extension methods of AJAXHelper class which exist in System.Web.Mvc namespace.</p><p>ASP.NET MVC supports unobtrusive Ajax which is based on jQuery. The unobtrusive Ajax means that you use helper methods to
+  define your Ajax features, rather than adding blocks of code throughout your views.</p>`),
+new qList(`What are Layouts in ASP.NET MVC?`, `<p>Layouts are used to maintain a consistent look and feel across multiple views within ASP.NET MVC application. As compared to Web Forms, layouts serve the same purpose as master pages, but offer a simple syntax and greater flexibility. A basic structure of layout is given below:
+<pre>&lt!DOCTYPE html>
+&lthtml>
+&lthead>
+&ltmeta charset="utf-8" />
+&ltmeta name="viewport" content="width=device-width" />
+&lttitle>@ViewBag.Title</title>
+@Styles.Render("~/Content/css")
+@Scripts.Render("~/bundles/modernizr")
+&lt/head>
+&ltbody>
+@RenderBody()
+@Scripts.Render("~/bundles/jquery")
+@RenderSection("scripts", required: false)
+&lt/body>
+&lt/html></pre>
+You can use a layout to define a common template for your site. A layout can be declared at the top of view as:
+<pre>@{
+Layout = "~/Views/Shared/SiteLayout.cshtml";
+}</pre></p>`),
+new qList(`What are Sections in ASP.NET MVC?`, `<p>
+A section allow you to specify a region of content within a layout. It expects one parameter which is the name of the section. If you don’t provide that, an exception will be thrown. A section in a layout page can be defined by using the following code.
+<pre>
+@section header{
+&lth1>Header Content</h1>
+}</pre>
+You can render above defined section header on the content page as given below:
+<pre>@RenderSection("header")</pre>
+By default, sections are mandatory. To make sections optional, just provides the second parameter value as false, which is a Boolean value.
+<pre>@RenderSection("header",false)</pre>
+Note: A view can define only those sections that are referred to in the layout page otherwise an exception will be thrown.
+</p>`),
+        new qList(`What are differences among ViewData, ViewBag, TempData and Session?`,`<p>
+In ASP.NET MVC there are three ways - ViewData, ViewBag and TempData to pass data from controller to view and in next request. Like WebForm, you can also use Session to persist data during a user session.
+</p>
+<p>
+<b>ViewData </b> is a dictionary object that is derived from ViewDataDictionary class.</p>
+public ViewDataDictionary ViewData { get; set; }
+<ul>
+<li>ViewData is used to pass data from controller to corresponding view.</li>
+<li>Its life lies only during the current request</li>
+<li>If redirection occurs then its value becomes null.</li>
+<li>It’s required typecasting for getting data and check for null values to avoid error.</li>
+</ul>
+<p>
+<b>ViewBag </b> is a dynamic property that takes advantage of the new dynamic features in C# 4.0.
+public Object ViewBag { get;}
+</p>
+<ul>
+<li>Basically it is a wrapper around the ViewData and also used to pass data from controller to corresponding view.</li>
+<li>Its life also lies only during the current request.</li>
+<li>If redirection occurs then its value becomes null.</li>
+</ul>
+It doesn’t required typecasting for getting data.
+<img src="/assets/Images/viewData.JPG">
+<p>
+<b>TempData </b> is a dictionary object that is derived from TempDataDictionary class and stored in short lives session.
+</p>
+public TempDataDictionary TempData { get; set; }
+<p>TempData is used to pass data from current request to subsequent request (means redirecting from one page to another.</p>
+<ul>
+<li>Its life is very short and lies only till the target view is fully loaded.</li>
+</li>It’s required typecasting for getting data and check for null values to avoid error.</li>
+<li>It’s used to store only one time messages like error messages, validation messages.</li>
+</ul>
+
+<p>
+<b>Session </b> is an object that is derived from HttpSessionState class.
+</p>
+public HttpSessionState Session { get; }
+Session is a property of HttpContext class.
+<ul>
+<li>Session is also used to pass data within the ASP.NET MVC application and Unlike TempData, it never expires.</li>
+<li>Session is valid for all requests, not for a single redirect.</li>
+<li>It’s also required typecasting for getting data and check for null values to avoid error.</li>
+</ul>`),
+new qList(`What are Action methods in ASP.NET MVC?`,`
+<p>
+Controller actions are methods defined in the controller class and responsible to perform required operations on the user's inputs like as form values, query strings values etc. with the help of Model and passing the results back to the View. Asp.net MVC has the following built-in ActionResults Type and Helper methods:
+</p>
+<p>
+<b>1. ViewResult -</b>Returns a ViewResult which renders the specified or default view by using controller View() helper method.</p>
+
+<p>
+<b>2. PartialViewResult -</b>Returns a PartialViewResult which renders the specified or default partial view (means a view without its layout) by using controller PartialView() helper method.
+</p>
+<p>
+<b>3. RedirectResult -</b>Returns a RedirectResult which Issues an HTTP 301 or 302 redirection to a specific URL by using controller Redirect() helper method.
+</p>
+<p>
+<b>4. RedirectToRouteResult -</b>Returns a RedirectToRouteResult which Issues an HTTP 301 or 302 redirection to an action method or specific route entry by using controller RedirectToAction(), RedirectToActionPermanent(), RedirectToRoute(), RedirectToRoutePermanent() helper methods.
+</p>
+<p>
+<b>5. ContentResult -</b>ReturnsReturns a ContentResult which renders raw text like as "Hello, DotNet Tricks!" by using controller Content() helper method.
+</p>
+<p>
+<b>6. JsonResult -</b>Returns a JsonResult which serializes an object in JSON format ( like as "{ "Message": Hello, World! }") and renders it by using controller Json() helper method.
+</p>
+<p>
+<b>7. JavaScriptResult -</b>Returns a JavaScriptResult which renders a snippet of JavaScript code like as "function hello() { alert(Hello, World!); }" by using controller JavaScript() helper method. This is used only in AJAX scenarios.
+</p><p>
+<b>8. FileResult -</b>Returns a FileResult which renders the contents of a file like as PDF, DOC, Excel etc. by using controller File() helper method.
+</p><p>
+<b>9. EmptyResult -</b>Returns no result returned by an action. This has no controller helper method.
+</p><p>
+<b>10. HttpNotFoundResult -</b>Returns an HttpNotFoundResult which renders a 404 HTTP Status Code response by using controller HttpNotFound() helper method.
+</p>
+<p>
+<b>11. HttpUnauthorizedResult -</b>Returns an HttpUnauthorizedResult which renders a 401 HTTP Status Code (means "not authorized") response. This has no controller helper method. This is used for authentication (forms authentication or Windows authentication) to ask the user to log in.
+</p>
+<p>
+<b>12. HttpStatusCodeResult -</b>Returns an HttpStatusCodeResult which renders a specified HTTP code response. This has no controller helper method.
+</p>
+`),
+new qList(`How to make a Non-Action method in ASP.NET MVC?`,`<p>By default, the ASP.NET MVC framework treats all public methods of a controller class as action methods. If you do not want a public method to be an action method, you must mark that method with the NonActionAttribute attribute.
+<pre>[NonAction]
+public void DoSomething()
+{
+// Method logic
+}</pre></p>`),
+new qList(`Can you change action method name?`, `<p>You can also change action method name by using ActionName attribute. Now action method will be called by the name defined by the ActionName attribute.
+<pre>[ActionName("DoAction")]
+public ActionResult DoSomething()
+{
+//TODO:
+return View();
+}</pre></p>`),
+new qList(`What is Data Annotations in ASP.NET MVC?`,`<p>
+Data validation is a key aspect for developing web application. In Asp.net MVC, we can easily apply validation to web application by using Data Annotation attribute classes to model class. Data Annotation attribute classes are present in System.ComponentModel.DataAnnotations namespace and are available to Asp.net projects like Asp.net web application & website, Asp.net MVC, Web forms and also to Entity framework ORM models.
+Data Annotations help us to define the rules to the model classes or properties for data validation and displaying suitable messages to end users.
+</p>
+<b>Data Annotation Validator Attributes</b>
+<p>
+<b>1. DataType -</b>Specify the datatype of a property</p>
+
+<p>
+<b>2. DisplayName -</b>specify the display name for a property.
+</p>
+<p>
+<b>3. DisplayFormat -</b>specify the display format for a property like different format for Date property.
+</p>
+<p>
+<b>4. Required -</b>Specify a property as required.
+</p>
+<p>
+<b>5. ReqularExpression -</b>validate the value of a property by specified regular expression pattern.
+</p>
+<p>
+<b>6. Range -</b>validate the value of a property within a specified range of values.
+</p>
+<p>
+<b>7. StringLength -</b>specify min and max length for a string property.
+</p><p>
+<b>8. MaxLength -</b>specify max length for a string property.
+</p><p>
+<b>9. Bind -</b>specify fields to include or exclude when adding parameter or form values to model properties.
+</p><p>
+<b>10. ScaffoldColumn -</b>specify fields for hiding from editor forms.
+</p>`),
+new qList(`How to determine there is no error in Model State?`, `When server side model validation fails, errors are included in the ModelState.
+Hence, by using ModelState.IsValid property you can verify model state. It returns true if there is no error in ModelState else returns false.
+<pre>[HttpPost]
+public ActionResult DoSomething(UserViewModel model)
+{
+if (ModelState.IsValid)
+{
+//TODO:
+}
+return View();
+}</pre>`),
+new qList(`What is Partial View in ASP.NET MVC?`, `<p>A partial view is like as user control in ASP.NET Web forms that is used for code re-usability. Partial views helps us to reduce code duplication. Hence partial views are reusable views like as Header and Footer views.
+We can use partial view to display blog comments, product category, social bookmarks buttons, a dynamic ticker, calendar etc.
+It is best practice to create partial view in the shared folder and partial view name is preceded by "_", but it is not mandatory. The "_" before view name specify that it is a reusable component i.e. partial view.</p>`),
         new qList(`What is the difference between “ActionResult” and “ViewResult” ?`,`
         <p>“ActionResult” is an abstract class while “ViewResult” is derived from “AbstractResult” class.  “ActionResult” has a number of derived classes like “JsonResult”, “FileStreamResult” and “ViewResult” .</p>
         <br><p>“ActionResult” is best if you are deriving different types of view dynamically.</p>`),
+       new qList(`When to use _ViewStart?`, `<p>When a set of views shares common settings, the _ViewStart.cshtml file is a great place to put these common view settings. If any view needs to override any of the common settings then that view can set new values to common settings.</p>`),
+       new qList(`What is App_Start folder in ASP.NET MVC?`, `<p>
+App_Start folder has been introduced in MVC4. It contains various configurations files like as BundleConfig.cs, FilterConfig.cs, RouteConfig.cs, WebApiConfig.cs for your application. All these settings are registered within Application_Start method of Global.asax.cs file.
+</p>
+<p>
+<b>BundleConfig.cs -</b>This is used to create and register bundles for CSS and JS files. By default, various bundles are added in this files including jQuery, jQueryUI, jQuery validation, Modernizr, and Site CSS.
+</p>
+<p>
+<b>FIlterConfig.cs -</b>This is used to register global MVC filters like error filters, actions filters etc. By default it contains HandleErrorAttribute filter.
+</p>
+<p>
+<b>RouteConfig.cs -</b>This is used to register various route patterns for your ASP.NET MVC application. By default, one route is registered here named as Default Route.
+</p><p>
+<b>WebApiConfig.cs -</b>This is used to register various WEB API routes like as ASP.NET MVC, as well as set any additional WEB API configuration settings.
+</p>`),
+new qList(`What are different ways of returning/rendering a view in ASP.NET MVC?`,`<p>
+There are four different ways for returning/rendering a view in ASP.NET MVC as given below:
+</p>
+<p>
+<b>1. Return View() -</b>This is used to create and register bundles for CSS and JS files. By default, various bundles are added in this files including jQuery, jQueryUI, jQuery validation, Modernizr, and Site CSS.</p>
+<p>
+<b>Return RedirectToAction() -</b>This tells MVC to redirect to specified action instead of rendering HTML. In this case, browser receives the redirect notification and make a new request for the specified action. This acts like as Response.Redirect() in ASP.NET WebForm.
+</p>
+<p>
+<b>Return Redirect() -</b>This tells MVC to redirect to specified URL instead of rendering HTML. In this case, browser receives the redirect notification and make a new request for the specified URL. This also acts like as Response.Redirect() in ASP.NET WebForm. In this case, you have to specify the full URL to redirect.
+</p><p>
+<b>4.Return RedirectToRoute() -</b>This tells MVC to look up the specifies route into the Route table that is defined in global.asax and then redirect to that controller/action defined in that route. This also make a new request like RedirectToAction().
+</p>`),
         new qList(`What is the difference between View and Partial View?`,`
         <b>View</b><br> <ul><li>It contains the layout page</li>
         <li>Before any view is rendered, viewstart page is rendered</li>
@@ -1585,16 +2084,10 @@ app.config(['$routeProvider',
         <br><br><b>Partial View</b><br><ul><li>It does not contain the layout page</li>
         <li>Partial view does not verify for a viewstart.cshtml. We cannot put common code for a partial view within the <b>viewStart.cshtml.page</b></li>
         <li>Partial view is designed specially to render within the view and just because of that it does not consist any mark up</li>
-        <li>We can pass a regular view to the RenderPartial method</li></ul>`),
-        new qList(`What are the file extensions for razor views?`,`
-        <p>For razor views the file extensions are</p>
-        <ul><li>.cshtml: If C# is the programming language</li><li>.vbhtml: If VB is the programming language</li></ul>`),
-        new qList(`What you mean by Routing in MVC?`,`
-        <p>Routing is a pattern matching mechanism of incoming requests to the URL patterns which are registered in route table. Class – “UrlRoutingModule” is used for the same process.</p>`),
-        new qList(`Explain Bundle.Config in MVC4?`,`
-        <p>"BundleConfig.cs" in MVC4 is used to register the bundles by the bundling and minification system. Many bundles are added by default including jQuery libraries like - jquery.validate, Modernizr, and default CSS references.</p>`),
-        new qList(`What is ViewStart Page in MVC?`,`
-        <p>This page is used to make sure common layout page will be used for multiple views. Code written in this file will be executed first when application is being loaded.</p>`)
+        <li>We can pass a regular view to the RenderPartial method</li></ul>`),      
+        
+        new qList(`Explain Bundle.Config in MVC?`,`
+        <p>"BundleConfig.cs" in MVC is used to register the bundles by the bundling and minification system. Many bundles are added by default including jQuery libraries like - jquery.validate, Modernizr, and default CSS references.</p>`)
     ];
     public webAPI=[
         new qList(`What is Web API?`,`
