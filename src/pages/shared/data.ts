@@ -3202,7 +3202,35 @@ new qList(`What are advantages of using LINQ on DataSet?`, `<p>LINQ to DataSet i
         <p><b>Type Safety -</b> As LINQ supports type safety so errors can be type checked in LINQ queries in compile time. It is better to use LINQ as it enable us to identify the errors while compilation rather than runtime execution.</p>`)
     ];
      public SqlQueries=[
-        
+        new qList(`How to change database, Table, Colum name ?`,`<b>database</b><p>Sp_renameDB ‘oldDB’ , ‘NewDB’</p>
+        <b>Table</b><p>Sp_rename ‘oldTableName’, ‘newTableName’</p>
+        <b>Column</b> <p>Sp_rename ‘oldColumnName’ , ‘NewColumnName’, ‘Column’</p>`),
+        new qList(`How to find duplicate records from column?`,`<p>with tempEmp as(select [Name], row_number() over (PARTITION By Name order by Name) as [rn] from EMPLOYEE)
+select * from tempEmp</p>`),
+         new qList(`How to Delete duplicate records from column?`,`<p>with tempEmp as(select [Name], row_number() over (PARTITION By Name order by Name) as [rn] from EMPLOYEE)
+delete tempEmp where [rn]>1</p>`),
+        new qList(`How to check all existing table in the database ?`,`<b>Query :</b><p>Select * from sys.tables</pre><b>Notes :</b>
+        <p>Select * from sys.view => use for displaying all the view in the database</p>
+        <p>Select * from sys.procedure => it will display all the procedure which we used in the database.</p>`),
+        new qList(`How to replace NULL value to default value ?`,`<b>Query :</b><p>Select Name, ISNULL(ManagerName, ‘No Manager’) from Employee;</p>`),
+        new qList(`Please write the query for establishing foreign key primary key relation ?`,`<b>Query :</b><p>Alter table [TableName] add constraint 
+        fkforeignKeyName Foreign key(EmployeeID) references Department(EmployeeID)</p>`),
+        new qList(`How to find 2nd higher salary in employee table ?`,`<b>Query :</b><p>SELECT MAX (Salary) FROM Employee WHERE Salary NOT IN 
+        (SELECT MAX(Salary) FROM Employee )</p>`),
+        new qList(`How to FIND N'th higher salary in employee table?`,`<p>select salary(select salary,row_number() over (order by salary desc) as rownum from EMPLOYEE) tempEmp where rownum=3</p><p><b>Note :</b> rownum represent of N'th higher salary, which you want to display the number of records, like : rownum =3/4/5/6</p>`),
+        new qList(`How to FIND N'th Lowest salary in employee table?`,`<p>select salary(select salary,row_number() over (order by salary asc) as rownum from EMPLOYEE) tempEmp where rownum=3</p><p><b>Note :</b> rownum represent of N'th lowest salary, which you want to display the number of records, like : rownum =3/4/5/6</p>`),
+        new qList(`Write the query for add new column in table ?`,`<b>Query :</b><p>Alter table Employee add salary int</p>`),
+        new qList(`Select first 3 characters of FIRST_NAME from EMPLOYEE`,`<b>Query :</b><p>select substring(FIRST_NAME,1,3) from employee</p>`),
+        new qList(`Write a SQL query to find the products which does not have sales at all?`,`<b>Query :</b><p>SELECT P.PRODUCT_NAME FROM PRODUCTS P WHERE P.PRODUCT_ID NOT IN (SELECT DISTINCT PRODUCT_ID FROM SALES);</p>`),
+        new qList(`Select TOP N salary from employee table`,`<b>Query :</b><p>select top (2) * from emp</p>`),
+        new qList(`Get First_Name from employee table after replacing 'o' with '$'`,`<b>Query :</b><p>select REPLACE(FIRST_NAME,'o','$') from employee</p>`),
+        new qList(`Get employee details from employee table whose first name starts with 'J'`,`<b>Query :</b><p>Select * from EMPLOYEE where FIRST_NAME like 'J%'</p>`),
+        new qList(`Get employee details from employee table whose Salary greater than 600000`,`<b>Query :</b><p>Select * from EMPLOYEE where Salary > 600000</p>`),
+        new qList(`Get employee details from employee table whose Salary between 500000 and 800000`,`<b>Query :</b><p>Select * from EMPLOYEE where Salary between 500000 and 800000</p>`),
+        new qList(`Get department,total salary with respect to a department from employee table.`,`<b>Query :</b><p>Select DEPARTMENT,sum(SALARY) Total_Salary from employee group by department</p>`),
+        new qList(`How can we get count of the number of records in a table?`,`<b>Query :</b><p>Select count(*) from tablename</p>`),
+   
+
     ];
      public EF=[
          new qList(`What is Entity Framework?`,`<p>ADO.NET entity is an ORM (object relational mapping) which creates a higher abstract object model over ADO.NET components. So rather than getting into dataset, datatables, command, and connection objects , you work on higher level domain objects like customers, suppliers, etc.</p>`),
