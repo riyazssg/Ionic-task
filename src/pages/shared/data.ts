@@ -1260,7 +1260,7 @@ Using the DataReader increases application performance and reduces system overhe
         
     ];
     public angular1=[
-        new qList(`What is AngularJS?`,`<p>AngularJS has been introduced by  Google. It is a framework that helps you to create dynamic Web apps. Normally, AngularJS uses HTML as the backbone. AngularJS creates extended HTML tags that can be used as normal HTML tags. These tags will help you to write an efficient code. The interesting fact is that you can reduce the lines of code  you may need to write when you use normal JavaScript.</p>
+        new qList(`What is AngularJS & Why to use AngularJS?`,`<p>AngularJS has been introduced by  Google. It is a framework that helps you to create dynamic Web apps. Normally, AngularJS uses HTML as the backbone. AngularJS creates extended HTML tags that can be used as normal HTML tags. These tags will help you to write an efficient code. The interesting fact is that you can reduce the lines of code  you may need to write when you use normal JavaScript.</p>
    <ul><li>This framework is developed on MVC (Model-View-Controller) design pattern.</li>
    <li>It provides full featured SPA (Single Page Application) framework.</li>
    <li>It supports Dependency Injection.</li>
@@ -1271,6 +1271,49 @@ Using the DataReader increases application performance and reduces system overhe
    <li>Separation of the client side of an Application from the Server side.</li>
    <li>The AngularJS framework uses Plain Old JavaScript Objects(POJO), it doesn’t need the getter or setter functions.</li>
    </ul>`),
+   new qList(`What are the advantages of AngularJS?`, `<p>There are following advantages of AngularJS:</p>
+
+<p>
+<b>Data Binding -</b> AngularJS provides a powerful data binding mechanism to bind data to HTML elements by using scope.
+</p>
+
+<p>
+<b>Customize & Extensible - </b>AngularJS is customized and extensible as per your requirement. You can create your own custom components like directives, services etc.
+</p>
+
+<p>
+<b>Code Reusability -</b> AngularJS allows you to write code which can be reused. For example, custom directive which you can reuse.
+</p>
+
+<p>
+<b>Support -</b> AngularJS is mature community to help you. It has widely support over the internet. Also, AngularJS is supported by Google which gives it an advantage.
+</p>
+
+<p>
+<b>Compatibility -</b> AngularJS is based on JavaScript which makes it easier to integrate with any other JavaScript library and runnable on browsers like IE, Opera, FF, Safari, Chrome etc.
+</p>
+
+<p>
+<b>Testing -</b> AngularJS is designed to be testable so that you can test your AngularJS app components as easy as possible. It has dependency injection at its core, which makes it easy to test.
+</p>`),
+new qList(`What are AngularJS features?`,`<p>The features of AngularJS are listed below:</p>
+
+<ol>
+<li>Modules</li>
+<li>Directives</li>
+<li>Templates</li>
+<li>Scope</li>
+<li>Expressions</li>
+<li>Data Binding</li>
+<li>MVC (Model, View & Controller)</li>
+<li>Validations</li>
+<li>Filters</li>
+<li>Services</li>
+<li>Routing</li>
+<li>Dependency Injection</li>
+<li>Testing</li>
+
+</ul>`),
    new qList(`Explain Directives in AngularJS?`,`<p>AngularJS directives are only used to extend HTML and DOM elements' behavior. These are the special attributes, that start with ng- prefix, that tell AngularJS's HTML compiler ($compile) to attach a specified behavior to that DOM element.</p>
    <b>AngularJS has a set of built-in directives like</b>
    <ul><li>ng-App</li>
@@ -1291,13 +1334,76 @@ Using the DataReader increases application performance and reduces system overhe
    <b>ng-repeat</b>
    <p>ng-repeat directive is used to repeat HTML statements. Ng-repeat works the same as for each loop in C#, Java or PHP on a specific collection item like an array.</p>
      `),
-     new qList(`What are expressions in AngularJS? `,`<p>Expressions in AngularJS are just like JavaScript code snippets. JavaScript code is usually written inside double braces: <strong>{{expression}}</strong>. In other words, Angular Expressions are JavaScript code snippets with limited sub-set. Expressions are included in the HTML elements.</p>
+     new qList(`What is restrict option in directive? & Can you define multiple restrict options on a directive?`,`<p>The restrict option in angular directive, is used to specify how a directive will be invoked in your angular app i.e. as an attribute, class, element or comment.</p>
+<b>There are four valid options for restrict:</b>
+<pre>'A' (Attribute)- &ltspan my-directive>&lt/span>
+'C' (Class)- &ltspan class="my-directive:expression;">&lt/span>
+'E' (Element)- <my-directive></my-directive>
+'M' (Comment)- <!-- directive: my-directive expression -->
+</pre>
+
+<p>
+You can also specify multiple restrict options to support more than one methods of directive invocation as an element or an attribute. Make sure all are specified in the restrict keyword as:</p>
+<pre>restrict: 'EA'</pre>`),
+new qList(`What is auto bootstrap process in AngularJS? or How AngularJS is initialized automatically?`, `<p>Angular initializes automatically upon DOMContentLoaded event or when the angular.js script is downloaded to the browser and the document.readyState is set to complete. At this point AngularJS looks for the ng-app directive which is the root of angular app compilation and tells about AngularJS part within DOM. When the ng-app directive is found then Angular will:</p>
+<ol>
+<li>Load the module associated with the directive.</li>
+<li>Create the application injector.</li>
+<li>Compile the DOM starting from the ng-app root element.</li>
+</ol>
+<p>This process is called auto-bootstrapping.</p>
+<img src="/assets/Images/bootstrapangular.JPG">
+<b>Example</b>
+<pre>
+&lthtml> &ltbody ng-app="myApp">
+&ltdiv ng-controller="Ctrl">
+Hello {{msg}}!
+&lt/div>
+&ltscript src="lib/angular.js">&lt/script>
+&ltscript>
+var app = angular.module('myApp', []);
+app.controller('Ctrl', function ($scope) {
+$scope.msg = 'World';
+});
+&lt/script>
+&lt/body>
+&lt/html>
+</pre>`),
+new qList(`What is manual bootstrap process in AngularJS? or How AngularJS is initialized manually?`,`<p>You can manually initialized your angular app by using angular.bootstrap() function. This function takes the modules as parameters and should be called within angular.element(document).ready() function. The angular.element(document).ready() function is fired when the DOM is ready for manipulation.</p>
+<b>Example</b>
+<pre>
+&lthtml>
+&ltbody>
+&ltdiv ng-controller="Ctrl">
+Hello {{msg}}!
+&lt/div>
+&ltscript src="lib/angular.js">&lt/script>
+&ltscript>
+var app = angular.module('myApp', []);
+app.controller('Ctrl', function ($scope) {
+$scope.msg = 'World';
+});
+//manual bootstrap process
+angular.element(document).ready(function () {
+angular.bootstrap(document, ['myApp']);
+});
+&lt/script>
+&lt/body>
+&lt/html>
+</pre>
+<b>Note</b>
+<ol>
+<li>You should not use the ng-app directive when manually bootstrapping your app.</li>
+<li>You should not mix up the automatic and manual way of bootstrapping your app.</li>
+<li>Define modules, controller, services etc. before manually bootstrapping your app as defined in above example.</li>
+</ol>`),
+     new qList(`What are expressions in AngularJS & How its different from the JavaScript expressions? `,`<p>Expressions in AngularJS are just like JavaScript code snippets. JavaScript code is usually written inside double braces: <strong>{{expression}}</strong>. In other words, Angular Expressions are JavaScript code snippets with limited sub-set. Expressions are included in the HTML elements.</p>
      For Example, <br><ul><li>{{ 2 + 2 }} (numbers)</li>
      <li>{{Name + " " + email}} (string)</li>
      <li>{{ Country.Name }} (object)</li>
      <li>{{ fact[4] }} (array)</li>
      </ul>
-      <br> <img src="assets/Images/angular_expression.jpg"></p>`),
+      <br> <img src="/assets/Images/angular_expression.jpg"></p> <p>AngularJS expressions are much like JavaScript expressions but they are different from JavaScript expressions in the following ways:</p><ul><li>Angular expressions can be added inside the HTML templates.</li><li>Angular expressions don’t support control flow statements (conditionals, loops, or exceptions).</li><li>Angular expressions support filters to format data before displaying it.</li></ul>`),
       new qList(`Explain currency filter in AngularJS`,`<p>One of the filters in AngularJS is the Currency Filter. This “currency” filter includes the “$” Dollar Symbol as the default. So we can use the following code as the html template format of Currency Filter.</p>
       <b>{{ currency_expression | currency : symbol : fractionSize}}</b><br><br><b>How to use Currency Filter in AngularJS</b><br>There are two ways by which we can use Currency Filter. 
       <br><ul><li><b>Default</b><br> If we did not provide any currency symbol then by default Dollar-Sign will be used; we can use it as follows: <br> <!-- by default -->
@@ -1308,13 +1414,112 @@ Using the DataReader increases application performance and reduces system overhe
        <b>e.g- For Example</b> If we want to define Indian Currency Symbol then we have to use (Unicode-value) or (Hexa-Decimal value)
       <br><b>Indian Currency {{amount | currency:"&# 8377"}}</b> 
       </li></ul>`),
-      new qList(`What is $scope in AngularJS ?`,`<p>$scope in AngularJS is an object which refers to an application model. It is an object that binds view (DOM element) with the controller. In controller, model data is accessed via $scope object. As we know, AngularJS supports MV* pattern, $scope object becomes the model of MV*.<br><img src="/assets/Images/ngular_scope.jpg"></img> </p>
-      <br><b>Characteristics of scope object </b><ul><li>It provides the APIs to observe model<b> (example $watch)</b>.</li>
-      <li>It can be nested, so that it limits access to the properties. Nested scopes are either child scope or isolated scope.</li>
-      <li>It provides the APIs to propagate any model changes from the outside of "Angular realm" <b>(example $apply)</b>.</li>
-      <li>It provides context against the expression to be evaluated.</li>
-      </ul>
+      new qList(`What is scope in AngularJS?`,`<p>Scope is a JavaScript object that refers to the application model. It acts as a context for evaluating angular expressions. Basically, it acts as glue between controller and view.</p>
+<img src="/assets/Images/scope.JPG">
+
+<p>Scopes are hierarchical in nature and follow the DOM structure of your AngularJS app. AngularJS has two scope objects: $rootScope and $scope.</p>
       `),
+      new qList(`What is $scope and $rootScope?`,`<p><b>$scope -</b> A $scope is a JavaScript object which is used for communication between controller and view. Basically, $scope binds a view (DOM element) to the model and functions defined in a controller.</p>
+<img src="/assets/Images/rootScope.JPG">
+
+<p><b>$rootScope -</b> The $rootScope is the top-most scope. An app can have only one $rootScope which will be shared among all the components of an app. Hence it acts like a global variable. All other $scopes are children of the $rootScope.</p>
+<b>For example, suppose you have two controllers: Ctrl1 and Ctrl2 as given below:</b>
+
+<pre>
+&lt!doctype html>
+&lthtml>
+&ltbody ng-app="myApp">
+&ltdiv ng-controller="Ctrl1" style="border:2px solid blue; padding:5px">
+Hello {{msg}}!
+&ltbr /> Hello {{name}}! (rootScope)
+&lt/div>
+&ltbr />
+&ltdiv ng-controller="Ctrl2" style="border:2px solid green; padding:5px">
+Hello {{msg}}!
+&ltbr /> Hey {{myName}}!
+&ltbr /> Hi {{name}}! (rootScope)
+&lt/div>
+&ltscript src="lib/angular.js">&lt/script>
+&ltscript>
+var app = angular.module('myApp', []);
+app.controller('Ctrl1', function ($scope, $rootScope) {
+$scope.msg = 'World'; $rootScope.name = 'AngularJS';
+});
+app.controller('Ctrl2', function ($scope, $rootScope) {
+$scope.msg = 'IT Interview Guide'; $scope.myName = $rootScope.name;
+});
+&lt/script>
+&lt/body>
+&lt/html>
+</pre>
+<b>Output -1 </b>
+Hello World <br>
+Hello AngularJS! (rootScope)
+
+
+<b>Output -2 </b>
+Hello IT Interview Guide <br>
+Hey AngularJS! <br>
+Hi AngularJS! (rootScope)
+`),
+new qList(`What is the difference between $scope and scope?`, `<p>The module factory methods like controller, directive, factory, filter, service, animation, config and run receive arguments through dependency injection (DI). In case of DI, you inject the scope object with the dollar prefix i.e. $scope. The reason is the injected arguments must match to the names of injectable objects followed by dollar ($) prefix.</p>
+
+<p>For example, you can inject the scope and element objects into a controller as given below:</p>
+
+<pre>
+module.controller('MyController', function ($scope, $element) { // injected arguments
+});
+</pre>
+<p>When the methods like directive linker function don’t receive arguments through dependency injection, you just pass the scope object without using dollar prefix i.e. scope. The reason is the passing arguments are received by its caller.</p>
+<pre>
+module.directive('myDirective', function () // injected arguments here
+{
+return {
+// linker function does not use dependency injection
+link: function (scope, el, attrs) {
+// the calling function will passes the three arguments to the linker: scope, element and attributes, in the same order
+}
+};
+});
+</pre>
+<p>In the case of non-dependency injected arguments, you can give the name of injected objects as you wish. The above code can be re-written as:<p>
+<pre>
+module.directive("myDirective", function () {
+return {
+link: function (s, e, a) {
+// s == scope
+// e == element
+// a == attributes
+}
+};
+});
+</pre>
+<p>In short, in case of DI the scope object is received as $scope while in case of non-DI scope object is received as scope or with any name.</p>`),
+      new qList(`How to create custom directives in AngularJS?`, `<p>You can create your own custom directive by using following syntax:</p>
+
+<pre>var app = angular.module('app', []);
+//creating custom directive syntax
+app.directive("myDir", function () {
+return {
+restrict: "E", //define directive type like E = element, A = attribute, C = class, M = comment
+scope: { //create a new child scope or an isolate scope
+title: '@' //@ reads the attribute value,
+//= provides two-way binding,
+//& works with functions
+},
+template: "&ltdiv>{{ myName }}&lt/div>",// define HTML markup
+templateUrl: 'mytemplate.html', //path to the template, used by the directive
+replace: true | false, // replace original markup with template yes/no
+transclude: true | false, // copy original HTML content yes/no
+controller: function (scope) { //define controller, associated with the directive template
+//TODO:
+},
+link: function (scope, element, attrs, controller) {//define function, used for DOM manipulation
+//TODO:
+}
+}
+});
+</pre>`),
       new qList('What is SPA  in AngularJS?',`<p>Single-Page Applications (SPAs) are web applications that load a single HTML page and dynamically update that page as the user interacts with the app</p>
       <br><img src="/assets/Images/spa.jpg"></img><br><b>Key Points of Single-Page Applications</b><br>
       <ul><li>The application is responsive in the UI with no page flicker</li>
@@ -1347,7 +1552,163 @@ app.config(['$routeProvider',
     <ul><li>Data type validation</li><li>Required field validation</li><li>Date Validation</li>
     <li>Email Validation</li>
     <li>Range Validation Max and Min</li>
-        </ul>`),
+        </ul><p>Angular provides properties on form which help you to get information about a form or its inputs and to validate them.</p>
+<p><b>$valid -</b> It is a boolean property that tells whether the form or it's inputs are valid or not. If all containing form and controls are valid, then it will be true, otherwise it will be false.</p>
+<b>Syntax</b>
+<pre>
+formName.$valid
+formName.inputFieldName.$valid
+</pre>
+
+<p><b>$invalid - </b> It is a boolean property that tells whether the form or it's inputs are invalid or not. If at least one containing form and control is invalid then it will be true, otherwise it will be false.</p>
+<b>Syntax</b>
+<pre>
+formName.$invalid
+formName.inputFieldName.$invalid
+</pre>
+
+<p><b>$pristine -</b> It is a boolean property that tells whether the form or it's inputs are unmodified by the user or not. If the form or its inputs are unmodified by the user, then it will be true, otherwise it will be false.</p>
+<b>Syntax</b>
+<pre>
+formName.inputFieldName.$pristine
+</pre>
+
+<p><b>$dirty -</b> It is a boolean property that is actually just reverse of pristine i.e. it tells whether the form or it's inputs are modified by the user or not. If the form or its inputs are modified by the user, then it will be true, otherwise it will be false.</p>
+<b>Syntax</b>
+<pre>formName.$dirty
+formName.inputFieldName.$dirty
+</pre>
+
+<p><b>$error -</b> This is an object hash which contains references to all invalid controls or forms. It has all errors as keys: where keys are validation tokens (such as required, url or email) and values are arrays of controls or forms that are invalid with given error. For a control, if a validation fails then it will be true, otherwise it will be false.</p>
+<b>Syntax</b>
+<pre>formName.$error
+formName.inputFieldName.$error
+</pre>`),
+new qList(`What is the difference between Factory, Service and Provider?`,`<p><b>Factory - </b>A factory is a simple function which allows you to add some logic before creating the object. It returns the created object.</p>
+<pre>
+//define a factory using factory() function
+app.factory('MyFactory', function () {
+var serviceObj = {};
+serviceObj.function1 = function () {
+//TO DO:
+};
+serviceObj.function2 = function () {
+//TO DO:
+};
+return serviceObj;
+});
+</pre>
+
+<p><b>When to use:</b> It is just a collection of functions like a class. Hence, it can be instantiated in different controllers when you are using it with constructor function.</p>
+
+<p><b>Service -</b> A service is a constructor function which creates the object using new keyword. You can add properties and functions to a service object by using this keyword. Unlike factory, it doesn’t return anything.</p>
+<b>Example</b>
+<pre>
+//define a service using service() function
+app.service('MyService', function () {
+this.function1 = function () {
+//TO DO:
+};
+this.function2 = function () {
+//TO DO:
+</pre>
+<p><b>When to use:</b> It is a singleton object. Use it when you need to share a single object across the application.</p>
+<p><b>For example,</b> authenticated user details.</p>
+<p><b>Provider -</b> A provider is used to create a configurable service object. It returns value by using $get() function.</p>
+<b>Example</b>
+<pre>
+//define a provider using provider() function
+app.provider('configurable', function () {
+var privateName = '';
+this.setName = function (newName) {
+privateName = newName;
+};
+this.$get = function () {
+return {
+name: privateName
+};
+};
+});
+//configuring provider using config() function
+app.config(function (configurableService) {
+configurableService.setName('www.dotnet-tricks.com');
+});</pre>
+<p><b>When to use:</b> When you need to provide module-wise configuration for your service object before making it available.</p>
+
+
+<pre>
+&ltbody>
+&ltdiv class="container" style="padding-top:20px;">
+&ltdiv ng-app="myApp" ng-controller="myController">
+&ltp>From Service: {{serviceName}}&lt/p>
+&ltp>From Factory: {{factoryName}}&lt/p>
+&ltp>From Provider: {{providerName}}&lt/p>
+&lt/div>
+&lt/div>
+&ltscript>
+//defining module
+var app = angular.module('myApp', []);
+//defining service
+app.service('myService', function () {
+this.name = '';
+this.setName = function (newName) {
+this.name = newName;
+return this.name;
+};
+});
+//defining factory
+app.factory('myFactory', function () {
+var serviceObj = {};
+serviceObj.name = '';
+serviceObj.setName = function (newName) {
+serviceObj.name = newName;
+};
+return serviceObj;
+});
+//defining provider
+app.provider('configurable', function () {
+var privateName = '';
+this.setName = function (newName) {
+privateName = newName;
+};
+this.$get = function () {
+return {
+name: privateName
+};
+};
+});
+//configuring provider
+app.config(function (configurableProvider) {
+configurableProvider.setName("IT Interview Guide");
+});
+//defining controller
+app.controller('myController', function ($scope, myService, myFactory, configurable) {
+$scope.serviceName = myService.setName("IT Interview Guide");
+myFactory.setName("IT Interview Guide");
+$scope.factoryName = myFactory.name;
+$scope.providerName = configurable.name;
+});
+&lt/script>
+&lt/body>
+</pre>
+`),
+new qList(`What is $q service and when to use it?`,`<p><b>$q</b> is a service that helps you to run functions asynchronously, and use their return values when they have done processing.</p>
+
+<p><b>$q service </b>is said to be inspired by Chris Kowal's Q library which allow users to monitor asynchronous progress by providing a "promise" as a return from a call.</p>
+<p><It is good when you need to process a number of asynchronous activities simultaneously. The $q.all() function lets you trigger several callbacks at the same time, and use a single then function to join them all together.</p>
+<pre>
+var first = $http.get("/app/data/first.json"),
+second = $http.get("/app/data/second.json"),
+third = $http.get("/app/data/third.json");
+$q.all([first, second, third]).then(function (result) {
+var tmp = [];
+angular.forEach(result, function (response) {
+tmp.push(response.data);
+});
+return tmp;
+}).then(function (tmpResult) {
+$scope.combinedResult = tmpResult.join(", ");
+});</pre>`),
         new qList(`Explain what is Dependency Injection in AngularJS?`,`<p>Dependency Injection is one of the best features of AngularJS. It is a software design pattern in which objects are passed as dependencies. It helps us to remove hard coded dependencies and makes dependencies configurable. Using Dependency Injection, we can make components maintainable, reusable and testable.</p>
         <b>Dependency Injection is required for the following</b><br>
         <ul><li>Separating the process of creation and consumption of dependencies.</li>
@@ -1355,8 +1716,67 @@ app.config(['$routeProvider',
         <li>We can change the dependencies when required.</li>
        <li>It allows injecting mock objects as dependencies for testing.</li>
        </ul>`),
-       new qList(`Explain ng-repeat directive.`,`<p>The ng-repeat directive is the most used and very useful AngularJS Directive feature. It iterates over a collection of items and creates DOM elements. It constantly monitors the source of data to re-render a template in response to change.
-       </p>`),
+       new qList(`Explain directives ng-if, ng-switch and ng-repeat?`,`<p><b>ng-if –</b> This directive can add / remove HTML elements from the DOM based on an expression. If the expression is true, it add HTML elements to DOM, otherwise HTML elements are removed from the DOM.</p>
+
+<pre>
+&ltdiv ng-controller="MyCtrl">
+&ltdiv ng-if="data.isVisible">ng-if Visible&lt/div>
+&lt/div>
+&ltscript>
+var app = angular.module("app", []);
+app.controller("MyCtrl", function ($scope) {
+$scope.data = {};
+$scope.data.isVisible = true;
+});
+&lt/script>
+</pre>
+<p><b>ng-switch – </b>This directive can add / remove HTML elements from the DOM conditionally based on scope expression.</p>
+
+<pre>
+&ltdiv ng-controller="MyCtrl">
+&ltdiv ng-switch on="data.case">
+&ltdiv ng-switch-when="1">Shown when case is 1&lt/div>
+&ltdiv ng-switch-when="2">Shown when case is 2&lt/div>
+&ltdiv ng-switch-default>Shown when case is anything else than 1 and 2&lt/div>
+&lt/div>
+&lt/div>
+&ltscript>
+var app = angular.module("app", []);
+app.controller("MyCtrl", function ($scope) {
+$scope.data = {};
+$scope.data.case = true;
+});
+&lt/script></pre>
+<p><b>ng-repeat - </b>This directive is used to iterate over a collection of items and generate HTML from it.</p>
+<pre>
+&ltdiv ng-controller="MyCtrl">
+&ltul>
+&ltli ng-repeat="name in names">
+{{ name }}
+&lt/li>
+&lt/ul>
+&lt/div>
+&ltscript>
+var app = angular.module("app", []);
+app.controller("MyCtrl", function ($scope) {
+$scope.names = ['Shailendra', 'Deepak', 'Kamal'];
+});
+&lt/script>
+</pre>
+`),
+new qList(`What are Templates in AngularJS?`,`<p>AngularJS templates are just plain old HTML that contains Angular-specific elements and attributes. AngularJS used these templates to show information from the model and controller.</p>
+<b>Creating an AngularJS template</b>
+<pre>
+&lthtml ng-app>
+<!-- body tag with ngController directive -->
+&ltbody ng-controller="MyController">
+&ltinput ng-model="txtName" value="shailendra"/>
+<!-- button tag with ng-click directive & string expression 'btnText' wrapped in "{{ }}" markup -->
+&ltbutton ng-click="changeName()">{{btnText}}&lt/button>
+&ltscript src="angular.js">
+&lt/body>
+&lt/html>
+</pre>`),
        new qList(`What is controller in AngularJS?`,`<p>A controller is a set of JavaScript functions which is bound to a specified scope, the ng-controller directive. Angular will instantiate the new controller object, and injects the new scope as a dependency. It contains business logic for the view and avoids using controller to manipulate the DOM. </p>
        <br><img src="/assets/Images/controller.jpg"></img><br><b>Controller Rules</b><br>
        <ul><li>We can use controller to set up the initial state of the scope object and add behavior to that object.</li>
@@ -1370,9 +1790,60 @@ app.config(['$routeProvider',
           <li>date</li><li>filter</li><li>json</li><li>limitTo</li>
           <li>lowercase</li>
          <li>number</li><li>uppercase</li><li>OrderBy</li>
-        </ul>`),
-        new qList(`Explain Module  In AngularJS.`,`<p>AngularJS module is nothing but a container of all angular components like controller, services, directive, filter, config etc.Let me explain why module is required in AngularJS. In .NET console application there is a main method and what main method does is, it’s an entry point of application. It is the same as angular module and is an entry point. Using module we can decide how the AngularJS application should be bootstrapped.</p>
-        `),
+        </ul><b>Filter Syntax</b>
+<pre>{{ expression | filter}}</pre>
+<b>Filter Example</b>
+<pre>
+&ltscript type="text/javascript">
+{ { 14 | currency } } //returns $14.00
+&lt/script>
+</pre>`),
+        new qList(`What are Modules in AngularJS?`,`<p>AngularJS modules are containers just like namespace in C#. They divide an angular app into small, reusable and functional components which can be integrated with other angular app. Each module is identified by a unique name and can be dependent on other modules. In AngularJS, every web page (view) can have a single module assigned to it via ng-app directive.</p>
+<b>Creating an AngularJS module</b>
+<pre>
+&ltscript type="text/javascript">
+// defining module
+angular.module('myApp', []);
+//OR defining module which has dependency on other modules
+angular.module('myApp', ['dependentModule1', 'dependentModule2']);
+&lt/script>
+</pre>
+<b>Using an AngularJS module into your app</b>
+<p>You can bootstrap your app by using your AngularJS module as given below:</p>
+
+<pre>
+&lthtml ng-app="myApp">
+&lthead>
+...
+&lt/head>
+&ltbody>
+...
+&lt/body>
+</pre>`),
+new qList(`What is difference between config() and run() method in AngularJS?`,`<p>
+<b>Configuration block-</b> This block is executed during the provider registration and configuration phase. Only providers and constants can be injected into configuration blocks. This block is used to inject module wise configuration settings to prevent accidental instantiation of services before they have been fully configured. This block is created using config() method.
+
+</p>
+
+<pre>
+angular.module('myModule', []).
+config(function (injectables) { // provider-injector
+// This is an example of config block.
+// You can have as many of these as you want.
+// You can only inject Providers (not instances)
+// into config blocks.
+}).
+run(function (injectables) { // instance-injector
+// This is an example of a run block.
+// You can have as many of these as you want.
+// You can only inject instances (not Providers)
+// into run blocks
+});
+</pre>
+<p><b>Run block –</b> This block is executed after the configuration block. It is used to inject instances and constants. This block is created using run() method. This method is like as main method in C or C++.</p>
+<p>The run block is a great place to put event handlers that need to be executed at the root level for the application. For example, authentication handlers.</p>`),
+new qList(`What is core module in AngularJS? & How angular modules load the dependencies?`,`<p><b>ng</b> is the core module in angular. This module is loaded by default when an angular app is started. This module provides the essential components
+ for your angular app like directives, services/factories, filters, global APIs and testing components.</p><p>An angular module use configuration and run blocks to inject dependencies (like providers, services and constants) which get applied to the angular app during the bootstrap process.</p>`),
         new qList(`What are the services in AngularJS?`,`<p>Services are one of the most important concepts in AngularJS. In general services are functions that are responsible for specific tasks in an application. AngularJS services are designed based on two principles.</p>
         <b>Lazily instantiated </b><br><p>Angular only instantiates a service when an application component depends on it using dependency injection for making the Angular codes robust and less error prone.</p>
         <b>Singletons</b><br><p>Each component is dependent on a service that gets a reference to the single instance generated by the service factory.</p>`),
@@ -1407,8 +1878,175 @@ app.config(['$routeProvider',
       We can prefer AngularJS only if we are developing a heavy web application.
      </li>
      </ul>`),
-     new qList(`What is One-Way Data Binding in AngularJS?`,`<p>One-Way Data Binding simply means that HTML elements reflect the change. When the model values change the HTML elements don't change the values in the model.</p>
-     <p>In other words, when the model changes, this change is reflected in the view but the view doesn't change the model. In other words the developer must write extra code for automatic synchronization of data between the model and the view components. One-Way binding may also be called one-direction binding.<br><img src="/assets/Images/bind.jpg"></img></p>`)
+     new qList(`Explain Two-way and One-way data binding in AngularJS?`,`<p><b>Two-way data binding -</b> It is used to synchronize the data between model and view. It means, any change in model will update the view and vice versa. ng-model directive is used for two-way data binding.</p>
+<img src="/assets/Images/OneTwoWay.JPG">
+<p>
+<b>One-way data binding -</b> This binding is introduced in Angular 1.3. An expression that starts with double colon (::), is considered a one-time expression i.e. one-way binding.</p>
+<b>Two-Way and One-Way data binding Example</b>
+<pre>
+&ltdiv ng-controller="MyCtrl"> &ltlabel>Name (two-way binding):
+ &ltinput type="text" ng-model="name" />&lt/label> 
+ &ltstrong>Your name (one-way binding):&lt/strong> {{::name}}<br /> 
+ &ltstrong>Your name (normal binding):&lt/strong> {{name}}
+&lt/div>
+&ltscript>
+var app = angular.module('app', []);
+app.controller("MyCtrl", function ($scope) {
+$scope.name = "Shailendra Chauhan"
+})
+&lt/script>
+</pre>`),
+new qList(`What is the difference between $watch, $digest and $apply?`,`<p><b>$watch() -</b> This function is used to observe changes in a variable on the $scope. It accepts three parameters: expression, listener and equality object, where listener and equality object are optional parameters.</p>
+<b>$watch(watchExpression, listener, [objectEquality])</b>
+<pre>
+&ltscript>
+var myapp = angular.module("myapp", []);
+var myController = myapp.controller("myController", function ($scope) {
+$scope.name = 'dotnet-tricks.com';
+$scope.counter = 0;
+//watching change in name value
+$scope.$watch('name', function (newValue, oldValue) {
+$scope.counter = $scope.counter + 1;
+});
+});
+&lt/script>
+&lt/head>
+&ltbody ng-app="myapp" ng-controller="myController">
+&ltinput type="text" ng-model="name" />
+<br /><br />
+Counter: {{counter}}
+&lt/body>
+</pre>
+
+<p>
+<b>$digest() -</b> This function iterates through all the watches in the $scope object, and its child $scope objects (if it has any). When $digest() iterates over the watches, it checks if the value of the expression has changed. If the value has changed, AngularJS calls the listener with the new value and the old value.
+</p>
+<p>The $digest() function is called whenever AngularJS thinks it is necessary. For example, after a button click, or after an AJAX call. You may have some cases where AngularJS does not call the $digest() function for you. In that case you have to call it yourself.</p>
+<pre>
+&ltbody ng-app="app">
+&ltdiv ng-controller="Ctrl">
+&ltbutton class="digest">Digest my scope!&lt/button>
+&ltbr />
+&lth2>obj value : {{obj.value}}&lt/h2>
+&lt/div>
+&ltscript>
+var app = angular.module('app', []);
+app.controller('Ctrl', function ($scope) {
+$scope.obj = { value: 1 };
+$('.digest').click(function () {
+console.log("digest clicked!");
+console.log($scope.obj.value++);
+//update value
+$scope.$digest();
+});
+});
+&lt/script>
+</pre>
+
+<p>
+<b>$apply() -</b> Angular do auto-magically updates only those model changes which are inside AngularJS context. When you do change in any model outside of the Angular context (like browser DOM events, setTimeout, XHR or third party libraries), then you need to inform Angular of the changes by calling $apply() manually. When the $apply() function call finishes AngularJS calls $digest() internally, so all data bindings are updated.</p>
+<b>$apply([exp])</b>
+<pre>
+&ltscript>
+var myapp = angular.module("myapp", []);
+var myController = myapp.controller("myController", function ($scope) {
+$scope.datetime = new Date();
+$scope.updateTime = function () {
+$scope.datetime = new Date();
+}
+//outside angular context
+document.getElementById("updateTimeButton").addEventListener('click', function () {
+//update the value
+$scope.$apply(function () {
+console.log("update time clicked");
+$scope.datetime = new Date();
+console.log($scope.datetime);
+});
+});
+});
+&lt/script>
+&lt/head>
+&ltbody ng-app="myapp" ng-controller="myController">
+&ltbutton ng-click="updateTime()">Update time - ng-click</button>
+&ltbutton id="updateTimeButton">Update time</button>
+<br />
+{{datetime | date:'yyyy-MM-dd HH:mm:ss'}}
+&lt/body>
+</pre>`),
+new qList(`What is $emit, $broadcast and $on in AngularJS?`,`<p>AngularJS provides $on, $emit, and $broadcast services for event-based communication between controllers.</p>
+<p><b>$emit –</b> It dispatches an event name upwards through the scope hierarchy and notify to the registered $rootScope.Scope listeners. The event life cycle starts at the scope on which $emit was called. The event traverses upwards toward the root scope and calls all registered listeners along the way. The event will stop propagating if one of the listeners cancels it.</p>
+
+<pre>
+&ltscript>
+var app = angular.module('app', []);
+app.controller("firstCtrl", function ($scope) { $scope.$on('eventName', function (event, args) {
+$scope.message = args.message;
+console.log($scope.message);
+});
+});
+app.controller("secondCtrl", function ($scope) {
+$scope.handleClick = function (msg) { $scope.$emit('eventName', { message: msg });
+};
+});
+&lt/script>
+&ltbody ng-app="app">
+&ltdiv ng-controller="firstCtrl" style="border:2px solid #E75D5C; padding:5px;">
+&lth1>Parent Controller&lt/h1>
+&ltp>Emit Message : {{message}}&lt/p>
+<br />
+&ltdiv ng-controller="secondCtrl" style="border:2px solid #428bca;padding:5px;">
+&lth1>Child Controller&lt/h1>
+&ltinput ng-model="msg">
+&ltbutton ng-click="handleClick(msg);">Emit&lt/button>
+&lt/div>
+&lt/div>
+&lt/body>
+</pre>
+<img src="/assets/Images/emit.JPG">
+<p>
+<b>$broadcast –</b> It dispatches an event name downwards to all child scopes (and their children) and notify to the registered $rootScope.Scope listeners. The event life cycle starts at the scope on which $broadcast was called. All listeners for the event on this scope get notified. Afterwards, the event traverses downwards toward the child scopes and calls all registered listeners along the way. The event cannot be canceled.</p>
+<pre>
+&ltscript>
+var app = angular.module('app', []);
+app.controller("firstCtrl", function ($scope) {
+$scope.handleClick = function (msg) { $scope.$broadcast('eventName', { message: msg });
+};
+});
+app.controller("secondCtrl", function ($scope) { $scope.$on('eventName', function (event, args) {
+$scope.message = args.message;
+console.log($scope.message);
+});
+});
+&lt/script>
+&ltbody ng-app="app">
+&ltdiv ng-controller="firstCtrl" style="border:2px solid #E75D5C; padding:5px;">
+&lth1>Parent Controller&lt/h1>
+&ltinput ng-model="msg">
+&ltbutton ng-click="handleClick(msg);">Broadcast&lt/button>
+<br /><br />
+&ltdiv ng-controller="secondCtrl" style="border:2px solid #428bca;padding:5px;">
+&lth1>Child Controller&lt/h1>
+<p>Broadcast Message : {{message}}&lt/p>
+&lt/div>
+&lt/div>
+&lt/body>
+</pre>
+<p><b>$on –</b> It listen on events of a given type. It can catch the event dispatched by $broadcast and $emit.</p>
+<p>
+<b>Note - </b>If there is no parent-child relation between your scopes you can inject $rootScope into the controller and broadcast the event to all child scopes but you cannot emit your event. You can emit your event only when you have parent-child relation and event propagation is initiated by child. However, $emit can fire an event only for all $rootScope.$on listeners.</p>
+
+`),
+new qList(`Please explan about $evalAsync, $timeout, $watch and $observe?`,`<p><b>$evalAsync -</b> This executes the expression on the current scope on later time. The $evalAsync makes no guarantees as to when the expression will be executed, only that:</p>
+<ul>
+<li>If code is queued using $evalAsync from a directive, it will run after the DOM has been manipulated by Angular, but before the browser renders.</li>
+<li>If code is queued using $evalAsync from a controller, it will run before the DOM has been manipulated by Angular and before the browser renders.</li>
+</ul>
+<p><b>$timeout -</b> This also executes the expression on the current scope on later time. When the code is queued using $timeout, it will run after the DOM has been manipulated by Angular and after the browser renders which may cause flicker in some cases.</p>
+<p><b>$watch - </b> is a method on the scope object which is used to watch expressions. The expression can be either strings or functions. It can be called wherever you have access to scope (a controller or a directive linking function).</p>
+<p><b>$observe -</b> is a method on the attrs object which is only used to observe the value change of a DOM attribute. It is only used inside directives.</p>
+
+<p><b>Note -</b> All $observes and $watches are checked on every digest cycle.</p>`),
+new qList(`What is issue with two-way data binding? or Why one-way data binding is introduced?`,`<p>In order to make data-binding possible, Angular uses $watch APIs to observe model changes on the scope. Angular registered watchers for each variable on scope to observe the change in its value. If the value, of variable on scope is changed then the view gets updated automatically.</p><p>This automatic change happens because of $digest cycle is triggered. Hence, Angular processes all registered watchers on the current scope and its children and checks for model changes and calls dedicated watch listeners until the model is stabilized and no more listeners are fired. Once the $digest loop finishes the execution, the browser re-renders the DOM and reflects the changes.</p><p>By default, every variable on a scope is observed by the angular. In this way, unnecessary variable are also observed by the angular that is time consuming and as a result page is becoming slow.</p><p>Hence to avoid <b>unnecessary observing</b> of variables on scope object, angular introduced one-way data binding.</p>`),
 
         
     ];
