@@ -2058,22 +2058,198 @@ new qList(`What is issue with two-way data binding? or Why one-way data binding 
        <li><b>ngOnDestroy</b>-Cleanup just before Angular destroys the directive/component. Unsubscribe observables and detach event handlers to avoid memory leaks.</li>
         </ul>
         `),
-        new qList(`What are the advantages of using Angular 2 over Angular 1?`,`<ul><li>Angular 2 is a platform not only a language</li>
-        <li>Better Speed and Performance: No $Scope in Angular 2, AOT</li>
-        <li>Simpler Dependency Injection</li>
-        <li>Modular, cross platform</li>
-        <li>Benefits of ES6 and Typescript.</li>
-        <li>Flexible Routing with Lazy Loading Features</li>
-        <li>Easier to Learn</li>
-        </ul>`),
+        new qList(`Difference between Angular 1 VS Angular 2?`,`
+<b>1). Angular 2 is mobile oriented & better in performance. </b>
+<p>Angular 1.x was not built with mobile support in mind, where Angular 2 is mobile oriented. Angular 2 is using Hierarchical Dependency Injection system which is major performance booster. Angular 2 implements unidirectional tree based change detection which again increases performance. As per ng-conf meetup, angular 2 is 5 times faster as compared to angular 1.</p>
+<img src="/assets/Images/ang-1.jpg">
+<b>2). Angular 2 provides more choice for languages.</b>
+<p>Angular 2 provides more choice for languages. You can use any of the languages from ES5, ES6, TypeScript or Dart to write Angular 2 code. Where, Angular 1.x has ES5, ES6, and Dart. Using of TypeScript is a great step as TypeScript is an awesome way to write JavaScript.</p>
+<b>3). Angular 2 implements web standards like components.</b>
+<p>Angular 2 implements web standards like components, and it provides better performance than Angular 1.</p>
+<img src="/assets/Images/ang-2.jpg">
+<b>4). AngularJS 2.0 is not easy to setup as AngularJS 1.x.</b>
+<p>AngularJS 1.x is easy to setup. All you need to do is to add reference of library and you are good to go. Where AngularJS 2 is dependent on other libraries and it requires some efforts to set up it.
+[UPDATE: Angular Team heard this and they introduced Angular CLI to create AngularJS 2 applications]</p>
+<b>5). Angular 1.x controllers and $scope are gone.</b>
+<p>Angular 1.x controllers and $scope are gone. We can say that controllers are replaced with “Components” in Angular 2. Angular 2 is component based. Angular 2 is using zone.js to detect changes.</p>
+<pre>
+//Angular 1.x Controller
+var myApp = angular.module("myModule", []);
+myApp.controller("productController", function($scope) {
+     var prods = { name: "Prod1", quantity: 1 };
+     $scope.products = prods;
+});
+</pre>
+<pre>
+//Angular 2 Components using TypeScript
+import { Component } from '@angular/core';
+
+@Component({
+    selector: 'prodsdata',
+    template: '&lth3>{{prods.name}}&lt/h3>'
+})
+
+export class ProductComponent {
+    prods = {name: 'Prod1', quantity: 1 };
+}
+</pre>
+<p><b>Note:</b> there is a class with ‘export’ keyword, @Componentannotation (that’s also new in Angular 2). The @Componentannotation adds the metadata to the class.</p>
+<img src="/assets/Images/ang-3.jpg">
+
+<b>6). Different ways to define local variables.</b>
+<p>In Angular 2, local variables are defined using a Hash(#) prefix.</p>
+<pre>&ltdiv *ngFor="#technicalDiary of technicalDiries"></pre>
+
+<b>7). Structural directives syntax is changed.</b>
+<p>In Angular 2, Structural directives syntax is changed. ng-repeat is replaced with. *ngFor
+Angular 1.x structural directives:</p>
+<pre>
+&ltul>
+   &ltli ng-repeat="technology in technologies">
+     {{technology.name}}
+   &lt/li>
+&lt/ul></pre>
+
+<p>Angular 2 structural directives:</p>
+<pre>
+&ltul>
+  &ltli *ngFor="#technology of technologies">
+    {{technology.name}}
+  &lt/li>
+&lt/ul></pre>
+<p><b>Note:</b> Asterisk(*) sign is used as a prefix for structural directives, is replaced with and camelCase syntax is used.</p>
+<b>8). Angular 2 uses camelCase syntax for built-in directives.</b>
+<p>Angular 2 uses camelCase syntax for built-in directives. For example, ng-class is now and ngClass ng-model is now ngModel.</p>
+<b>9). Angular 2, directly uses the valid HTML DOM element properties and events.</b>
+<p>One of the major change in Angular 2 is, that it directly uses the valid HTML DOM element properties and events. Due to this, many of the available built-in directives in Angular 1.x are now no longer required. Like ng-href, ng-src, ng-show and ng-hide. Angular 2 uses href, src and hidden properties to get the same output. And same goes with event based directives like ng-click and ng-blur.</p>
+<pre>&ltbutton ng-click=”doSomething()”></pre>
+<p>And in Angular 2, take the HTML event and wrap it with parentheses.</p>
+<pre>&ltbutton ng-click=”doSomething()”></pre>
+<b>10). One-way data binding directive replaced with [property].</b>
+<p>In Angular 1.x, ng-bind is used for one-way data binding, but with Angular 2 it is replaced with, [property] where ‘property’ is valid HTML DOM element property.
+Angular 1.x, one-way data binding</p>
+<pre>&ltinput ng-bind="name">&lt/input></pre>
+<p>
+Angular 2, one-way data binding is achieved via wrapping the properties with square brackets.</p>
+<pre>&ltinput [ng-bind]="name">&lt/input></pre>
+
+<b>11). Two-way data binding: ng-model replaced with [(ngModel)]</b>
+<p>In Angular 1.x, ng-model is used for two-way data binding, but with Angular 2 it is replaced with [(ngModel)].</p>
+<p>Angular 1.x, two-way data binding,</p>
+<pre>&ltinput ng-model="technology.name">&lt/input></pre>
+<p>In Angular 2,</p>
+<pre>&ltinput [(ngModel)]="technology.name">&lt/input></pre>
+<b>12). Way of Bootstrapping Angular Application is changed:</b>
+<p>Angular 1.x has 2 ways to bootstrap Angular. One using ng-app attribute and other via code.</p>
+<pre>&ltscript>
+   angular.element(document).ready(function() {
+      angular.bootstrap(document, ['myApp']);
+   });
+&lt/script></pre>
+
+<p>In Angular 2, say goodbye to ng-app. The only way to bootstrap Angular is via code.</p>
+<pre>
+import { bootstrap } from 'angular2/platform/browser';
+import { ProductComponent } from './product.component';
+
+bootstrap(ProductComponent);</pre>
+<p>The bootstrap function is used and it takes starting component which is also parent component of your angular application.</p>
+
+<b>13). Ways of Dependency Injection is Changed- syntax changed.</b>
+<p>One of the advantages of Angular is Dependency Injection. With Angular 2 DI is there but now there is a different way to inject dependencies. As everything is ‘class’ in Angular, so DI is achieving via constructors.</p>
+<p>In Angular 1.x,</p>
+
+<pre>var myApp = angular
+   .module("myModule", [])
+   .controller("productController", function($scope, $http) {
+        var prods = { name: "Prod1", quantity: 1 };
+        $scope.products = prods;
+    });</pre>
+	<p>In Angular 2,</p>
+	<pre>import { Injectable } from 'angular2/core';
+
+@Injectable()
+
+export class TechnologyService {
+    constructor(private _http: Http) { }
+    getTechnologies() {
+        return [new technology(1, 'Angular'),
+            new technology(2, 'jQuery',
+            new technology(3, 'Node'),
+            new technology(4, 'Knockout')
+        ];
+    }
+}</pre>
+
+<p>Note: <b>@Injectable()</b> is added to service class. It is similar to Angular 1.x $inject used for DI.</p>
+<b>14). Way of routing is Changed- syntax changed.</b>
+<p>In Angular 1.x, we use $routeProvider.when() to configuring routing. Where in Angular 2, @RouteConfig{(...}) is used. ng-view present in Angular 1.x is replaced with <router-outlet></p>
+<p>In Angular 1.x,</p>
+<pre>var app = angular
+        .module("MyModule", ["ngRoute"])
+        .config(function ($routeProvider) {
+            $routeProvider
+            .when("/home", { templateUrl: "home.html", controller: "homeController" })
+            .when("/technology", { templateUrl: "technology.html", controller: "technologyController" })
+        })
+       .controller("homeController", function ($scope) {
+            $scope.message = "Home Page";
+        })   
+       .controller("technologyController", function ($scope) {
+             $scope.technologies = ["ASP.NET", "jQuery", "AngularJS", "JavaScript"];
+       })</pre>
+	   
+	   <p>In Angular 2,</p>
+	   <pre>import { Component } from 'angular2/core';
+import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/router';
+import { TechnologyComponent } from './technology/technology.component';
+import { TechnologyService } from './Technology/Technology.service';
+ 
+@Component({
+  selector: 'my-app',
+  
+  directives: [ROUTER_DIRECTIVES],
+  providers: [
+    ROUTER_PROVIDERS,
+    TechnologyService
+  ]
+})
+@RouteConfig([
+  { path: '/home', name: 'Home', component: HomeComponent, useAsDefault: true },
+  { path: '/technology', name: 'Technology', component: TechnologyComponent },
+])
+
+export class AppComponent { }</pre>
+<p>Routing is a separate module that’s why need to import it. And 2 more configurations need to be to make routing work, one is adding[ROUTER_DIRECTIVES] as directive and other is to add ROUTER_DIRECTIVES in providers list. And in HTML page,</p>
+<pre>
+&ltul>
+  <&lti>&lta [routerLink]="['Home']" href="">Home&lt/a>&lt/li>
+  &ltli>&lta [routerLink]="['Technology']" href="">Technology&lt/a>&lt/li>
+&lt/ul>
+</pre>
+
+<p>ng-href is also replaced by [routerLink]</p>
+<b>Conclusion:</b>
+<p>Although angular 2, I consider this as a major upgrade from Angular 1. Angular 2 has very powerful routes. The Angular 2 Router will only load components when it absolutely needs them. Kind of partial loading which is a great feature I think. Angular 2 is 5 times faster as compared to Angular 1.</p>
+
+<p>It certainly requires some efforts to migrate from Angular 1 to Angular 2, but it is in the right direction. Things are looking better and more inline with HTML. It is still in beta but eagerly waiting for the final release.</p>
+
+`),
         new qList(`How routing works in Angular 2`,`<p>Routing is a mechanism which enables user to navigate between views/components. Angular 2 simplifies the routing and provide flexibility to configure and define at module level (Lazy loading). </p>
         <p>The angular application has single instance of the Router service and whenever URL changes, corresponding Route is matched from the routing configuration array. On successful match, it applies redirects and the router builds a tree of ActivatedRoute objects and contains the current state of the router. Before redirection, the router will check whether new state is permitted by running guards (CanActivate). Route Guards is simply an interface method that router runs to check the route authorization.</p><p> After guard runs, it will resolve the route data and activate the router state by instantiation the required components into &ltrouter-outlet&gt &lt/router-outlet&gt.</p>`),
         new qList(`What are Event Emitters and how it works in Angular 2?`,`<p>Angular 2 doesn’t have bi-directional digest cycle, unlike angular 1. In angular 2, any change occurred in the component always gets propagated from the current component to all its children in hierarchy. If the change from one component needs to be reflected to any of its parent component in hierarchy, we can emit the event by using Event Emitter api.</p>
         <p>In short, EventEmitter is class defined in @angular/core module which can be used by components and directives to emit custom events.</p>
         @output() somethingChanged = new EventEmitter();`),
-        new qList(`What is lazy loading and How to enable lazy loading in angular 2?`,`<p>Lazy lading enables us to load only the module user is interacting and keep the rest to be loaded at runtime on demand.<br>
-     Lazy loading speeds up the application initial load time by splitting the code into multiple bundles and loading them on demand.
-     </p>Every Angular application must have one main module say AppModule. The code should be splitted into various child modules (NgModule) based on the application business case.`),
+        new qList(`What is lazy loading and How to enable lazy loading in angular 2?`,`<p>Most of the enterprise application contains various modules for specific business cases. Bundling whole application code and loading will be huge performance impact at initial call. Lazy lading enables us to load only the module user is interacting and keep the rest to be loaded at runtime on demand.</p>
+<p>Lazy loading speeds up the application initial load time by splitting the code into multiple bundles and loading them on demand.</p>
+<p>Every Angular application must have one main module say AppModule. The code should be splitted into various child modules (NgModule) based on the application business case.</p>
+<ol>
+<li>We don't require to import or declare lazily loading module in root module.</li>
+<li>Add the route to top level routing (app.routing.ts) and set loadChildren. loadChildren takes absolute path from root folder followed by #{ModuleName}. RouterModule.forRoot() takes routes array and configures the router.</li>
+<li>Import module specific routing in the child module.</li>
+<li>In the child module routing, specify path as empty string ' ', the empty path. RouterModule.forChild again takes routes array for the child module components to load and configure router for child.</li>
+<li>Then, export const routing: <pre>ModuleWithProviders = RouterModule.forChild(routes);</pre></li>
+</ol>`),
      new qList(`What are the security threats should we be aware of in angular 2 application?`,`<p>Just like any other client side or web application, angular 2 application should also follow some of the basic guidelines to mitigate the security risks. Some of them are:</p>
      <ul><li>Avoid using/injecting dynamic Html content to your component.</li>
      <li>If using external Html, that is coming from database or somewhere outside the application, sanitize it</li>
@@ -2114,9 +2290,54 @@ new qList(`What is issue with two-way data binding? or Why one-way data binding 
      <li>supports map, filter, reduce and similar operators</li>
      <li>proposed feature for ES 2016</li>
      </ul>`),
-     new qList(`Modern browsers are supported in Angular 2? `,`<p>All the Angular 2 framework code is already being written in ECMAScript 6.</p>
-     The set of modern browsers are <br>
-     <ul><li>Chrome</li><li>Firefox</li><li>Opera</li><li>safari</li><li>IE version10 and 11</li></ul>`)
+     new qList(`Explain local reference variables, ViewChild, and ContentChild.`,`<p>Local template variables in angular2 is used to refer HTML elements and use their properties to access siblings or children. Let’s consider you have an input field named username.
+
+<pre>&ltinput type="text" required ... /></pre>
+
+This HTMLInputField can be made available to the template using # symbol with a variable name say username.
+
+ <pre>&ltinput type="text" #username required ... /></pre>
+
+Now, this HTMLInputElement can be accessed from anywhere in the current template for example, checking validation and showing appropriate message based on the validation rule. But, username HTML reference is not accessible in the component/directive.
+
+To access this in the component, angular 2 provides @ViewChild decorator which accepts the local reference variable.
+
+<pre>@ViewChild('username') username: HTMLInputElement;</pre>
+
+ViewChild element can be read after the view is initialized (ngAfterViewInit).
+
+ContentChild is used to query the reference of the DOM within ng-content. Content Child are set before the ngAfterContentInit lifecycle hook.
+</p>
+
+<b>For Example</b>
+<pre>
+// &ltcode>app.component.ts&lt/code>
+<my-component>
+    &ltp #contentRef>{{test}}&lt/p>
+</ my-component >
+ 
+// MyComponent.component.ts
+@Component({
+    selector: ‘my-component',
+    template: '
+    &ltng-content></ng-content>
+    &ltdiv> ContentChild Example &lt/div>
+})
+export class LifecycleComponent implements ngAfterContentInit{
+                @ContentChild(‘contentRef’)   childContent: HTMLElement;
+ 
+ngAfterContentInit() {
+              this.log('ngAfterContentInit');
+console.log(this.childContent);
+    }
+}
+</pre>`),
+new qList(`What are Modules in Angularjs 2.0?`,`<p>Both Angular 1.x and 2.0 apps are modular. However, in Angular2.0 NgModules  has been introduced as its modularity system. Every Angular2.0 must have one module which acts as the root module and conventionally named as AppModule. If the project has been created using angular-cli, AppModule is created in file src/app/app.module.ts.</p>
+
+<b>However, there can be more than one module in a single Angular2.0 app.</b>
+<p>
+<b>@NgModule </b>decorators pass a metadata, with properties such as declaration, imports, providers, export and bootstrap in order to create the module class.</p>
+<img src="/assets/Images/angularmodule.JPG">`),
         
     ];
     public sqlServer=[
