@@ -15,4 +15,16 @@
 <div *ngIf="qnsDetails">
   <p text-wrap [innerHTML]="qnsDetails.ans"></p>
 </div>
+
+  <ion-list *ngIf="youMayLike">
+    <ion-item color="light">
+      <ion-title text-wrap center>You Also May Like...</ion-title>
+    </ion-item>
+
+  <button ion-item  outline *ngFor="let a of youMayLike, let p=index" (click)="goToNext(p)">
+   <p text-wrap [innerHTML]="a.qus"></p>
+  </button>  
+</ion-list>
+
+
 </ion-content>

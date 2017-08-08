@@ -124,10 +124,14 @@ console.log(this.questionList);
 
 }
 
-  itemTapped(item) {
-console.log(item);
+  itemTapped(e) {
+console.log(e);
    localStorage.setItem("title", this.selectedItem.title);
-    this.navCtrl.push(AnsDetailsPage, item);
+   let dataList={
+     items:this.Tempitems,
+index:e
+   }
+    this.navCtrl.push(AnsDetailsPage, dataList);
   }
 
 
