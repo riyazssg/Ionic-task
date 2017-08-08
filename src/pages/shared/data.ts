@@ -3243,7 +3243,5 @@ foreach (Customercust in Customers) // In this line no address object loaded
    <p>Now the customer object and the related address objects will be loaded in one query rather than multiple queries.</p><pre>var employees = context.Customers.Include("Addresses").Take(5);</pre>`)
         
     ];
-     public practical=[
-        
-    ];
+    
 }

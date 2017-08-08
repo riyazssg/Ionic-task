@@ -38,7 +38,7 @@ export class MyApp {
       { title: 'Linq', apiKey: 'Linq' },
       { title: 'SQL Queries', apiKey: 'SqlQueries' },
       { title: 'Entity Framework', apiKey: 'EF' },
-      { title: 'System Test Qus ', apiKey: 'practical' },
+     
 
     ];
 
