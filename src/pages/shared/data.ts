@@ -4338,5 +4338,61 @@ Virtual void function2() = 0 //Pure virtual</pre>`),
   
 
     ];
-    
+   public selfIntro=[
+       new qList(`Self Introduction : 1`,`<p>Good Morning /Good After-Noon /Good Evening</p><p>My name is Mansur Haider from Kolkata. I am persuing my M.C.A in stream of Master of Computer Application from Acharya Institute Of Technology. I have completed CHSC from BB College and my SSC from Delhi High school with aggregate 73%.
+</p>
+</p>
+We are five in my family. My father is a private employee and my mother is a homemaker. I have two sibblings.</p>
+<p>About my achievements, I never made any achievements at state level. But in my schooling I got certificate in singing level competition. In college I got NSS certificate which I participated as volunteer in my 1st year of engineering.</p>
+<p>My strengths are hardworker, self motivating and dedicated towards my work. And also I’m a good learner as well as teacher.</p>
+<p>My hobbies are making crafts, painting, surfing net.</p>
+<p>My short term goal to get placed in well reputed company.
+</p>
+<p>My long term goal to palced in any mnc company and give my best to your.</p>
+<p>Organisation.
+As a fresher, I don’t have any working experience, but I will prove once the opportunity comes.</p>`),
+new qList(`Self Introduction : 2`,`<p>First of all, I would like to thank you for giving me an opportunity to introduce myself.</p>
+<p>I am Ashish Kamble, I am from Wadsa Desaiganj Dist Gadchiroli State Maharashtra.
+So, actually, I am pursuing my BE degree in CSE. In my field, I like c, c++ and java.
+I like coding and I have an interest in the operating system and Data structures.
+I have a completed my Diploma in Computer Engineering from Government Polytechnic college in 2016 at Gondia.</p>
+<p>
+Coming to my strength I am more confident punctual and Hard worker, the problem solver.
+I have a good computer knowledge I'm an honest person and quick learner.
+My weakness is believing people easily.</p>
+<p>Coming to my family background; I have a small family of four members including me also. My father is labour and my mother is House maker, I have a younger sister.</p>
+<p>My hobbies are playing video games and paying a cricket, listening to a song and puzzle solving, GK reading and run programs.</p>
+<p>It's all about me.</p>
+`),
+new qList(`Self Introduction : 3`,`<p>Good morning mam/sir.</p>
+<p>It's my pleasure to introduce my self. Well, I'm VINITHA born and raised in Anantapur.</p>
+<p>I have done my schooling in Little flower Montessori English Medium High School with, then I did my plus 12 from NARAYANA JR COLLEGE and now I'm pursuing my final year B-Tech from CBIT.</p>
+<p>My strengths are my attitude that I like to take challenges that I CAN do it, my way of thinking that I take both success and failure in a balanced manner.</p>
+<p>I don't like to say weakness but I like to say scope for improvement that is I won't leave any ask in completely, I believe in my self and my hard work and I want perfection in every thing.</p>
+<p>My short term goal is I want a such a platform where I can grow my career along with the organisation growth like yours and.</p>
+<p>My Long term goal is I want to be one of the reason for the success of the organisation and I want to seeyour organisation as a bench mark to other organisations.</p>
+<p>My ethic is "i never neglect an opportunity for my improvement".</p>
+<p>Thats all about me sir. Thank you for giving me such a wonderful oppurtunity.</p>`),
+new qList(`Self Introduction : 4`,`<p>Good morning Sir,</p>
+<p>First of all I would like to thank you, for giving me an opportunity to introduce my self.</p>
+<p>My name is Mohammed Aftab Munshi, I born and belong to Dharwad City.</p>
+<p>I have completed B.Com from Anjuman College Karnataka University Dharwad in 2012.</p>
+</p>In my family we are 7 members my father passed away 8 years ago my mother is housewife and 4 sisters.</p>
+<p>I have 8 years of experience in 3 different work Supermarkt, Shoe shop and currently I am working in BPO company as Process Team Leader.
+</p>
+<p>My strength is I am very positive bout work and relationship, confident, Quick learner, hard worker out of my comfort zone.</p>
+<p>My hobbies learning new things</p>
+<p>That's all about me.</p>
+
+`),
+new qList(`Self Introduction (experience) - 1`,`<p>First of all, thank you very much for giving me this golden opportunity. Let me introduce myself, Myself Mona Choudhary. There are four members in my family; my father, mother, me and my sister. My father's name is Shyam Choudhary, he is a doctor. My mother's name is Dimple Choudhary, she is a housewife. My sister “Rina”, she is in 10th standard now.</p>
+<p>About my education & qualification - in 2012, I had completed my engineering in computer science from Anna University, Tamilnadu, and schooling from Delhi Public School, Delhi. During my Graduation period, I had done three Mainframe projects and successfully completed a training course on the Mainframe. I am excellent in planning, analyzing, designing, and developing.</p>
+<p>I am interested to work as a Mainframe web developer and my goal is to get good opportunities on the same profile in your company. I have done many successful Mainframe projects during college. Even though, I have just started my career and don't have any working experience, but once I get the opportunity, I will prove myself.</p>
+<p>My hobbies are Internet browsing & searching for helpful applications, watching news & discovery channel, playing Indoor games, listening old songs, art & design. My strengths are self-confidence & dedication, positive attitude, and hard work. My weakness is my soft nature that sometime harms me. Thanks for giving me this golden opportunity.</p>`),
+new qList(`Self Introduction (experience) - 2`,`<p>Thank you for giving me this opportunity to introduce myself in-front of you.</p>
+<p>My-self Shiva from Bangalore. I am in Bangalore since my childhood, but I born in Chennai. I have done my schooling and college from Bangalore. In 10th and 12th I have scored more than 80% and in graduation (BE) I have scored more than 70%. I am 27 Years old, working in TCS as a Java software developer.</p>
+<p>My role & responsibilities in my current company is to understand the client requirements and plan, develop, maintain and deploy the software project, help testers to test the particular software application, and help and co-operate with other team members.</p>
+<p>My short term goal is to crack this interview and get the particular job position. My long term goal is to get higher position in top MNC companies.</p>`)
+
+   ]; 
 }
