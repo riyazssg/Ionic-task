@@ -1490,6 +1490,38 @@ new qList(`Where to Use Abstact Class and Where to Use Interface?`,`<b>Use an ab
         new qList(``,`<p></p>`)
     ];
     public htmlCss=[
+        new qList(`What is the difference between HTML and HTML5 ?`,`HTML5 is nothing more then upgraded version of HTML where in HTML5 supports the innovative features such as Video, Audio/mp3, date select function , placeholder , Canvas, 2D/3D Graphics, Local SQL Database added so that no need to do external plugin like Flash player or other library elemenents.`),
+        new qList(`WHAT are some other advantages of HTML5?`,`<ul>
+<li>Cleaner markup than earlier versions of HTML</li>
+<li>Additional semantics of new elements like <header>, <nav>, and <time></li>
+<li>New form input types and attributes that will (and in Opera’s case, do) take the hassle out of scripting forms</li>tionality.</li>
+</ul>`),
+new qList(`What are the New Media Elements in HTML5 Over HTML?`,`<table border="1">
+<tr>
+<th>TAG</th>
+<th>DESCRIPTION</th>
+</tr>
+<tr>
+<td>&ltaudio></td>
+<td>For multimedia content, sounds, music or other audio streams</td>
+</tr>
+<tr>
+<td>&ltvideo></td>
+<td>For video content, such as a movie clip or other video streams</td>
+</tr>
+<tr>
+<td>&ltsource></td>
+<td>For media resources for media elements, defined inside video or audio elements</td>
+</tr>
+<tr>
+<td>&ltembed></td>
+<td>For embedded content, such as a plug-in</td>
+</tr>
+<tr>
+<td>&lttrack></td>
+<td>For text tracks used in mediaplayers</td>
+</tr>
+</table>`),
         new qList(`What is CSS ?`,`<p>The full form of CSS is Cascading Style Sheets. It is a styling language which is simple enough for HTML elements. It is popular in web designing, and its application is common in XHTML also.</p>`),
         new qList(`What is the origin of CSS ?`,`<p>Standard Generalized Markup Language marked the beginning of style sheets in 1980s.</p>`),
         new qList(`What are the limitations of CSS ?`,`<p>Limitations are:</p>
@@ -3789,7 +3821,12 @@ There are four different ways for returning/rendering a view in ASP.NET MVC as g
     ];
     public webAPI=[
         new qList(`What is Web API?`,`
-        <p>It is a framework which helps us to build/develop HTTP services. So there will a client server communication using HTTP protocol.</p>`),
+        <p>ASP.NET Web API is a framework that simplifies building HTTP services for broader range of clients (including browsers as well as mobile devices) on top of .NET Framework. Using ASP.NET Web API we can create non-SOAP based services like plain XML or JSON strings etc. with many other advantages including:</p>
+<ul>
+<li>Create resource-oriented services using the full features of HTTP.</li>
+<li><Exposing services to a variety of clients easily like browsers or mobile devices etc.</li>
+</ul>
+<img src="/assets/Images/ASP.NET-Web-API.png">`),
         new qList(`What is Representational state transfer or REST?`,`
         <p>REST is architectural style, which has defined guidelines for creating services which are scalable. REST used with HTTP protocol using its verbs GET, POST, PUT and DELETE.</p>`),
         new qList(`Explain Web API Routing?`,`
@@ -3802,18 +3839,16 @@ There are four different ways for returning/rendering a view in ASP.NET MVC as g
             };
             </pre>`),
         new qList(`What are the advantages of Web API?`,`
-        <p>Below are the list of support given by Web API –</p>
-        <ul><li>OData</li><br>
-        <li>Filters</li><br>
-        <li>Content Negotiation</li><br>
-        <li>Self Hosting</li><br>
-        <li>Routing</li><br>
-        <li>Model Bindings</li></ul>`),
-        new qList(`What is ASP.NET Web API?`,`
-        <p>ASP.NET Web API is a framework that simplifies building HTTP services for broader range of clients (including browsers as well as mobile devices) on top of .NET Framework.</p>
-        <p>Using ASP.NET Web API, we can create non-SOAP based services like plain XML or JSON strings, etc. with many other advantages including:</p>
-        <ul><li>Create resource-oriented services using the full features of HTTP</li><br>
-        <li>Exposing services to a variety of clients easily like browsers or mobile devices, etc.</li></ul>`),
+        <p>Using ASP.NET Web API has a number of advantages, but core of the advantages are:</p>
+<ul>
+<li>It works the HTTP way using standard HTTP verbs like GET, POST, PUT, DELETE etc for all CRUD operations.</li>
+<li>Complete support for routing.</li>
+<li>Response generated in JSON or XML format using MediaTypeFormatter.</li>
+<li>It has the ability to be hosted in IIS as well as self-host outside of IIS.</li>
+<li>Supports Model binding and Validation.</li>
+<li>Support for OData.</li?
+</ul>`),
+       
         new qList(`How to Return View from ASP.NET Web API Method?`,`
         <p>No, we can't return view from ASP.NET Web API method. We discussed in the earlier interview question about the difference between ASP.NET MVC and Web API that ASP.NET Web API creates HTTP services that renders raw data. <br>Although, it's quite possible in ASP.NET MVC application.<p>`),
         new qList(`Can we use Web API with ASP.NET Web Form?`,`
@@ -3830,7 +3865,112 @@ There are four different ways for returning/rendering a view in ASP.NET MVC as g
         routeTemplate: "api/{Controller}/{id}",
         defaults: new { id = RouteParameter.Optional }
         );
-        </pre>`),
+        </pre>
+        <p>So, any incoming request is matched against already defined routeTemplate and further routed to matched controller action. But it’s really hard to support certain URI patterns using conventional routing approach like nested routes on same controller. For example, authors have books or customers have orders, students have courses etc.</p>
+        <p>Such patterns can be defined using attribute routing i.e. adding an attribute to controller action as follows:</p>
+        <pre>
+        => books/1/authors
+
+[Route("books/{bookId}/authors")]
+public IEnumerable<Author> GetAuthorsByBook(int bookId) { ..... }
+</pre>
+<pre>
+=> customers/1/orders
+
+[Route("customers/{customerId}/orders")]
+public IEnumerable<Order> GetOrdersByCustomer(int customerId) { ..... }
+</pre>
+<pre>
+=> students/1/courses  
+
+[Route("students/{studentId}/courses")]
+public IEnumerable<Course> GetCoursesByStudent(int studentId) { ..... }</pre>
+`),
+new qList(`Explain CORS(Cross-Origin Resource Sharing)?`,`ASP.NET WebAPI is a trending technology in today’s world. Everyone tries to access the service through AJAX requests on the server side. The problem is when a WebAPI is hosted and the other applications on different domains try to access the WebAPI through a request. Here, enabling CORS plays a vital role in WebAPI.<p>CORS (Cross-origin resource sharing) is a technique that allows restricted resources on a web page to be requested from another domain outside the domain of which the first resource was served. A web page may freely attach cross-origin images, scripts, stylesheets, iframes, and videos. The same-origin security policy by default does not allow certain “cross-domain” requests, notably Ajax requests.</p>`),
+        new qList(`WCF RESTful Service Vs ASP.NET Web API?`,`<b>WCF REST</b>
+<ul>
+<li>Microsoft introduced “WebHttpBinding” to be used for creating WCF RESTful Services.</li>
+<li>HTTP Methods are mapped to attributes, for example, “WebGet” for GET method and “WebInvoke” for POST.</li>
+</ul>
+
+<b>ASP.NET Web API</b>
+<ul>
+<li>As compared with WCF REST, Web API supports full features of HTTP.</li>
+<li>Its possible to host Web API in IIS as well as in an application.</li>
+</ul>`),
+new qList(`Is it true that ASP.NET Web API has replaced WCF?`,`It’s a misconception that ASP.NET Web API has replaced WCF. It’s another way of building non-SOAP based services, for example, plain XML or JSON string etc.
+Yes, it has some added advantages like utilizing full features of HTTP and reaching more clients such as mobile devices etc.<p>But WCF is still a good choice for following scenarios:</p>
+<ul>
+<li>If we intended to use transport other than HTTP e.g. TCP, UDP or Named Pipes.</li>
+<li>Messag Queuing scenario using MSMQ.</li>
+<li>One-way communication or Duplex communication</li>
+</ul>`),
+new qList(`How to return View from ASP.NET Web API method?`,`(A tricky Interview Question) No, we can’t return view from ASP.NET Web API Method. As we discussed in earlier interview question about difference between ASP.NET MVC and Web API that ASP.NET Web API creates HTTP services that renders raw data. Although, it’s quite possible in ASP.NET MVC application.`),
+new qList(`Write a code snippet for passing arraylist in Web API?`,`Below is the code snippet for passing arraylist –<pre>
+ArrayList paramList = new ArrayList();
+
+Category c = new Category { CategoryId = 1, CategoryName = "SmartPhones"};
+Product p = new Product { ProductId = 1, Name = "Iphone", Price = 500, CategoryID = 1 };
+ 
+paramList.Add(c);
+paramList.Add(p);
+</pre>`),
+new qList(`How we can handle errors in Web API?`,`Below are the list of classes which can be used for error handling -<ul>
+<li>HttpResponseException</li>
+<li>Exception Filters</li>
+<li>Registering Exception Filters</li>
+<li>HttpError</li>
+</ul>`),
+new qList(`Explain how we can handle error from “HttpResponseException”?`,`This returns the HTTP status code what you specify in the constructor. Eg :<pre>
+public TestClass MyTestAction(int id)
+{
+ TestClass c = repository.Get(id);
+ if (c == null)
+ {
+ throw new HttpResponseException(HttpStatusCode.NotFound);
+ }
+ return c;
+}
+</pre>`),
+new qList(`How to register Web API exception filters?`,`Below are the options to register Web API exception filters –<ul>
+<li>From Action</li>
+<li>From Controller</li>
+<li>Global registration</li>
+</ul>`),
+new qList(`Write a code snippet to register exception filters from action?`,`Below is the code snippet for registering exception filters from action –
+<pre>
+[NotImplExceptionFilter]
+public TestCustomer GetMyTestCustomer(int custid)
+{
+ //Your code goes here
+}
+</pre>`),
+new qList(`Write a code snippet to register exception filters globally?`,`Below is the code snippet for registering exception filters globally –<pre>
+GlobalConfiguration.Configuration.Filters
+.Add( new MyTestCustomerStore.NotImplExceptionFilterAttribute());
+</pre>`),
+new qList(`Explain ASP.NET Identity?`,`This is the new membership system for ASP.NET. This allows to add features of login in our application.<p>Below are the list of features supported by ASP.NET Identity in Web API –</p>
+<ul><li>One ASP.NET Identity System</li><li>Persistence Control</li></ul>`),
+new qList(`Why to use “FromUri” in Web API?`,`In Web API to read complex types from URL we will use “FromUri” attribute to the parameter in action method. Eg:
+<pre>
+public MyValuesController : ApiController
+{
+ public HttpResponseMessage Get([FromUri] MyCustomer c) { ... }
+}
+</pre>`),
+new qList(`Why to use “FromBody” in Web API?`,`This attribute is used to force Web API to read the simple type from message body. “FromBody” attribute is along with parameter. Eg:
+<pre>
+public HttpResponseMessage Post([FromBody] int customerid,
+ [FromBody] string customername) { ... }</pre>
+`),
+new qList(`What is the Advantages of Token Based Authentication?`,`<p>
+A token is a piece of data which is created by a server, and which contains enough data to identify a particular user. The process starts by allowing users to enter their username and password which accessing a service. Once the user provides the username/password, a token is issued which allows users to fetch a specific resource - without using their username and password every time. This token is sent to the server with each request made by the client and contains all necessary information to validate a user’s request. The following diagram explains how Token-Based authentication is used in communication between clients and server.</p>
+<img src="/assets/Images/token-based-auth-working.png">
+<b>Advantages of Token Based Authentication</b>
+<ul>
+<li>The client application is not dependent on a specific authentication mechanism. The token is generated by the server and the Web API have some APIs to understand, validate the token and perform the authentication. This approach provides Loose Coupling between client and the Web API.</li>
+<li>Maintaining cookies in native mobile applications is not an easy task. Using token based authentication, we can now provide support for mobile applications with much ease.</li>
+</ul>`),
         new qList(`What is ASP.NET Web API OData?`,`
         <p>The Open Data Protocol (OData) is a data access protocol created for the web. OData gives a consistent procedure to query and manipulates data sets via CRUD operations (Create, Retrieve, Update, and Delete). ASP.NET web API supports each of the v3 and v4 protocol.</p>`),
         new qList(`Differences between WCF and Web API?`,`
