@@ -1135,6 +1135,14 @@ new qList(`What is a tuple?`, `
         new qList(`What is an ADO.Net?`,`<p>ADO.Net is commonly termed as ActiveX Data Objects which is a part of .Net Framework. ADO.Net framework has set of classes which are used to handle data access by connecting with different databases like SQL, Access, Oracle, etc.</p>
         <p>Enterprise applications handle a large amount of data. This data is primarily stored in relational databases, such as Oracle, SQL Server, and Access and so on. These databases use Structured Query Language (SQL) for retrieval of data.</p>
         <p>To access enterprise data from a .NET application, an interface was needed. This interface acts as a bridge between an RDBMS system and a .NET application. ADO.NET is such an interface that is created to connect .NET applications to RDBMS systems.</p>`),
+       new qList(`What are the Benefits of ADO.Net?`,`<b>Interoperability:</b>
+<p>XML Format is one of the best formats for Interoperability.ADO.NET supports to transmit the data using XML format.</p>
+<b>Scalability:</b>
+<p>ADO.NET works on Dataset that can represent a whole database or even a data table as a disconnected object and thereby eliminates the problem of the constraints of number of databases being connected. In this way scalability is achieved.</p>
+<p>Performance:</p>
+<p>The performance in ADO.NET is higher in comparison to ADO that uses COM marshalling.</p>
+<b>Programmability:</b>
+<p>ADO.Net Data components in Visual studio help to do easy program to connect to the database.</p>`),
         new qList(` What are the ADO.NET components?`,`<p> ADO.NET components categorized in three modes: disconnected, common or shared and the .NET data providers.
        </p><p><b>The disconnected components</b> build the basic ADO.NET architecture. You can use these components (or classes) with or without data providers. For example, you can use a DataTable object with or without providers and shared or common components are the base classes for data providers.</p>
       <p><b>Shared or common components</b> are the base classes for data providers and shared by all data providers. The data provider components are specifically designed to work with different kinds of data sources. For example, ODBC data providers work with ODBC data sources and OleDb data providers work with OLE-DB data sources.</p>`),
@@ -1144,6 +1152,7 @@ new qList(`What is a tuple?`, `
       <pre>&ltconnectionStrings&gt  
        &ltadd name="sqlConnectionString" connectionString="Data Source=mySQLServer;Initial Catalog=myDatabase;Integrated Security=True;Connection Timeout=15;Connection Lifetime=0;Min Pool Size=0;Max Pool Size=100;Pooling=true;" /&gt  
       &lt/connectionStrings&gt </pre>`),
+      new qList(`What is the difference between ExecuteScalar and ExecuteNonQuery?`,`<p>ExecuteScalar returns output value where as ExecuteNonQuery does not return any value but the number of rows affected by the query. ExecuteScalar used for fetching a single value and ExecuteNonQuery used to execute Insert and Update statements.</p>`),
       new qList(`What is SqlCommand Object?`,`<p>The SqlCommand carries the SQL statement that needs to be executed on the database. SqlCommand carries the command in the CommandText property and this property will be used when the SqlCommand calls any of its execute methods.</p>
       <ul><li>The Command Object uses the connection object to execute SQL queries.</li>
       <li>The queries can be in the form of Inline text, Stored Procedures or direct Table access.</li>
@@ -1153,6 +1162,14 @@ new qList(`What is a tuple?`, `
       <p><b>ExecuteScalar</b> is useful for returning a single value from the database. For example, using this method we can retrieve a sum of sales made by a specific product, total number of records in the employee table, unique id by supplying filtering conditions and so on</p>
       <p><b>ExecuteNonQuery</b> is useful for performing data manipulation on the database. Simply, the ExecuteNonQuery is for executing the DML statements.</p>
       <p><b>ExecuteReader</b> is used when we need to retrieve rows and columns of data using the SQL select statements. As the data retrieved is a table of data, ExecuteReader returns SqlDataReader.</p>`),
+      new qList(`What is the difference between Execute Reader, Execute Scalar and Execute Non Query methods?`,`<b>Execute Reader</b>
+<p>Execute Reader will be used to return the set of rows, on execution of SQL Query or Stored procedure using command object.</p>
+<b>Execute Scalar</b>
+<p>Execute Scalar will be used to return the single value, on execution of SQL Query or Stored procedure using command object.</p>
+<p>Execute Non Query</p>
+<p>If the command or stored procedure performs INSERT, DELETE or UPDATE operations, then we use Execute Non Query method. Execute Non Query method returns an integer specifying the number of rows inserted, deleted or updated.</p>
+`),
+new qList(`What is difference between dataset and datareader ?`,`<ul><li>DataReader provides forward-only and read-only access to data, while the DataSet object can hold more than one table (in other words more than one rowset) from the same data source as well as the relationships between them.</li><li>Dataset is a disconnected architecture while datareader is connected architecture.</li><li>Dataset can persist contents while datareader can not persist contents, they are forward only.</li></ul>`),
       new qList(`What is the DataAdapter Object in ADO.NET?`,`<p> A Data Adapter represents a set of data commands and a database connection to fill the dataset and update a SQL Server database.
        </p><p>A Data Adapter contains a set of data commands and a database connection to fill the dataset and update a SQL Server database. Data Adapters form the bridge between a data source and a dataset.</p>
        A Data Adapter supports mainly the following two methods:<p><b>Fill ():</b> The Fill method populates a dataset or a data table object with data from the database. It retrieves rows from the data source using the SELECT statement specified by an associated select command property</p>
@@ -2347,30 +2364,117 @@ new qList(`What are Modules in Angularjs 2.0?`,`<p>Both Angular 1.x and 2.0 apps
        <br> This is also known as structured form of data which can be accessed in many ways<br><br>Example: School Management Database, Bank Management Database</p>`),
        new qList(`What are tables and Fields?`,`<p>A table is a set of data that are organized in a model with Columns and Rows. Columns can be categorized as vertical, and Rows are horizontal.
         A table has specified number of column called fields but can have any number of rows which is called record</p>`),
-       new qList(`What is a primary key?`,`<p>A primary key is a combination of fields which uniquely specify a row. This is a special kind of unique key, and it has implicit NOT NULL constraint. It means, Primary key values cannot be NULL</p>`),
-       new qList(`What is a unique key?`,`<p>A Unique key constraint uniquely identified each record in the database. This provides uniqueness for the column or set of columns</p>
-       <p>A Primary key constraint has automatic unique constraint defined on it. But not, in the case of Unique Key</p>
-       <p>There can be many unique constraint defined per table, but only one Primary key constraint defined per table.</p>`),
+       new qList(`What is a candidate key ?`,`<p>A table may have more than one combination of columns that could uniquely identify the rows in a table; each combination is a candidate key. During database design you can pick up one of the candidate keys to be the primary key. For example, in the supplier table supplierid and suppliername can be candidate key but you will only pick up supplierid as the primary key.</p>`),       
+       
        new qList(`What is a foreign key?`,`<p>A foreign key is one table which can be related to the primary key of another table. Relationship needs to be created between two tables by referencing foreign key with the primary key of another table.</p>`),
-       new qList(`What is a join?`,`<p>This is a keyword used to query data from more tables based on the relationship between the fields of the tables. Keys play a major role when JOINs are used.</p>`),
-       new qList(`What are the types of join and explain each?`,`<p>There are various types of join which can be used to retrieve data and it depends on the relationship between tables.</p>
-       <ul><li><b>Inner join</b>-Inner join return rows when there is at least one match of rows between the tables.</li><br>
-       <li><b>Right Join</b>-Right join return rows which are common between the tables and all rows of Right hand side table. Simply, it returns all the rows from the right hand side table even though there are no matches in the left hand side table.</li><br>
-       <li><b>Left Join</b>-Left join return rows which are common between the tables and all rows of Left hand side table. Simply, it returns all the rows from Left hand side table even though there are no matches in the Right hand side table.</li><br>
-       <li><b>Full Join</b>-Full join return rows when there are matching rows in any one of the tables. This means, it returns all the rows from the left hand side table and all the rows from the right hand side table.</li></ul>`),
-       new qList(`What is normalization?`,`<p>Normalization is the process of minimizing redundancy and dependency by organizing fields and table of a database. The main aim of Normalization is to add, delete or modify field that can be made in a single table.</p>`),
-       new qList(`What is Denormalization?`,`<p>DeNormalization is a technique used to access the data from higher to lower normal forms of database. It is also process of introducing redundancy into a table by incorporating data from the related tables.</p>`),
-       new qList(`. What are all the different normalizations?`,`<p>The normal forms can be divided into 5 forms, and they are explained below-</p>
+       new qList(`What are the different types of joins? What is the difference between them ?`,`<b>INNER JOIN</b>
+<p>The INNER JOIN keyword selects all rows from both tables as long as there is a match between the columns in both tables (Table1 and Table2).</p>
+<pre>SELECT column_name(s)
+FROM Table1
+INNER JOIN Table2
+ON Table1.column_name=Table2.column_name;</pre>
+<img src="/assets/Images/innerJoining.JPG">
+
+<b>LEFT OUTER JOIN</b>
+<p>The LEFT JOIN keyword returns all rows from the left table (Table1), with the matching rows in the right table (Table2). The result is NULL in the right side when there is no match.<p>
+<pre>SELECT column_name(s)
+FROM Table1
+LEFT OUTER JOIN Table2
+ON Table1.column_name=Table2.column_name;</pre>
+<img src="/assets/Images/leftouterjoin.JPG">
+
+<p>RIGHT OUTER JOIN</p>
+<p>The RIGHT JOIN keyword returns all rows from the right table (Table2), with the matching rows in the left table (Table1). The result is NULL in the left side when there is no match.</p>
+<pre>SELECT column_name(s)
+FROM Table1
+RIGHT OUTER JOIN Table2
+ON Table1.column_name=Table2.column_name;</pre>
+<img src="/assets/Images/rightOuterjoin.JPG">
+
+<b>FULL JOIN</b>
+<p>The FULL OUTER JOIN keyword returns all rows from the left table (Table1) and from the right table (Table2). The FULL OUTER JOIN keyword combines the result of both LEFT and RIGHT joins.</p>
+<pre>
+SELECT column_name(s)
+FROM Table1
+FULL OUTER JOIN Table2
+ON Table1.column_name=Table2.column_name;</pre>
+<img src="/assets/Images/FullJoin.JPG">`),
+       
+       new qList(`What is normalization? & What are all the different normalizations?`,`<p>Normalization is the process of minimizing redundancy and dependency by organizing fields and table of a database. The main aim of Normalization is to add, delete or modify field that can be made in a single table.</p> <p>The normal forms can be divided into 5 forms, and they are explained below-</p>
        <ul><li><b>First Normal Form (1NF)-</b>This should remove all the duplicate columns from the table. Creation of tables for the related data and identification of unique columns.</li><br>
        <li><b>Second Normal Form (2NF)-</b>Meeting all requirements of the first normal form. Placing the subsets of data in separate tables and Creation of relationships between the tables using primary keys.</li><br>
        <li><b>Third Normal Form (3NF)-</b>This should meet all requirements of 2NF. Removing the columns which are not dependent on primary key constraints</li><br>
-       <li><b>Fourth Normal Form (3NF)-</b>Meeting all the requirements of third normal form and it should not have multi- valued dependencies</li></ul>`),
-       new qList(`What is a View?`,`<p>A view is a virtual table which consists of a subset of data contained in a table. Views are not virtually present, and it takes less space to store. View can have data of one or more tables combined, and it is depending on the relationship</p>`),
-       new qList(`What is an Index?`,`<p>An index is performance tuning method of allowing faster retrieval of records from the table.<br> An index creates an entry for each value and it will be faster to retrieve data.</p>`),
-       new qList(`What are all the different types of indexes?`,`<p>There are three types of indexes -</p>
-       <ul><li><b>Unique Index-</b>This indexing does not allow the field to have duplicate values if the column is unique indexed. Unique index can be applied automatically when primary key is defined.</li><br>
-       <li><b>Clustered Index-</b>This type of index reorders the physical order of the table and search based on the key values. Each table can have only one clustered index.</li><br>
-       <li><b>NonClustered Index-</b>NonClustered Index does not alter the physical order of the table and maintains logical order of data. Each table can have 999 nonclustered indexes</li></ul>`),
+       <li><b>Fourth Normal Form (4NF)-</b>Meeting all the requirements of third normal form and it should not have multi- valued dependencies</li></ul>`),
+       new qList(`What is Denormalization?`,`<p>DeNormalization is a technique used to access the data from higher to lower normal forms of database. It is also process of introducing redundancy into a table by incorporating data from the related tables.</p>`),
+       
+       new qList(`What is a View?`,`<p>A view is a virtual table which consists of a subset of data contained in a table. Views are not virtually present, and it takes less space to store. View can have data of one or more tables combined, and it is depending on the relationship</p><b>Syntax :</b>
+<pre>
+Create view [ViewName] 
+As 
+Select ID, Name,Gender from Employee e 
+Join Department d on d.ID=e.ID 
+</pre>
+Execute : select * from [ViewName]`),
+       new qList(`What is the difference between a “Local Temporary Table” and “Global Temporary Table”?`,`<ol>
+<li>A Local Temporary Table is created by giving it a prefix of # whereas a Global Temporary Table is created by giving it a prefix of ##.</li>
+<li>A Local Temporary Table cannot be shared among multiple users whereas a Global Temporary Table can be shared among multiple users.</li>
+<li>A Local Temporary Table is only available to the current DB connection for the current user and are cleared when the connection is closed whereas a Global Temporary Table is available to any connection once created. They are cleared when the last connection is closed.</li>
+</ol>`),
+new qList(`What is SQL Profiler?`,`<ol>
+<li>SQL Profiler is a graphical tool that allows system administrators to monitor events in an instance of Microsoft SQL Server. You can capture and save data about each event to a file or SQL Server table to analyze later. For example, you can monitor a production environment to see which stored procedures are hampering performances by executing too slowly.</li>
+<li>Use SQL Profiler to monitor only the events in which you are interested. If traces are becoming too large, you can filter them based on the information you want, so that only a subset of the event data is collected. Monitoring too many events adds overhead to the server and the monitoring process and can cause the trace file or trace table to grow very large, especially when the monitoring process takes place over a long period of time.</li>
+
+</ol>`),
+new qList(`What is CHECK Constraint? & What is NOT NULL Constraint?`,`<p>A <b>CHECK constraint</b> is used to limit the values that can be placed in a column. The check constraints are used to enforce domain integrity.</p>
+<p>A <b>NOT NULL constraint</b> enforces that the column will not accept null values. The not null constraints are used to enforce domain integrity, as the check constraints.</p>
+`),
+       new qList(`What are indexes? What is the difference between clustered and nonclustered indexes?`,`<p>An index is performance tuning method of
+        allowing faster retrieval of records from the table.<br> An index creates an entry for each value and it will be faster to retrieve data.</p>
+        <p>Indexes in SQL Server are similar to the indexes in books. They help SQL Server retrieve the data quickly.</p><b>Syntax :</b>
+<pre>
+Create index [indexName] 
+On [EmployeeTable] (Salary ASC)
+</pre>
+<b>difference between “Clustered Index” and “Non Clustered Index”</b>
+<ol>
+<li>A Clustered Index physically stores the data of the table in the order of the keys values and the data is resorted every time whenever a new value is inserted or a value is updated in the column on which it is defined, whereas a non-clustered index creates a separate list of key values (or creates a table of pointers) that points towards the location of the data in the data pages.</li>
+<li>A Clustered Index requires no separate storage than the table storage. It forces the rows to be stored sorted on the index key whereas a non-clustered index requires separate storage than the table storage to store the index information.</li>
+<li>A table with a Clustered Index is called a Clustered Table. Its rows are stored in a B-Tree structure sorted whereas a table without any clustered indexes is called a non-clustered table. Its rows are stored in a heap structure unsorted.</li>
+<li>The default index is created as part of the primary key column as a Clustered Index.</li>
+<li>In a Clustered Index, the leaf node contains the actual data whereas in a non-clustered index, the leaf node contains the pointer to the data rows of the table.</li>
+<li>A Clustered Index always has an Index Id of 1 whereas non-clustered indexes have Index Ids > 1.</li>
+<li>A Table can have only 1 Clustered Index whereas prior to SQL Server 2008 only 249 non-clustered indexes can be created. With SQL Server 2008 and above 999 non-clustered indexes can be created.</li>
+<li>A Primary Key constraint creates a Clustered Index by default whereas A Unique Key constraint creates a non-clustered index by default.</li>
+</ol>
+
+`),
+new qList(`What is SQl injection ?`,`<p>It is a Form of attack on a database-driven Web site in which the attacker executes unauthorized SQL commands by taking advantage of insecure code on a system connected to the Internet, bypassing the firewall. SQL injection attacks are used to steal information from a database from which the data would normally not be available and/or to gain access to an organization’s host computers through the computer that is hosting the database.</p>
+<p>SQL injection attacks typically are easy to avoid by ensuring that a system has strong input validation.</p>
+<p>
+As name suggest we inject SQL which can be relatively dangerous for the database.
+Example this is a simple SQL</p>
+<pre>
+SELECT email, passwd, login_id, full_name
+FROM members
+WHERE email = 'x'
+Now somebody does not put “x” as the input but puts “x ; DROP TABLE members;”.
+So the actual SQL which will execute is :-
+SELECT email, passwd, login_id, full_name
+FROM members
+WHERE email = 'x' ; DROP TABLE members; Think what will happen to your database.
+</pre>`),
+new qList(`What is the difference between “Stored Procedure” and “Function”?`,`<ol>
+<li>A procedure can have both input and output parameters, but a function can only have input parameters.</li>
+<li>Inside a procedure we can use DML (INSERT/UPDATE/DELETE) statements. But inside a function we can't use DML statements.</li>
+<li>We can't utilize a Stored Procedure in a Select statement. But we can use a function in a Select statement.</li>
+<li>We can use a Try-Catch Block in a Stored Procedure but inside a function we can't use a Try-Catch block.</li>
+<li>We can use transaction management in a procedure but we can't in a function.</li>
+<li>We can't join a Stored Procedure but we can join functions.</li>
+<li>Stored Procedures cannot be used in the SQL statements anywhere in the WHERE/HAVING/SELECT section. But we can use a function anywhere.</li>
+<li>A procedure can return 0 or n values (max 1024). But a function can return only 1 value that is mandatory.</li>
+<li>A procedure can't be called from a function but we can call a function from a procedure.</li>
+</ol>
+`),
        new qList(`What is a Cursor?`,`<p>A database Cursor is a control which enables traversal over the rows or records in the table. This can be viewed as a pointer to one row in a set of rows. Cursor is very much useful for traversing such as retrieval, addition and removal of database records</p>`),
        new qList(`What is a relationship and what are they?`,`<p>Database Relationship is defined as the connection between the tables in a database. There are various data basing relationships, and they are as follows-</p>
        <ul><li>One to One Relationship</li><br>
@@ -2378,14 +2482,77 @@ new qList(`What are Modules in Angularjs 2.0?`,`<p>Both Angular 1.x and 2.0 apps
        <li>Many to One Relationship</li><br>
        <li>Self-Referencing Relationship</li></ul>`),
        new qList(`What is a query?`,`<p>A DB query is a code written in order to get the information back from the database. Query can be designed in such a way that it matched with our expectation of the result set. Simply, a question to the Database.</p>`),
-       new qList(`What is subquery?`,`<p>A subquery is a query within another query. The outer query is called as main query, and inner query is called subquery. SubQuery is always executed first, and the result of subquery is passed on to the main query.</p>`),
+       new qList(`What is subquery?`,`<p>A subquery is a query within another query. The outer query is called as main query, and inner query is called subquery. SubQuery is always executed first, and the result of subquery is passed on to the main query.</p><pre>
+SELECT * 
+   FROM CUSTOMERS 
+   WHERE ID IN (SELECT ID 
+         FROM CUSTOMERS 
+         WHERE SALARY > 4500) ;
+
+
+</pre>`),
        new qList(`What is a trigger?`,`<p>A DB trigger is a code or programs that automatically execute with response to some event on a table or view in a database. Mainly, trigger helps to maintain the integrity of the database</p>
-       <p>Example: When a new student is added to the student database, new records should be created in the related tables like Exam, Score and Attendance tables.</p>`),
-       new qList(`What is the difference between DELETE and TRUNCATE commands?`,`<p>DELETE command is used to remove rows from the table, and WHERE clause can be used for conditional set of parameters. Commit and Rollback can be performed after delete statement.</p>
-       <p>TRUNCATE removes all rows from the table. Truncate operation cannot be rolled back</p>`),
+       <p>Example: When a new student is added to the student database, new records should be created in the related tables like Exam, Score and Attendance tables.</p><b>Syntax</b><pre>
+Create trigger [triggerName] 
+On [table Name] 
+For [INSERT/UPDATE/DELETE] 
+As 
+Begin 
+// sql query 
+End
+</pre>
+`),
+       new qList(`What is the difference between DELETE and TRUNCATE commands?`,`<ol>
+<li>The DELETE command is used to remove rows from a table based on a WHERE condition whereas TRUNCATE removes all rows from a table.</li>
+<li>So we can use a where clause with DELETE to filter and delete specific records whereas we cannot use a Where clause with TRUNCATE.</li>
+<li>A table with a Clustered Index is called a Clustered Table. Its rows are stored in a B-Tree structure sorted whereas a table without any clustered indexes is called a non-clustered table. Its rows are stored in a heap structure unsorted.</li>
+<li>DELETE is executed using a row lock, each row in the table is locked for deletion whereas TRUNCATE is executed using a table lock and the entire table is locked for removal of all records.</li>
+<li>DELETE is a DML command whereas TRUNCATE is a DDL command.</li>
+<li>DELETE retains the identity of the column value whereas in TRUNCATE, the Identify column is reset to its seed value if the table contains any identity column.</li>
+<li>To use Delete you need DELETE permission on the table whereas to use Truncate on a table you need at least ALTER permission on the table.</li>
+<li>DELETE uses more transaction space than the TRUNCATE statement whereas Truncate uses less transaction space than DELETE statement.</li>
+<li>DELETE can be used with indexed views whereas TRUNCATE cannot be used with indexed views.</li>
+<li>The DELETE statement removes rows one at a time and records an entry in the transaction log for each deleted row whereas TRUNCATE TABLE removes the data by deallocating the data pages used to store the table data and records only the page deallocations in the transaction log.</li>
+<li>Delete activates a trigger because the operation is logged individually whereas TRUNCATE TABLE can't activate a trigger because the operation does not log individual row deletions.</li>
+</ol>`),
+new qList(`What is the difference between the “WHERE” clause and the “HAVING” clause?`,`<ol>
+<li>WHERE clause can be used with a Select, Update and Delete Statement Clause but the HAVING clause can be used only with a Select statement.</li>
+<li>We can't use an aggregate functions in the WHERE clause unless it is in a sub-query contained in a HAVING clause whereas we can use an aggregate function in the HAVING clause. We can use a column name in the HAVING clause but the column must be contained in the group by clause.</li>
+<li>WHERE is used before the GROUP BY clause whereas a HAVING clause is used to impose a condition on the GROUP Function and is used after the GROUP BY clause in the query.</li>
+<li>A WHERE clause applies to each and every row whereas a HAVING clause applies to summarized rows (summarized with GROUP BY).</li>
+<li>In the WHERE clause the data that is fetched from memory depending on a condition whereas in HAVING the completed data is first fetched and then separated depending on the condition.</li>
+</ol>`),
+new qList(`What is the difference between “Primary Key” and “Unique Key”?`,`<ol>
+<li>We can have only one Primary Key in a table whereas we can have more than one Unique Key in a table.</li>
+<li>The Primary Key cannot have a NULL value whereas a Unique Key may have only one null value.</li>
+<li>By default, a Primary Key is a Clustered Index whereas by default, a Unique Key is a unique non-clustered index.</li>
+<li>A Primary Key supports an Auto Increment value whereas a Unique Key doesn't support an Auto Increment value.</li>
+</ol>`),
        new qList(`What is Self-Join?`,`<p>Self-join is set to be query used to compare to itself. This is used to compare values in a column with other values in the same column in the same table. ALIAS ES can be used for the same table comparison</p>`),
        new qList(`What is Cross-Join?`,`<p>Cross join defines as Cartesian product where number of rows in the first table multiplied by number of rows in the second table. If suppose, WHERE clause is used in cross join then the query will work like an INNER JOIN.</p>`),
-       new qList(`What is user defined functions?`,`<p>User defined functions are the functions written to use that logic whenever required. It is not necessary to write the same logic several times. Instead, function can be called or executed whenever needed</p>`),
+       new qList(`What is user defined functions?`,`<p>User defined functions are the functions written to use that logic whenever required. It is not necessary to write the same logic several times. Instead, function can be called or executed whenever needed</p><b>Syntax :</b>
+<pre>
+Create function [fn_FunctionName] (parameter )
+Return table
+As
+Return 
+(select Name, ID, Gender from Employee 
+where Gender=@parameter)
+
+</pre>
+Execure : select * from fn_FunctionName(parametter)`),
+new qList(`How to create stored procedure ?`,`<pre>
+Create procedure sp_StoredProcedureName
+@ID int,
+@gender nvarchar(50)
+As
+Begin
+Select * from Employee where ID=@ID and gender=@gender
+end
+
+
+</pre>
+execure : exec sp_StoredProcedureName 1 ‘Male’`),
        new qList(`What are all types of user defined functions?`,`<p>Three types of user defined functions are-</p>
        <ul><li>Scalar Functions.</li><br>
        <li>Inline Table valued functions.</li><br>
