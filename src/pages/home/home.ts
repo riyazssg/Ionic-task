@@ -14,4 +14,10 @@ goToSelfIntro(){
   let d={ title: 'Self Introduction', apiKey: 'selfIntro' };
   this.navCtrl.push(ListPage, d);
 }
+
+goToInterviewTips(){
+let d={ title: 'Interview Tips', apiKey: 'InterviewTips' };
+  this.navCtrl.push(ListPage, d);
+}
+
 }
