@@ -694,7 +694,679 @@ new qList(`What is a tuple?`, `
 <ul><li>Create, access, and manipulate a data set</li><li>Return a data set from a method without using out parameter</li><li>Pass multiple values to a method through a single parameter&nbsp;</li> </ul>`)
     ];
     public csharpDotNet=[
-        
+        new qList(`What is C#? `,`C# is the best language for writing Microsoft .NET applications. C# provides the rapid application development found in Visual Basic with the power of C++. Its syntax is similar to C++ syntax and meets 100% of the requirements of OOPs like the following:<ul>
+<li>Abstraction</li>
+<li>Encapsulation</li>
+<li>Polymorphism</li>
+<li>Inheritance</li>
+<ul>`),
+        new qList(`What is Boxing and Unboxing?`,`<b>Boxing:</b>
+<p>Boxing is the process of converting a value type data type to the object or to any interface data type which is implemented by this value type. When the CLR boxes a value means when CLR is converting a value type to Object Type, it wraps the value inside a System.Object and stores it on the heap area in application domain. </p>
+
+<img src="/assets/Images/boxing.png"/>
+<b>Unboxing:</b>
+<p>Unboxing is also a process which is used to extract the value type from the object or any implemented interface type. Boxing may be done implicitly, but unboxing have to be explicit by code. </p>
+
+<img src="/assets/Images/Unboxing.png"/>
+<p>The concept of boxing and unboxing underlines the C# unified view of the type system in which a value of any type can be treated as an object.</p>`),
+        new qList(`What is the difference between a struct and a class in C#?`,`<p>Class and struct both are the user defined data type but have some major difference:</p>
+<b>Struct</b>
+<ul>
+<li>The struct is value type in C# and it inherits from System.Value Type.</li>
+<li>Struct is usually used for smaller amounts of data.</li>
+<li>Struct can’t be inherited to other type.</li>
+<li>A structure can't be abstract.</li>
+<li>No need to create object by new keyword.</li>
+<li>Do not have permission to create any default constructor.</li>
+</ul>
+
+<b>Class</b>
+<ul>
+<li>The class is reference type in C# and it inherits from the System.Object Type.</li>
+<li>Classes are usually used for large amounts of data.</li>
+<li>Classes can be inherited to other class.</li>
+<li>A class can be abstract type.</li>
+<li>We can’t use an object of a class with using new keyword.</li>
+<li>We can create a default constructor.</li>
+</ul>`),
+        new qList(`What is the difference between Interface and Abstract Class?`,`<p>Theoretically their are some differences between Abstract Class and Interface which are listed below:</p>
+
+<ul>
+<li>A class can implement any number of interfaces but a subclass can at most use only one abstract class.</li>
+<li>An abstract class can have non-abstract methods (concrete methods) while in case of interface all the methods has to be abstract.</li>
+<li>An abstract class can declare or use any variables while an interface is not allowed to do so.</li>
+<li>In an abstract class all data member or functions are private by default while in interface all are public, we can’t change them manually.</li>
+<li>In an abstract class we need to use abstract keyword to declare abstract methods while in an interface we don’t need to use that.</li>
+<li>An abstract class can’t be used for multiple inheritance while interface can be used as multiple inheritance.</li>
+<li>An abstract class use constructor while in an interface we don’t have any type of constructor.</li>
+</ul>`),
+        new qList(`What is enum in C#?`,`<p>An enum is a value type with a set of related named constants often referred to as an enumerator list. The enum keyword is used to declare an enumeration. It is a primitive data type, which is user defined.</p>
+<p>An enum type can be an integer (float, int, byte, double etc.). But if you used beside int it has to be cast.</p>
+<pre>enum Dow {Sat, Sun, Mon, Tue, Wed, Thu, Fri};  </pre>
+<b>Some points about enum</b>
+<ul>
+<li>Enums are enumerated data type in c#.</li>
+<li>Enums are not for end-user, they are meant for developers.</li>
+<li>Enums are strongly typed constant. They are strongly typed, i.e. an enum of one type may not be implicitly assigned to an enum of another type even though the underlying value of their members are the same.</li>
+<li>Enumerations (enums) make your code much more readable and understandable.</li>
+<li>The default type is int, and the approved types are byte, sbyte, short, ushort, uint, long, and ulong.</li>
+<li>Enum values are fixed. Enum can be displayed as a string and processed as an integer.</li>
+<li>Every enum type automatically derives from System.Enum and thus we can use System.Enum methods on enums.</li>
+<li>Enums are value types and are created on the stack and not on the heap.</li>
+</ul>`),
+        new qList(`What is the difference between “continue” and “break” statements in C#?`,`Using break statement, you can 'jump out of a loop' whereas by using continue statement, you can 'jump over one iteration' and then resume your loop execution.
+        <b>Eg. Break Statement </b>
+        <pre>using System;  
+using System.Collections;  
+using System.Linq;  
+using System.Text;  
+  
+namespace break_example   
+    {  
+        Class brk_stmt {  
+            public static void main(String[] args) {  
+                for (int i = 0; i <= 5; i++) {  
+                    if (i == 4) {  
+                        break;  
+                    }  
+                    Console.WriteLine("The number is " + i);  
+                    Console.ReadLine();
+  
+                }  
+            }  
+        }  
+  
+    } </pre>
+    <b>Output </b>
+    <pre><pre>The number is 0; 
+The number is 1; 
+The number is 2; 
+The number is 3;</pre><b>Eg.Continue Statement</b><pre>
+using System;  
+using System.Collections;  
+using System.Linq;  
+using System.Text;  
+  
+namespace continue_example  
+{  
+    Class cntnu_stmt   
+    {  
+        public static void main(String[]   
+        {  
+            for (int i = 0; i <= 5; i++)   
+            {  
+                if (i == 4)   
+                {  
+                    continue;  
+                }  
+                Console.WriteLine(“The number is "+ i); 
+                Console.ReadLine();
+                  
+            }  
+        }  
+    }  
+      
+}  </pre><b>Output</b>
+<pre>The number is 1;
+The number is 2;
+The number is 3;
+The number is 5; </pre>`),
+        new qList(`What is the difference between constant and read only in c#?`,`<p>Constant (const) and Readonly (readonly) both looks like same as per the uses but they have some differences: </p>
+<p><b>Constant</b> is known as “const” keyword in C# which is also known immutable values which are known at compile time and do not change their values at run time like in any function or constructor for the life of application till the application is running.</p>
+<p><b>Readonly</b> is known as “readonly” keyword in C# which is also known immutable values and are known at compile and run time and do not change their values at run time like in any function for the life of application till the application is running. You can assay their value by constructor when we call constructor with “new” keyword.</p>
+
+
+
+`),
+        new qList(`What is the difference between ref and out keywords?`,`In C Sharp (C#) we can have three types of parameters in a function. The parameters can be in parameter (which is not returned back to the caller of the function), out parameter and ref parameter. We have lots of differences in both of them.
+
+<table border="1">
+<tr>
+<th>Ref </th>
+<th>Out</th>
+</tr>
+<tr>
+<td>
+The parameter or argument must be initialized first before it is passed to ref.</td>
+<td>It is not compulsory to initialize a parameter or argument before it is passed to an out.</td>
+</tr>
+<tr>
+<td>It is not required to assign or initialize the value of a parameter (which is passed by ref) before returning to the calling method.</td>
+<td>A called method is required to assign or initialize a value of a parameter (which is passed to an out) before returning to the calling method.</td>
+</tr>
+<tr>
+<td>Passing a parameter value by Ref is useful when the called method is also needed to modify the pass parameter.</td>
+<td>Declaring a parameter to an out method is useful when multiple values need to be returned from a function or method.</td>
+</tr>
+<tr>
+<td>It is not compulsory to initialize a parameter value before using it in a calling method.</td>
+<td>A parameter value must be initialized within the calling method before its use.</td>
+</tr>
+<tr>
+<td>When we use REF, data can be passed bi-directionally.</td>
+<td>When we use OUT data is passed only in a unidirectional way (from the called method to the caller method).</td>
+</tr>
+<tr>
+<td colspan="2">Both ref and out are treated differently at run time and they are treated the same at compile time.</td>
+
+</tr>
+<tr>
+<td colspan="2">Properties are not variables, therefore it cannot be passed as an out or ref parameter.</td>
+
+</tr>
+</table>`),
+        new qList(`Can “this” be used within a static method?`,`We can't use this in static method because keyword 'this' returns a reference to the current instance of the class containing it. Static methods (or any static member) do not belong to a particular instance. They exist without creating an instance of the class and call with the name of a class not by instance so we can’t use this keyword in the body of static Methods, but in case of Extension Methods we can use it the functions parameters. Let’s have a look on “this” keyword.<p>The "this" keyword is a special type of reference variable that is implicitly defined within each constructor and non-static method as a first parameter of the type class in which it is defined. For example, consider the following class written in C#.</p>`),
+        new qList(`What is extension method in c# and how to use them?`,`Extension methods enable you to add methods to existing types without creating a new derived type, recompiling, or otherwise modifying the original type. An extension method is a special kind of static method, but they are called as if they were instance methods on the extended type.<p><b>How to use extension methods?</b></p>
+<p>An extension method is a static method of a static class, where the "this" modifier is applied to the first parameter. The type of the first parameter will be the type that is extended.</p>
+<p>Extension methods are only in scope when you explicitly import the namespace into your source code with a using directive.</p>
+<p>Like: suppose we have a class like bellow:</p>
+<pre>
+public class Class1 {  
+    public string Display() {  
+        return ("I m in Display");  
+    }  
+  
+    public string Print() {  
+        return ("I m in Print");  
+    }  
+}</pre>
+
+<p>Now we need to extend the definition of this class so m going to create a static class to create an extinction method like:</p>
+<pre>
+public static class XX {  
+    public static void NewMethod(this Class1 ob) {  
+        Console.WriteLine("Hello I m extended method");  
+    }  
+}
+</pre>
+<p>Here I just create a method that name is NewMethod with a parameter using this to define which type of data I need to be extend, now let’s see how to use this function.</p>
+<img src="/assets/Images/extentionMethod.JPG">
+
+
+
+
+`),
+        new qList(`What is the difference between dispose and finalize methods in c#?`,`finalizer and dispose both are used for same task like to free unmanaged resources but have some differences see. <p><b>Finalize:</b></p>
+<ul>
+<li>Finalize used to free unmanaged resources those are not in use like files, database connections in application domain and more, held by an object before that object is destroyed.</li>
+<li>In the Internal process it is called by Garbage Collector and can’t called manual by user code or any service.</li>
+<li>Finalize belongs to System.Object class.</li>
+<li>Implement it when you have unmanaged resources in your code, and make sure that these resources are freed when the Garbage collection happens.</li>
+</ul>
+<p><b>Dispose:</b></p>
+<ul>
+<li>Dispose is also used to free unmanaged resources those are not in use like files, database connections in Application domain at any time.</li>
+<li>Dispose explicitly it is called by manual user code.</li>
+<li>If we need to dispose method so must implement that class by IDisposable interface.</li>
+<li>It belongs to IDisposable interface.</li>
+<li>Implement this when you are writing a custom class that will be used by other users.</li>
+</ul>
+
+`),
+        new qList(`What is the difference between string and StringBuilder in c#?`,`<b>String: </b>
+<ul>
+<li>It’s an immutable object that hold string value.</li>
+<li>Performance wise string is slow because its’ create a new instance to override or change the previous value.</li>
+<li>String belongs to System namespace.</li>
+</ul>
+<img src="/assets/Images/string.png">
+
+<b>StringBuilder:</b>
+<ul>
+<li>StringBuilder is a mutable object.</li>
+<li>Performance wise StringBuilder is very fast because it will use same instance of StringBuilder object to perform any operation like insert value in existing string.</li>
+<li>StringBuilder belongs to System.Text.Stringbuilder namespace.</li>
+</ul>
+<img src="/assets/Images/stringbuilder.png">`),
+        new qList(`What is delegates in C# and uses of delegates?`,`C# delegates are same as pointers to functions, in C or C++. A delegate Object is a reference type variable that use to holds the reference to a method. The reference can be changed at runtime which is hold by an object of delegate, a delegate object can hold many functions reference which is also known as Invocation List that refers functions in a sequence FIFO, we can new functions ref in this list at run time by += operator and can remove by -= operator. <p>Delegates are especially used for implementing events and the call-back methods. 
+        All delegates are implicitly derived from the System.Delegate class.</p><img src="/assets/Images/delegate.png">`),
+        new qList(`What is sealed class in c#?`,`Sealed classes are used to restrict the inheritance feature of object oriented programming. Once a class is defined as a sealed class, the class cannot be inherited. <p>In C#, the sealed modifier is used to define a class as sealed. In Visual Basic .NET the Not Inheritable keyword serves the purpose of sealed. If a class is derived from a sealed class then the compiler throws an error. </p><p>If you have ever noticed, structs are sealed. You cannot derive a class from a struct. </p><pre>// Sealed class  
+sealed class SealedClass  
+{  
+  
+}</pre>`),
+        new qList(`What are partial classes?`,`<p>A partial class is only use to splits the definition of a class in two or more classes in a same source code file or more than one source files. You can create a class definition in multiple files but it will be compiled as one class at run time and also when you’ll create an instance of this class so you can access all the methods from all source file with a same object.</p><p>Partial Classes can be create in the same namespace it’s doesn’t allowed to create a partial class in different namespace. So use “partial” keyword with all the class name which you want to bind together with the same name of class in same namespace, 
+        let’s have an example:</p><img src="/assets/Images/pertialClass.png">`),
+        new qList(`What is difference between late binding and early binding in c#?`,`Early Binding and Late Binding concepts belongs to polymorphism so let’s see first about polymorphism:<p>Polymorphism is an ability to take more than one form of a function means with a same name we can write multiple functions code in a same class or any derived class.</p><p>Polymorphism we have 2 different types to achieve that:</p><ul><li>Compile Time also known as Early Binding or Overloading.</li><li>Run Time also known as Late Binding or Overriding.</li></ul><b>Compile Time Polymorphism or Early Binding:</b>
+<p>
+In Compile time polymorphism or Early Binding we will use multiple methods with same name but different type of parameter or may be the number or parameter because of this we can perform different-different tasks with same method name in the same class which is also known as Method overloading.</p>
+<img src="/assets/Images/compileTime.png" >
+
+<b>Run Time Polymorphism or Late Binding:</b>
+<p>
+Run time polymorphism also known as late binding, in Run Time polymorphism or Late Binding we can do use same method names with same signatures means same type or same number of parameters but not in same class because compiler doesn’t allowed that at compile time so we can use in derived class that bind at run time when a child class or derived class object will instantiated that’s way we says that Late Binding. For that we have to create my parent class functions as partial and in driver or child class as override functions with override keyword. </p>
+<img src="/assets/Images/runTime.png" >`),
+        new qList(`What are the differences between IEnumerable and IQueryable?`,`<b>IEnumerable:</b>
+<p>Is the parent interface for all non-generic collections in System.Collections namespace like ArrayList, HastTable etc. that can be enumerated. For the generic version of this interface as IEnumerable<T> which a parent interface of all generic collections class in System.Collections.Generic namespace like List<> and more.</p>
+<b>IQueryable:</b>
+<p>The IQueryable interface inherits the IEnumerable interface so that if it represents a query, the results of that query can be enumerated. Enumeration causes the expression tree associated with an IQueryable object to be executed. The definition of "executing an expression tree" is specific to a query provider. For example, it may involve translating the expression tree to an appropriate query language for the underlying data source. Queries that do not return enumerable results are executed when the Execute method is called.
+</p>
+<img src="/assets/Images/iemurable.JPG">`),
+        new qList(`What happens if the inherited interfaces have conflicting method names?`,`If we implement multipole interface in the same class with conflict method name so we don’t need to define all or in other words we can say if we have conflict methods in same class so we can’t implement their body independently in the same class coz of same name and same signature so we have to use interface name before method name to remove this method confiscation let’s see an example:
+        <pre>
+        interface testInterface1 {  
+    void Show();  
+}  
+interface testInterface2 {  
+    void Show();  
+}  
+class Abc: testInterface1,  
+testInterface2 {  
+  
+    void testInterface1.Show() {  
+        Console.WriteLine("For testInterface1 !!");  
+    }  
+    void testInterface2.Show() {  
+        Console.WriteLine("For testInterface2 !!");  
+    }  
+}
+</pre><b>Now see how to use those in a class:</b><pre>
+class Program {  
+    static void Main(string[] args) {  
+        testInterface1 obj1 = new Abc();  
+        testInterface1 obj2 = new Abc();  
+        obj1.Show();  
+        obj2.Show();  
+  
+        Console.ReadLine();  
+    }  
+} </pre><b>Output:</b><pre>
+For testInterface1 !!
+For testInterface1 !!
+</pre>`),
+        new qList(`What is the Constructor Chaining in C#?`,`constructor chaining is a way to connect two or more classes in a relationship as Inheritance, in Constructor Chaining every child class constructor is mapped to parent class Constructor implicitly by base keyword so when you create an instance of child class to it’ll call parent’s class Constructor without it inheritance is not possible.`),
+        new qList(`What’s the difference between the System.Array.CopyTo() and System.Array.Clone()?`,`<b>Clone: </b>
+<p>Method creates a shallow copy of an array. A shallow copy of an Array copies only the elements of the Array, whether they are reference types or value types, but it does not copy the objects that the references refer to. The references in the new Array point to the same objects that the references in the original Array point to.</p>
+<b>CopyTo:</b>
+<p>The Copy static method of the Array class copies a section of an array to another array. The CopyTo method copies all the elements of an array to another one-dimension array. The code listed in Listing 9 copies contents of an integer array to an array of object types. 
+</p>
+`),
+        new qList(`Can Multiple Catch Blocks executed in c#?`,`we can use multiple Catches block with every try but when any Exceptions is throw by debugger so every catches match this exception type with their signature and catch the exception by any single catch block so that means we can use multiple catches blocks but only one can executed at once like:<pre>
+        using System;  
+class MyClient {  
+    public static void Main() {  
+        int x = 0;  
+        int div = 0;  
+        try {  
+            div = 100 / x;  
+            Console.WriteLine("Not executed line");  
+        } catch (DivideByZeroException de) {  
+            Console.WriteLine("DivideByZeroException");  
+        } catch (Exception ee) {  
+            Console.WriteLine("Exception");  
+        } finally {  
+            Console.WriteLine("Finally Block");  
+        }  
+        Console.WriteLine("Result is {0}", div);  
+    }  
+}
+</pre>`),
+        new qList(`What is Singleton Design Patterns and How to implement in C#?`,`<b>Singleton Design Pattern </b>
+<ol>
+<li>Ensures a class has only one instance and provides a global point of access to it.</li>
+<li>A singleton is a class that only allows a single instance of itself to be created, and usually gives simple access to that instance.</li>
+<li>Most commonly, singletons don't allow any parameters to be specified when creating the instance, since a second request of an instance with a different parameter could be problematic! (If the same instance should be accessed for all requests with the same parameter then the factory pattern is more appropriate.)</li>
+<li>There are various ways to implement the Singleton Pattern in C#. The following are the common characteristics of a Singleton Pattern.
+   <ul>
+   <li>A single constructor, that is private and parameterless.</li>
+   <li>The class is sealed.</li>
+   <li>A static variable that holds a reference to the single created instance, if any.</li>
+   <li>A public static means of getting the reference to the single created instance, creating one if necessary.</li>
+   
+   </ul>
+</li>
+</ol>
+<b>This is the example how to write the code with Singleton</b>
+<pre>
+namespace Singleton {  
+    class Program {  
+        static void Main(string[] args) {  
+            Calculate.Instance.ValueOne = 10.5;  
+            Calculate.Instance.ValueTwo = 5.5;  
+            Console.WriteLine("Addition : " + Calculate.Instance.Addition());  
+            Console.WriteLine("Subtraction : " + Calculate.Instance.Subtraction());  
+            Console.WriteLine("Multiplication : " + Calculate.Instance.Multiplication());  
+            Console.WriteLine("Division : " + Calculate.Instance.Division());  
+  
+            Console.WriteLine("\n----------------------\n");  
+  
+            Calculate.Instance.ValueTwo = 10.5;  
+            Console.WriteLine("Addition : " + Calculate.Instance.Addition());  
+            Console.WriteLine("Subtraction : " + Calculate.Instance.Subtraction());  
+            Console.WriteLine("Multiplication : " + Calculate.Instance.Multiplication());  
+            Console.WriteLine("Division : " + Calculate.Instance.Division());  
+  
+            Console.ReadLine();  
+        }  
+    }  
+  
+    public sealed class Calculate {  
+        private Calculate() {}  
+        private static Calculate instance = null;  
+        public static Calculate Instance {  
+            get {  
+                if (instance == null) {  
+                    instance = new Calculate();  
+                }  
+                return instance;  
+            }  
+        }  
+  
+        public double ValueOne {  
+            get;  
+            set;  
+        }  
+        public double ValueTwo {  
+            get;  
+            set;  
+        }  
+  
+        public double Addition() {  
+            return ValueOne + ValueTwo;  
+        }  
+  
+        public double Subtraction() {  
+            return ValueOne - ValueTwo;  
+        }  
+  
+        public double Multiplication() {  
+            return ValueOne * ValueTwo;  
+        }  
+  
+        public double Division() {  
+            return ValueOne / ValueTwo;  
+        }  
+    }  
+}
+</pre>`),
+        new qList(`Difference between Throw Exception and Throw Clause. `,`The basic difference is that the Throw exception overwrites the stack trace and this makes it hard to find the original code line number that has thrown the exception.<p>Throw basically retains the stack information and adds to the stack information in the exception that it is thrown.</p>
+        <pre>
+        using System;  
+using System.Collections.Generic;  
+using System.Linq;  
+using System.Text;  
+  
+namespace TestingThrowExceptions {  
+    class Program {  
+        public void ExceptionMethod() {  
+            throw new Exception("Original Exception occurred in ExceptionMethod");  
+  
+        }  
+  
+        static void Main(string[] args) {  
+            Program p = new Program();  
+            try {  
+                p.ExceptionMethod();  
+            } catch (Exception ex) {  
+  
+                throw ex;  
+            }  
+        }  
+    }  
+} 
+</pre>`),
+        new qList(`What are Indexer in C# .Net?`,`Indexer allows classes to be used in more intuitive manner. C# introduces a new concept known as Indexers which are used for treating an object as an array. The indexers are usually known as smart arrays in C#. They are not essential part of object-oriented programming.<p>An indexer, also called an indexed property, is a class property that allows you to access a member variable of a class using the features of an array.</p><p>Defining an indexer allows you to create classes that act like virtual arrays. Instances of that class can be accessed using the [] array access operator.</p><b>Creating an Indexer</b>
+        <pre>< modifier > <  
+return type > this[argument list] {  
+    get {  
+        // your get block code  
+    }  
+  
+    set {  
+        // your set block code  
+    }  
+} </pre><b>In the above code:</b><pre>
+&ltmodifier>
+
+can be private, public, protected or internal.
+
+&ltreturn type>
+
+can be any valid C# types.
+</pre>`),
+        new qList(`What is multicast delegate in c#?`,`Delegate can invoke only one method reference has been encapsulated into the delegate.it is possible for certain delegate to hold and invoke multiple methods such delegate called multicast delegates.multicast delegates also know as combinable delegates, must satisfy the following conditions:<ul><li>The return type of the delegate must be void. None of the parameters of the delegate type can be delegate type can be declared as output parameters using out keywords.</li><li>Multicast delegate instance that created by combining two delegates, the invocation list is formed by concatenating the invocation list of two operand of the addition operation. Delegates are invoked in the order they are added.</li></ul><b>Implement Multicast Delegates Example:</b>
+        <pre>using System;  
+using System.Collections.Generic;  
+using System.Linq;  
+using System.Text;  
+delegate void MDelegate();  
+class DM {  
+    static public void Display() {  
+        Console.WriteLine("Meerut");  
+    }  
+    static public void print() {  
+        Console.WriteLine("Roorkee");  
+    }  
+}  
+class MTest {  
+    public static void Main() {  
+        MDelegate m1 = new MDelegate(DM.Display);  
+        MDelegate m2 = new MDelegate(DM.print);  
+        MDelegate m3 = m1 + m2;  
+        MDelegate m4 = m2 + m1;  
+        MDelegate m5 = m3 - m2;  
+        m3();  
+        m4();  
+        m5();  
+    }  
+} </pre>`),
+        new qList(`Difference between Equality Operator (==) and Equals() Method in C#.`,`Both the == Operator and the Equals() method are used to compare two value type data items or reference type data items. The Equality Operator (==) is the comparison operator and the Equals() method compares the contents of a string. The == Operator compares the reference identity while the Equals() method compares only contents. Let’s see with some examples.<p>In this example we assigned a string variable to another variable. A string is a reference type and in the following example, a string variable is assigned to another string variable so they are referring to the same identity in the heap and both have the same content so you get True output for both the == Operator and the Equals() method.</p><pre>
+        using System;  
+namespace ComparisionExample {  
+    class Program {  
+        static void Main(string[] args) {  
+            string name = "sandeep";  
+            string myName = name;  
+            Console.WriteLine("== operator result is {0}", name == myName);  
+            Console.WriteLine("Equals method result is {0}", name.Equals(myName));  
+            Console.ReadKey();  
+        }  
+    }  
+}  </pre>`),
+        new qList(`Difference between is and as operator in C#.`,`<b>"is" operator</b>
+<p>The IS operator checks whether the type of an given object is compatible with the new object type. It returns boolean type value : true if given object is compatible with new one, else false. In this way IS operator help you to do safe type casting.</p>
+<pre>
+Object obj = new Object(); // Creates a new Object obj
+// checking compatibility of obj object with other type
+Boolean b1 = (obj is Object); // b1 is set to true.
+Boolean b2 = (obj is Employee); // The cast fails: no exception is thrown, but b2 is set to false.
+//we can also use it 
+if (obj is Employee) 
+{
+ Employee emp = (Employee) obj;
+ // TO DO:
+}
+</pre>
+
+<b>AS Operator</b>
+<p>The AS operator also checks whether the type of an given object is compatible with the new object type. It returns non-null if given object is compatible with new one, else null. In this way AS operator help you to do safe type casting. The above code can be re-written by using AS operator in a better way.</p>
+<pre>
+Object obj = new Object(); // Creates a new Object obj
+// checking compatibility of obj object with other type
+Employee emp = obj as Employee; // The cast fails: no exception is thrown, but emp is set to null.
+if (emp != null) 
+{
+ // TO:DO
+}
+</pre>
+`),
+       
+        new qList(`What is an Object Pool in .Net?
+`,`Object Pooling is something that tries to keep a pool of objects in memory to be re-used later and hence it will reduce the load of object creation to a great extent. This article will try to explain this in detail. The example is for an Employee object, but you can make it general by using Object base class.`),
+        new qList(`What are generics in c#.net?`,`<p>Generics is a technique that enriches your programs in the following ways:</p>
+<ul>
+<li>It helps you to maximize code reuse, type safety and performance.</li>
+<li>You can create generic collection classes. The .NET Framework class library contains several new generic collection classes in the System.Collections.Generic namespace. You may use these generic collection classes instead of the collection classes in the System.Collections namespace.</li>
+<li>You can create your own generic interfaces, classes, methods, events and delegates.</li>
+<li>You may create generic classes constrained to enable access to methods on specific data types.</li>
+<li>You may get information on the types used in a generic data type at run-time using reflection.</li>
+</ul><pre>
+// Declare the generic class.   
+public class GenericList<T>  
+{  
+    void Add(T input) { }  
+}  
+class TestGenericList  
+{  
+    private class ExampleClass { }  
+    static void Main()  
+    {  
+        // Declare a list of type int.  
+        GenericList<int> list1 = new GenericList<int>();  
+  
+        // Declare a list of type string.  
+        GenericList<string> list2 = new GenericList<string>();  
+  
+        // Declare a list of type ExampleClass.  
+        GenericList<ExampleClass> list3 = new GenericList<ExampleClass>();  
+    }  
+}</pre>`),
+        new qList(`Describe the accessibility modifiers in c#.Net. OR Why to use access modifiers?`,`Access modifiers are an integral part of object-oriented programming. They support the concept of encapsulation, which promotes the idea of hiding functionality. Access modifiers allow you to define who does or doesn't have access to certain features.<p>In C# there are 5 different types of Access Modifiers.</p>
+        <img src="/assets/Images/accessModifier.png">`),
+        new qList(`What is Virtual Method in C#?`,`A virtual method is a method that can be redefined in derived classes. A virtual method has an implementation in a base class as well as derived the class. It is used when a method's basic functionality is the same but sometimes more functionality is needed in the derived class. A virtual method is created in the base class that can be overridden in the derived class. We create a virtual method in the base class using the virtual keyword and that method is overridden in the derived class using the override keyword.
+        <p><b>Virtual Method</b></p>
+        <ul><li>By default, methods are non-virtual. We can't override a non-virtual method.</li><li>We can't use the virtual modifier with the static, abstract, private or override modifiers.</li></ul>`),
+        new qList(`What are the Difference between Array and ArrayList in C#.Net?`,`<b>Array</b>
+<ul>
+<li>Array is strongly typed. This means that an array can store only specific type of items\elements.</li>
+<li>Array stores fixed number of elements. Size of an Array must be specified at the time of initialization.</li>
+<li>No need to cast elements of an array while retriving because it is strongly type and stores specific type of items only.</li>
+<li>Use static helper class Array to perform different tasks on the array.</li>
+</ul>
+
+<b>ArrayList</b>
+<ul>
+<li>ArrayList can store any type of items\elements.</li>
+<li>ArrayList grows automatically and you don't need to specify size.</li>
+<li>Items of ArrayList need to be cast to appropriate data type while retriving.</li>
+<li>ArrayList itself includes various utility methods for various tasks.</li>
+</ul>`),
+        new qList(`What is the use of Using statement in C#?`,`The .Net Framework provides resource management for managed objects through the garbage collector - You do not have to explicitly allocate and release memory for managed objects. Clean-up operations for any unmanaged resources should performed in the destructor in C#. To allow the programmer to explicitly perform these clean-up activities, objects can provide a Dispose method that can be invoked when the object is no longer needed. The using statement in C# defines a boundary for the object outside of which, the object is automatically destroyed. The using statement is excited when the end of the "using" statement block or the execution exits the "using" statement block indirectly, for example - an exception is thrown. The "using" statement allows you to specify multiple resources in a single statement. The object could also be created outside the "using" statement. The objects specified within the using block must implement the IDisposable interface. The framework invokes the Dispose method of objects specified within the "using" statement when the block is exited. `),
+        new qList(`What is Multithreading with .NET?`,`The real usage of a thread is not about a single sequential thread, but rather using multiple threads in a single program. Multiple threads running at the same time and performing various tasks is referred as Multithreading. A thread is considered to be a lightweight process because it runs within the context of a program and takes advantage of resources allocated for that program.<p>A single-threaded process contains only one thread while a multithreaded process contains more than one thread for execution.</p>
+        <img src="/assets/Images/thread.jpg">`),
+        new qList(`Explain Anonymous type in C#?`,`Anonymous types allow us to create new type without defining them. This is way to defining read only properties into a single object without having to define type explicitly. Here Type is generating by the compiler and it is accessible only for the current block of code. The type of properties is also inferred by the compiler.
+        <pre>
+        var anonymousData = new   
+{  
+    ForeName = "Jignesh",  
+    SurName = "Trivedi"  
+};  
+Console.WriteLine("First Name : " + anonymousData.ForeName); 
+</pre>`),
+        new qList(`Difference between Hashtable and Dictionary in C#?`,`<table border="1">
+<tr>
+<th>Hashtable</th>
+<th>Dictionary</th>
+</tr>
+<tr>
+<td>Hashtable included in System.Collections namespace.</td>
+<td>Dictionary included in System.Collections.Generic namespace.</td>
+</tr>
+<tr>
+<td>Hashtable is loosely typed (non-generic) collection, this means it stores key-value pairs of any data types.</td>
+<td>Dictionary is generic collection. So it can store key-value pairs of specific data types.</td>
+</tr>
+<tr>
+<td>Hashtable is thread safe.</td>
+<td>Only public static members are thread safe in Dictionary.</td>
+</tr>
+<tr>
+<td>Hashtable returns/throws Exception if we try to find a key which does not exist.</td>
+<td>Dictionary returns null if we try to find a key which does not exist.</td>
+</tr>
+<tr>
+<td>Data retrival is slower than dictionary because of boxing-unboxing.</td>
+<td>	Data retrival is faster than Hashtable.</td>
+</tr>
+</table>
+`),
+new qList(`Difference between Design Principle and Design Pattern`,`<b>Design Principle:</b>
+<p>It provides high level guide lines to design better software applications. Design principles do not provide implementation and not bound to any programming language. E.g. SOLID (SRP, OCP, LSP, ISP, DIP) principles.</p>
+<p>For example, Single Responsibility Principle (SRP) suggests that a class should have only one and one reason to change. This is high level statement which we can keep in mind while designing or creating classes for our application. SRP does not provide specific implementation steps but it's on you how you implement SRP in your application.</p>
+
+<b>Design Pattern:</b>
+<p>It provides low level solution (implementation) for the commonly occurring object oriented problem. In another word, design pattern suggest specific implementation for the specific object oriented programming problem. For example, if you want create a class that can only have one object at a time then you can use Singleton design pattern which suggests the best way to create a class that can only have one object.</p>
+<p>Design patterns are tested by others and safe to follow. E.g. Gang of Four patterns: Abstract Factory, Factory, Singleton, Command etc.</p>`),
+new qList(`SOLID principles in C#`,`<img src="/assets/Images/SOLID.jpg">
+<b>1. What is Single Responsibility Principle (SRP)?</b>
+<p>The single responsibility principle states that every module or class should have responsibility over a single part of the functionality provided by the software, and that responsibility should be entirely encapsulated by the class.</p>
+<p>All its services should be narrowly aligned with that responsibility</p>
+<p>As per SRP, there should not be more than one reason for a class to change, or a class should always handle single functionality. If you put more than one functionality in one Class in C# it introduce coupling between two functionality and even if you change one functionality there is chance you broke coupled functionality, which require another round of testing to avoid any surprise on production environment.</p>
+
+<b>2. What is Open Closed Principle (OCP)?</b>
+<p>In object-oriented programming, the open/closed principle states “software entities (classes, modules, functions, etc.) should be open for extension, but closed for modification”; that is, such an entity can allow its behaviour to be extended without modifying its source code.</p>
+<p>Open Closed principle helps you write code that is extensible and cleaner.</p>
+
+<b>3. What is Liskov substitution principle (LSP) ?</b>
+<p>The Liskov substitution principle (LSP) is a particular definition of a subtyping relation, called (strong) behavioral subtyping, that was initially introduced by Barbara Liskov in a 1987 conference keynote address entitled Data abstraction and hierarchy</p>
+<p>if S is a subtype of T, then objects of type T in a program may be replaced with objects of type S without altering any of the desirable properties of that program</p>
+
+<b>4. What is Interface Segregation principle (ISP) ?</b>
+<p>The interface-segregation principle (ISP) states that no client should be forced to depend on methods it does not use.</p>
+<ul>
+<li>ISP splits interfaces which are very large into smaller and more specific ones so that clients will only have to know about the methods that are of interest to them.</li>
+<li>ISP is intended to keep a system decoupled and thus easier to refactor, change, and redeploy.</li>
+</ul>
+<p>ISP is one of the five SOLID principles of Object-Oriented Design, similar to the High Cohesion Principle of GRASP</p>
+
+<b>5. What is Dependency Inversion principle (DIP) ?</b>
+<p>The Dependency Inversion principle refers to a specific form of decoupling software modules.It states:</p>
+<ul>
+<li>High-level modules should not depend on low-level modules. Both should depend on abstractions.</li>
+<li>Abstractions should not depend on details. Details should depend on abstractions.</li>
+</ul>
+<p>The Dependency Inversion principle (DIP) helps us to develop loosely couple code by ensuring that high-level modules depend on abstractions rather than concrete implementations of lower-level modules</p>`),
+new qList(`Factory Method Design Pattern - C#`,`In Factory pattern, we create object without exposing the creation logic. In this pattern, an interface is used for creating an object, but let subclass decide which class to instantiate. The creation of object is done when it is required. The Factory method allows a class later instantiation to subclasses.
+<pre>
+interface Product
+{
+ 
+}
+ 
+class ConcreteProductA : Product
+{
+}
+ 
+class ConcreteProductB : Product
+{
+}
+ 
+abstract class Creator
+{
+ public abstract Product FactoryMethod(string type);
+}
+ 
+class ConcreteCreator : Creator
+{
+ public override Product FactoryMethod(string type)
+ {
+ switch (type)
+ {
+ case "A": return new ConcreteProductA();
+ case "B": return new ConcreteProductB();
+ default: throw new ArgumentException("Invalid type", "type");
+ }
+ }
+}
+</pre>
+`),
+new qList(`Where to Use Abstact Class and Where to Use Interface?`,`<b>Use an abstract class</b>
+<ul>
+<li>When creating a class library which will be widely distributed or reused—especially to clients, use an abstract class in preference to an interface; because, it simplifies versioning. This is the practice used by the Microsoft team which developed the Base Class Library. ( COM was designed around interfaces.)</li>
+<li>Use an abstract class to define a common base class for a family of types.</li>
+<li>Use an abstract class to provide default behavior.</li>
+<li>Subclass only a base class in a hierarchy to which the class logically belongs.</li>
+</ul>
+
+<b>Use an interface</b>
+<ul>
+<li>When creating a standalone project which can be changed at will, use an interface in preference to an abstract class; because, it offers more design flexibility.</li>
+<li>Use interfaces to introduce polymorphic behavior without subclassing and to model multiple inheritance—allowing a specific type to support numerous behaviors.</li>
+<li>Use an interface to design a polymorphic hierarchy for value types.</li>
+<li>Use an interface when an immutable contract is really intended.<li>
+<li>A well-designed interface defines a very specific range of functionality. Split up interfaces that contain unrelated functionality.</li>
+</ul>
+`),
     ];
     public aspDotNet=[
         new qList(`What is ASP.NET?`,`<p>Answer: ASP.NET was developed in direct response to the problems that developers had with classic ASP. Since ASP is in such wide use, however, Microsoft ensured that ASP scripts execute without modification on a machine with the .NET Framework</p>
