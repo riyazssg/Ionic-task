@@ -4428,4 +4428,155 @@ new qList(`Self Introduction (experience) - 2`,`<p>Thank you for giving me this 
    new qList(`Follow Up Afterwards`,`Don't let your interview be the last they hear from you. If you follow up afterwards, you'll help them remember who you are, and make sure your resume doesn't fall into the abyss of the forgotten. Send a thank you note after your interview, and a short email later on to check in if you haven't heard back. Take into account how you've been communicating with them so far, though, as different modes of communication may be more beneficial. If you have a follow up interview, be sure to nail that too.`),
    new qList(`If You Don't Get Hired, Find Out Why`,`Not every interview will be a winner, sadly, even if you do everything right. If you don't get hired, the best thing you can do is find out why and apply that knowledge to your next round of interviews. Look back on your interview and think about what you could have done better, whether it's avoiding the "overqualification" trap or just simply using better grammar. There are any number of reasons someone might not hire you, and all you can do is use this round as practice for your next interview.`)
    ];
+   public hrInterview=[
+       new qList(`Why do you want to work in this company?`,`<p>This is a popular interview question</p>
+<p><strong>Following are 4 sample answers</strong></p>
+<p><strong>Sample Answer 1: </strong></p>
+<p><em>I would be proud to work for a company like yours with such a long history of leadership in the industry.  </em>I have carried out web research and believe that the company’s XYZ products and its future projections are very impressive and promising.  The XXX team is the team I would take pride to work with. A place where my skills or background fits perfectly and can be utilized respectively.</p>
+<p><strong>Sample Answer 2:</strong></p>
+<p>Your company made its fortune for making great products that help people do X. But on top of that it is the kind of place where I can fit in and excel, so I was thrilled to see you have this opening.  Your company believes in providing superior service, to which I share the same value and enables me to not only fit into your organization but complement the team as well.</p>
+<p><strong>Sample Answer 3: </strong></p>
+<p>I was delighted to see on your website that your feature employees are talking about how great it is to work for your company. These days so many people seem to despise where they work for one reason or another. It&#8217;s wonderful to see that your employees are proud to talk about how much they love their jobs.</p>
+<p><strong>Sample Answer 4:</strong></p>
+<p>This company is on the list of most admired companies every year. I want to play a role in ensuring this company stays on that list. I want to be part of a company that offers no less than quality in terms of products and after sales services.</p>
+<p><strong>Tips:</strong></p>
+<ul>
+<li>Conduct a thorough research of company and company’s top executive before facing interview</li>
+<li>Learn about the company’s vision and how you can contribute to it</li>
+<li>Demonstrate your eagerness to work for the company</li>
+<li>Evidence that you understand the employer’s business</li>
+<li>Mention why you rely on XYZ company for your growth and why it is the best place to utilize your skill and experience for the benefit of the company</li>
+<li>Demonstrate your belief in company’s product or service</li>
+</ul>`),
+       new qList(`Do you consider yourself successful?`,`<p>This is a popular interview question</p>
+<p><strong>Following are 5 sample answers</strong></p>
+<p><strong>Sample answer #1</strong></p>
+<p>I feel successful with continuous progress.  I find exciting when I am allowed to implement new ideas and see its fruition. I would define my success as what I have learned through years and use them when circumstances arises or demands.</p>
+<p><strong>Sample answer #2</strong></p>
+<p>I feel successful when I meet my short term as well as the long-term goals. I try to achieve the set goals and work hard as much as I can, I try to reach those goals and achieve the desired outcome. I want to recognize myself as someone with a progressive attitude who does his best and gives 100% to attain goals.  To me success is not just my personal achievements but also by the efforts of the people around me.</p>
+<p><strong>Sample answer #3</strong></p>
+<p>Success to me is knowing that I am excelling in my performance and filling fulfilled. My work should add value to the company and its customers. Knowing that each day I am making the world a better place is a success to me. I would define success at work as what I have learned from key job assignments experiences.</p>
+<p><strong>Sample answer #4</strong></p>
+<p>Success to me is spending the majority of the time focused on work that are fulfilling and increasing my efficiency to help the organization grow.  While I also believe that greater success can be achieved while working as a team towards a common goal.</p>
+<p><strong>Sample answer #5</strong></p>
+<p>Yes. During my ___ year career, I have learned to set goals and to make sure I meet each of it. I make sure obstacles do not hinder me from reaching my goals, but instead should inspire me to exert more. I believe the new position I am applying for will enable me to reach up higher and be more successful</p>
+<p><strong>Tips:</strong></p>
+<ul>
+<li>Summarize your career goals</li>
+<li>Don’t say something that sound self-centric</li>
+</ul>`),
+       new qList(`Are you willing to travel?`,`Yes. I love traveling. Adjusting in new places and meeting new people would be a delightful experience for me.`),
+       new qList(`What are your salary expectations?`,`As of now, I haven&#8217;t thought much about it. I&#8217;m more focused on learning the requirements for this position that I am applying for.`),
+       new qList(`What would you consider your greatest strengths &amp; weakness?`,`<p>This is a popular interview question</p>
+<p><strong>Following are 4 sample answers</strong></p>
+<p><strong>Sample answer #1</strong></p>
+<p>My strength is my ability to convert negative work environment into a positive and at the same time, developing a supportive team. I am also capable of keeping many projects on track and ensuring deadlines are met. As far as my weakness is concerned I get impatient sometimes in order to get everything done very quickly. To tackle the problem, I am trying to re-consider the to-do list and prioritize the tasks.</p>
+<p><strong>Sample answer #2</strong></p>
+<p>I am very comfortable working with a different group of people. My strength is my analytical and planning skills, developed over the years, help me to complete my work before the deadline. I am a little bit nervous while speaking in a group, but I have given good number of paper presentation to overcome this.</p>
+<p><strong>Sample answer #3</strong></p>
+<p>I am efficient in a number of programming languages including HTML, C++, Java and AppleScript.  I have generated over 100% excess revenue for two separate companies through cost cutting programming efficiency, and I have leadership experience with a team of five IT professionals working on some of the popular iPhone apps online.  As far as weakness is concerned I have a tendency to remain quiet in meetings, but I am working on speaking up when I feel I have ideas to share.</p>
+<p><strong>Sample answer #4</strong></p>
+<p>I&#8217;m a highly motivated person. I don&#8217;t stop until I get things done. I value other people&#8217;s time and company&#8217;s resources. I work to become an asset, not a liability.</p>
+<p>People say I sometimes act too much as a perfectionist. To counter this, I attended seminars that teach me how to manage myself well.</p>
+<p><strong>Tips</strong></p>
+<ul>
+<li>Focus mostly on strengths</li>
+<li>Show the interviewer how you are putting effort to overcome the weakness</li>
+<li>Mention about your real weakness but do mention about how you are going to fix it</li>
+<li>Make sure your strength and weakness don’t contradict each other</li>
+<li>Research well about the position you are applying for and identify the area where you can apply your strength</li>
+<li>Choose a weakness that is acceptable for the job in hand</li>
+<li>Don’t confuse interests with strength or dislikes with weakness</li>
+</ul>`),
+       new qList(`What motivates you?`,`<p>This is a popular interview question</p>
+<p><strong>Following are 4 sample answers</strong></p>
+<p><strong>Sample Answer #1</strong></p>
+<p>I am very result-oriented person; my primary motivation is to achieve the desired end result.  While I enjoy working on the project of my own, I am particularly motivated by the buzz of working in a team. It’s very exciting working closely with others, who share the same common goal. I also like to take on the challenge, and rise to that challenge as part of a concerted team effort.</p>
+<p><strong>Sample Answer #2</strong></p>
+<p>Primarily, my ability to work hard and delivering result motivates me.  But subsequent recognition of my efforts gives me the encouragement for my next efforts.</p><p><strong>Sample Answer #3</strong></p>
+<p>Responsibility towards work motivates me the most and my aim within any company is to move up to greater levels of responsibility to achieve each goal with better responsibilities.</p>
+<p><strong>Sample Answer #4</strong></p>
+<p>Many things motivate me. My goal to be the best of what I can be often motivates me to go beyond my own expectations. When I see myself being productive everyday, it motivates me to continue.</p>
+<p><strong>Tips:</strong></p>
+<ul>
+<li>Sometimes, the best solution is to be honest- you can say money is your motivational factor, but it should be your last option</li>
+<li>Mention things like Job satisfaction, working towards a goal, contributing to a team effort or developing your skills- provide a specific example that supports your response</li>
+<li>Excitement for new challenges</li>
+<li>Quest for personal development</li>
+</ul>
+<p><strong>What not to say:</strong></p>
+<ul>
+<li>Do not mention that you are motivated by bragging rights, material things or fear of being disciplined</li>
+</ul>`),
+       new qList(`Tell me about your dream job.?`,`The only dream job I&#8217;ve always had was a job that keeps me busy, a job wherein I get to contribute to the company&#8217;s success.`),
+       new qList(`Why did you leave your last job?`,`I left my previous job because I feel I want to do more, to get hold of a greater opportunity to serve.`),
+       new qList(`Why should we hire you?`,`<p><strong>Following are 5 sample answers</strong></p>
+<p><strong>Sample Answer 1:</strong></p>
+<p>In my XXX years of experience as a manager, I have build-up a solid motivational and team-working skills. I was awarded twice as the manager-of-the-year for my excellent methodologies for motivating employees to encounter challenges and meeting deadlines. If hired, I will carry forward this ability of leadership and strategies for achieving profit gains to this position.</p>
+<p><strong>Sample Answer 2:</strong></p>
+<p>The subjects I chose while working for my degree in XXX subject have prepared me for this particular post. Also, my two-year experience working with company X has given me the platform to master the skills that I needed to deliver for this position. It seems as if I was prepared all my life to land this job.</p>
+<p><strong>Sample Answer 3: </strong></p>
+<p>For this particular job, I have the perfect combination of skills and experience that is required. I also bring the experience of strong analytical and problem-solving skills that I have gained while working with other companies. My dedication to excellent work standards will add value to the team and the company.</p>
+<p><strong>Sample Answer 4:</strong></p>
+<p>I am quite aware of the company’s mission of acquiring the largest consumer base in the area and to become the front-runner in supplier’s or provider’s community. My domain knowledge and hold over the customer base can make a big contribution towards this. I would really enjoy this challenge of growing this business bigger.</p>
+<p><strong>Sample Answer 5:</strong></p>
+<p>As I have said earlier, my years of experience in this field is something that can truly contribute to this company&#8217;s success. My sense of dedication in every task that I handle is definitely a big plus. I believe my skills and work attitude measures up to your company standards.</p>
+<p><strong>Tips</strong></p>
+<ul>
+<li>Emphasize on your uniqueness but keep it concise</li>
+<li>Highlight your strength, skills, and your accomplishments</li>
+<li>Give an example that describes you as a quick learner</li>
+<li>State or provide some evidence that shows how you contributed to the growth of the previous company in terms of revenue, goodwill, and brand</li>
+<li>Include your research you made on the company- for a smaller company you can say- your company is open to new innovative ideas</li>
+</ul>
+<p><strong>What not to say</strong></p>
+<ul>
+<li>Try to avoid saying- I need a job, money or this place is close to where I live</li>
+<li>Focus on what can you do for the company rather than what they can do for you</li>
+<li>NEVER DO THIS- comparing your skills to others. The natural instinct to this question is we usually start comparing our skills to others, when this question is put through.</li>
+</ul>`),
+       new qList(`Are you a team player?`,`Yes, definitely. While I will deny the fact that I can work independently with minimal supervision, I&#8217;m also one companion every leader would ever wanted to be in his team. Whatever task is assigned to me, I make sure it meets and exceeds what is expected of me. I also make it a point to reach out to teammates whenever needed.`),
+       new qList(`Are you willing to work overtime? Nights? Weekends?`,`I understand that being asked to work for an extended number of hours comes with a good reason in the first place, so I&#8217;m ok with it. It an extra effort means something for the company, I&#8217;ll be happy to do it.`),
+       new qList(`What will you do if you don&#8217;t get this position?`,`I have high hopes that I will be hired. In case it turns the other way around, I would have to move on and search for another job.`),
+       new qList(`What have you done to improve your knowledge in the last year?`,`I have attended in several self-improvement, time management and personality development seminars. I have also participated in training workshops related to [industry].`),
+       new qList(`How you would be an asset to this company?`,`My skills in [&#8230;] are outstanding. I have earned a lot of awards and certifications from my past employers. As an employee, I handle pressure with ease and can work with minimal supervision.`),
+       new qList(`How long would you expect to work for us in case you are hired?`,`As much as possible I would like to be in this company for a long time. For as long as management sees me as an asset, I am willing to stay.`),
+       new qList(`Describe your ability to work under pressure.`,`I understand the nature of this position that I am applying for quite well, along with the pressure that comes with it. Being under pressure doesn&#8217;t discourage me, it motivates me more.`),
+       new qList(`Why do you think you would do well at this job?`,`Because, I love this job. I feel very confident of myself and my ability to delivery nothing short of quality output. My years of experience helped me develop these skills.`),
+       new qList(`What irritates you about co-workers?`,`I always get along fine with my co-workers. I tend to be open minded and very considerate.`),
+       new qList(`What has disappointed you about a job?`,`I once felt that I was not being given enough challenges to work on. I was a bit disappointed because I was so eager to go for more.`),
+       new qList(`If you were hiring a person for this job, what would you look for?`,`I would look into two essential things: the ability to do the job right and the proper attitude to do it. Skills without the right attitude will not contribute to a productive output.`),
+       new qList(`What was the most difficult decision for you made?`,`It was a time when I had to choose between joining a group of employees protesting some issues in the company, and staying away from the issue. I ended up being a mediator between the employees and our immediate supervisor, and I was glad I made that decision because it all ended well and without further conflicts in the work place.`),
+       new qList(`What qualities do you look for in a boss?`,`I look into my boss as a person who can easily relate with me, can make firm decisions, and is transparent. A boss with a sense of humor would also be a delightful idea.`),
+       new qList(`Are you applying in other companies as well?`,`Yes. I have submitted my applications in some of the best companies like [&#8230;.]. Above all, my priority and hope is that I be able to land a job in your company.`),
+       new qList(`Have you ever worked in a job that you hated?`,`Not exactly hated. I once had a job that does not exactly match my qualification. Nevertheless, I was glad I took the job because it was an opportunity to learn something new and added to my list of experience.`),
+       new qList(`What would your previous supervisor say your best point is?`,`Some of my strongest points at work are being hardworking, patient and a quick learner.`),
+       new qList(`What suggestion/s have you made in your previous employment that was implemented?`,`I once suggested that management and staff should have more regular meetings instead of quarterly meetings. I was happy that management took note of this and even commended me for making a good initiative.`),
+       new qList(`How do you cope with stress?`,`I pause for a few minutes, look out into the window. Brief pauses in enough to get me charged again. I can manage stress well enough and does not decrease my productivity level.`),
+       new qList(`Would you rather work for money or job satisfaction?`,`Job satisfaction is more important for me. Working just for the money may not be fulfilling if I don&#8217;t like the job in the first place. Job satisfaction makes me stay productive; money would naturally come along well.`),
+       new qList(`Where do you see yourself in 5 years?`,`<p>This is a popular interview question asked in mock interviews</p>
+<p><strong>Following are 3 sample answers</strong></p>
+<p><em><strong>Sample Answer 1:</strong></em></p>
+<p>In five years’ time, I see myself growing along with the team, developing and using new skills to the benefit of the organization. I find this position extremely motivating and exciting. I can imagine many challenges lying ahead of me, which I am excited to experience. And therefore, I am eager to invest my five years time learning all facets of the job towards professional advancement.</p>
+<p><strong>Sample Answer 2:</strong></p>
+<p>I am flexible with others and enjoy the roles that involves leadership. Although, my initial focus and priority would be to involve actively in the job I am applying for, I would very much keen to take management or supervisory role in 3-5 years&#8230;or less. I enjoy supporting my team members, and always try to set a good example for others.</p>
+<p><strong>Sample Answer 3:</strong></p>
+<p><em>I am obsessed to be the best at whatever I do. I would like to work in an organization where I’ll have the best chances to enhance my skills, doing interesting projects, and work along with team members that I can actually learn from.</em><em> Some of the most innovative peers in the industry work here and that’s one of the reasons why I would love to built a career overhere.</em></p>
+<p><strong>Tips:</strong></p>
+<ul>
+<li>Analyze a reasonable career path which will flow from the position you are applying</li>
+<li>Try emphasize your interest and goal in your answer</li>
+<li>Talk in terms of responsibilities and achievements</li>
+<li>Try mentioning things that bring value to an organization</li>
+<li>Fresher’s can put forward their plan for next one or two years instead of five or ten years</li>
+<li>Show your long term interest in the position</li>
+</ul>
+<p><strong>What not to say</strong></p>
+<ul>
+<li><strong>Don’t say this- </strong>I am not sure, I am thinking about xyz…</li>
+<li>Don’t portray yourself overly ambitious by saying something like……I want to be CEO in next five years</li>
+<li>Don’t say that you wanted to be in the interviewer’s role or I want your job some-day</li>
+<li>Don’t put your personal plan like buying a new car or going for a long tour etc.</li>
+</ul>`)
+   ];
 }

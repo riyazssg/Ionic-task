@@ -19,5 +19,8 @@ goToInterviewTips(){
 let d={ title: 'Interview Tips', apiKey: 'InterviewTips' };
   this.navCtrl.push(ListPage, d);
 }
-
+goTohrInterview(){
+let d={ title: 'HR Interview Q&A', apiKey: 'hrInterview' };
+  this.navCtrl.push(ListPage, d);
+}
 }
