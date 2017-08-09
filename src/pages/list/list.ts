@@ -104,7 +104,8 @@ ionViewDidLoad(){
 
        else if(this.apiKey==="EF") 
        this.questionList=this.questions.EF;
-
+        else if(this.apiKey==="oops")
+         this.questionList=this.questions.oops;
 
        this.Tempitems=this.questionList;
 console.log(this.questionList);

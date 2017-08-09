@@ -3438,5 +3438,93 @@ foreach (Customercust in Customers) // In this line no address object loaded
    <p>Now the customer object and the related address objects will be loaded in one query rather than multiple queries.</p><pre>var employees = context.Customers.Include("Addresses").Take(5);</pre>`)
         
     ];
+
+    public oops=[
+        new qList(`What is OOPS?`,`<p>OOPS is abbreviated as Object Oriented Programming system in which programs are considered as a collection of objects. Each object is nothing but an instance of a class.</p>`),
+        new qList(`Write basic concepts of OOPS?`,`<pFollowing are the concepts of OOPS and are as follows:.</p><ol><li>Abstraction.</li><li>Encapsulation.</li><li>Inheritance.</li><li>Polymorphism.</li></ol>`),
+        new qList(`What is a class?`,`<p>A class is simply a representation of a type of object. It is the blueprint/ plan/ template that describe the details of an object.</p>`),
+        new qList(`What is an object?`,`<p>Object is termed as an instance of a class, and it has its own state, behavior and identity.</p>`),
+        new qList(`What is Encapsulation?`,`<p>Encapsulation is an attribute of an object, and it contains all data which is hidden. That hidden data can be restricted to the members of that class.</p><p>Levels are Public,Protected, Private, Internal and Protected Internal.</p>`),
+        new qList(` What is Polymorphism?`,`Polymorphism is nothing butassigning behavior or value in a subclass to something that was already declared in the main class. Simply, polymorphism takes more than one form.`),
+        new qList(`What is Inheritance?`,`Inheritance is a concept where one class shares the structure and behavior defined in another class. Ifinheritance applied on one class is called Single Inheritance, and if it depends on multiple classes, then it is called multiple Inheritance.`),
+        new qList(`What are manipulators?`,`Manipulators are the functions which can be used in conjunction with the insertion (<<) and extraction (>>) operators on an object. Examples are endl and setw.`),
+        new qList(`Define a constructor?`,`Constructor is a method used to initialize the state of an object, and it gets invoked at the time of object creation. Rules forconstructor are:.<ul><li>Constructor Name should be same asclass name.</li><li>Constructor must have no return type.</li></ul>`),
+        new qList(`Define Destructor?`,`Destructor is a method which is automatically called when the object ismade ofscope or destroyed. Destructor name is also same asclass name but with the tilde symbol before the name.`),
+        new qList(`What is Inline function?`,`Inline function is a technique used by the compilers and instructs to insert complete body of the function wherever that function is used in the program source code.`),
+        new qList(`What is a virtual function?`,`Virtual function is a member function ofclass and its functionality can be overridden in its derived class. This function can be implemented by using a keyword called virtual, and it can be given during function declaration.<p>Virtual function can be achieved in C++, and it can be achieved in C Languageby using function pointers or pointers to function.</p>`),
+
+        new qList(`What is friend function?`,`Friend function is a friend of a class that is allowed to access to Public, private or protected data in that same class. If the function is defined outside the class cannot access such information.
+
+<p>Friend can be declared anywhere in the class declaration, and it cannot be affected by access control keywords like private, public or protected.</p>`),
+        new qList(`What is function overloading?`,`Function overloading is defined as a normal function, but it has the ability to perform different tasks. It allowscreation of several methods with the same name which differ from each other by type of input and output of the function.
+        <b>Example</b>
+        <pre>void add(int& a, int& b);
+void add(double& a, double& b);
+void add(struct bob& a, struct bob& b);</pre>`),
+        new qList(`What is operator overloading?`,`Operator overloading is a function where different operators are applied and depends on the arguments. Operator,-,* can be used to pass through the function , and it has their own precedence to execute.
+        <b>Example</b>
+        <pre>
+        class complex { 
+double real, 
+imag; public: complex(double r, double i) : real(r), 
+imag(i) {} complex operator+(complex a, complex b); 
+complex operator*(complex a, complex b); 
+complex& operator=(complex a, complex b);
+}
+</pre>
+Output : a=1.2, b=6
+        `),
+        new qList(`What is an abstract class?`,`An abstract class is a class which cannot be instantiated. Creation of an object is not possible with abstract class , but it can be inherited. An abstract class can contain only Abstract method. Java allows only abstract method in abstract class while for other language it allows non-abstract method as well.`),
+        new qList(`What is a ternary operator?`,`Ternary operator is said to be an operator which takes three arguments. Arguments and results are of different data types , and it is depends on the function. Ternary operator is also called asconditional operator.`),
+
+        new qList(`What is the use of finalize method?`,`Finalize method helps to perform cleanup operations on the resources which are not currently used. Finalize method is protected , and it is accessible only through this class or by a derived class.`),
+        new qList(`What are different types of arguments?`,`A parameter is a variable used during the declaration of the function or subroutine and arguments are passed to the function , and it should match with the parameter defined. There are two types of Arguments.<ul>
+<li>Call by Value – Value passed will get modified only inside the function , and it returns the same value whatever it is passed it into the function.</li>
+<li>Call by Reference – Value passed will get modified in both inside and outside the functions and it returns the same or different value.</li>
+<ul>`),
+        new qList(`What is super keyword?`,`Super keyword is used to invoke overridden method which overrides one of its superclass methods. This keyword allows to access overridden methods and also to access hidden members of the superclass.<p>It also forwards a call from a constructor to a constructor in the superclass.,</p>`),
+        new qList(`What is method overriding?`,`Method overriding is a feature that allows sub class to provide implementation of a method that is already defined in the main class. This will overrides the implementation in the superclass by providing the same method name, same parameter and same return type.`),
+        new qList(`What is an interface?`,`An interface is a collection of abstract method. If the class implements an inheritance, and then thereby inherits all the abstract methods of an interface.`),
+        new qList(`What is exception handling?`,`Exception is an event that occurs during the execution of a program. Exceptions can be of any type – Run time exception, Error exceptions. Those exceptions are handled properly through exception handling mechanism like try, catch and throw keywords.`),
+        new qList(`What are tokens?`,`Token is recognized by a compiler and it cannot be broken down into component elements. Keywords, identifiers, constants, string literals and operators are examples of tokens.<p>Even punctuation characters are also considered as tokens – Brackets, Commas, Braces and Parentheses.</p>`),
+        new qList(`Difference between overloading and overriding?`,`Overloading is static binding whereas Overriding is dynamic binding. Overloading is nothing but the same method with different arguments , and it may or may not return the same value in the same class itself.<p>Overriding is the same method names with same arguments and return types associates with the class and its child class.</p>`),
+        new qList(`Difference between class and an object?`,`An object is an instance of a class. Objects hold any information , but classes don’t have any information. Definition of properties and functions can be done at class and can be used by the object.<p>Class can have sub-classes, and an object doesn’t have sub-objects.</p>`),
+        new qList(`What is an abstraction?`,`Abstraction is a good feature of OOPS , and it shows only the necessary details to the client of an object. Means, it shows only necessary details for an object, not the inner details of an object. Example – When you want to switch On television, it not necessary to show all the functions of TV. Whatever is required to switch on TV will be showed by using abstract class.`),
+        new qList(`What are access modifiers?`,`Access modifiers determine the scope of the method or variables that can be accessed from other various objects or classes. There are 5 types of access modifiers , and they are as follows:.<ul>
+<li>Private</li>
+<li>Protected</li>
+<li>Public</li>
+<li>Friend</li>
+<li>Protected Friend</li>
+<ul>`),
+        new qList(`What is sealed modifiers?`,`Sealed modifiers are the access modifiers where it cannot be inherited by the methods. Sealed modifiers can also be applied to properties, events and methods. This modifier cannot be applied to static members.`),
+        new qList(`What is the difference between new and override?`,`The new modifier instructs the compiler to use the new implementation instead of the base class function. Whereas, Override modifier helps to override the base class function.`),
+        new qList(`What are the various types of constructors?`,`There are three various types of constructors , and they are as follows:.<ul>
+<li>Default Constructor – With no parameters.</li>
+<li>Parametric Constructor – With Parameters. Create a new instance of a class and also passing arguments simultaneously.</li>
+<li>Copy Constructor – Which creates a new object as a copy of an existing object.</li>
+<ul>`),
+        new qList(`What is early and late binding?`,`Early binding refers to assignment of values to variables during design time whereas late binding refers to assignment of values to variables during run time.`),
+        new qList(`What is ‘this’ pointer?`,`THIS pointer refers to the current object of a class. THIS keyword is used as a pointer which differentiates between the current object with the global object. Basically, it refers to the current object.`),
+        new qList(`What is the difference between structure and a class?`,`Structure default access type is public , but class access type is private. A structure is used for grouping data whereas class can be used for grouping data and methods. Structures are exclusively used for dataand it doesn’t require strict validation , but classes are used to encapsulates and inherit data which requires strict validation.`),
+        new qList(`What is the default access modifier in a class?`,`The default access modifier of a class is Private by default.`),
+        new qList(`What is pure virtual function?`,`A pure virtual function is a function which can be overridden in the derived classbut cannot be defined. A virtual function can be declared as Pure by using the operator =0.
+        <b>Example</b>
+        <pre>
+        Virtual void function1() // Virtual, Not pure
+Virtual void function2() = 0 //Pure virtual</pre>`),
+        new qList(`What are all the operators that cannot be overloaded?`,`ollowing are the operators that cannot be overloaded -.<ul>
+<li>Scope Resolution (:: )</li>
+<li>Member Selection (.)</li>
+<li>Member selection through a pointer to function (.*)</li>
+<ul>`),
+        new qList(`What is dynamic or run time polymorphism?`,`Dynamic or Run time polymorphism is also known as method overriding in which call to an overridden function is resolved during run time, not at the compile time. It means having two or more methods with the same name,same signature but with different implementation.`),
+        new qList(`What is a copy constructor?`,`This is a special constructor for creating a new object as a copy of an existing object. There will be always only on copy constructor that can be either defined by the user or the system.`),
+        new qList(`What is static and dynamic binding?`,`Binding is nothing but the association of a name with the class. Static binding is a binding in which name can be associated with the class during compilation time , and it is also called as early Binding.<p>Dynamic binding is a binding in which name can be associated with the class during execution time , and it is also called as Late Binding.</p>`),
+        new qList(`How many instances can be created for an abstract class?`,`Zero instances will be created for an abstract class.`),
+        new qList(`Which keyword can be used for overloading?`,`Operator keyword is used for overloading.`),
+  
+
+    ];
     
 }

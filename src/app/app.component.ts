@@ -22,7 +22,7 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'C Programming', apiKey: 'cProgramming' },
-     // { title: 'C# Programming', apiKey: 'cshapProgramming' },
+      { title: 'OOPs Concepts', apiKey: 'oops' },
       { title: '.Net Framework', apiKey: 'dotNetFramework' },
       { title: 'C# .Net', apiKey: 'csharpDotNet' },
       { title: 'ASP.Net', apiKey: 'aspDotNet' },
