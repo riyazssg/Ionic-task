@@ -4,11 +4,17 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>IT Interview Scanner</ion-title>
+ <ion-buttons end>
+   <button ion-button icon-only (click)="openMenu()" item-end>
+                        <ion-icon name="more"></ion-icon>                       
+                    </button>    
+
+    </ion-buttons>
+
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-
  <ion-card>
     <ion-slides pager>
 
@@ -49,7 +55,7 @@
   <button ion-button full (click)="goToInterviewTips()" >Interview Tips</button>
 </ion-col>
 <ion-col>
-  <button ion-button full>Confidence</button>
+  <button ion-button full (click)="goToconfident()">Confidence</button>
 </ion-col>
 </ion-row>
  </ion-card>

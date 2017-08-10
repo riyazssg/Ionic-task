@@ -114,6 +114,8 @@ ionViewDidLoad(){
          this.questionList=this.questions.hrInterview;
          else if(this.apiKey==="groupDiscusstion")
          this.questionList=this.questions.groupDiscusstion;
+         else if(this.apiKey==="confident")
+         this.questionList=this.questions.confident;
 
        this.Tempitems=this.questionList;
 console.log(this.questionList);

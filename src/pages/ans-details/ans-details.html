@@ -18,7 +18,7 @@
 
   <ion-list *ngIf="youMayLike">
     <ion-item color="light">
-      <ion-title text-wrap center>You Also May Like...</ion-title>
+      <ion-title text-wrap center>You might also like</ion-title>
     </ion-item>
 
   <button ion-item  outline *ngFor="let a of youMayLike, let p=index" (click)="goToNext(p)">
