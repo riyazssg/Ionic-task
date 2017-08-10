@@ -18,6 +18,11 @@ this.dataindex=this.dataindex+en;
 this.qnsDetails=this.navParams.data.items[this.dataindex];
 this.fnMayLike(this.dataindex);
 }
+isFevorate=false;
+myFevorite(){
+ this.isFevorate=true;
+}
+
   ionViewDidLoad() {
    
     this.dataindex=this.navParams.data.index
