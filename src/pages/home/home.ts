@@ -23,4 +23,8 @@ goTohrInterview(){
 let d={ title: 'HR Interview Q&A', apiKey: 'hrInterview' };
   this.navCtrl.push(ListPage, d);
 }
+goTogroupDiscusstion(){
+  let d={ title: 'Group Discusstion', apiKey: 'groupDiscusstion' };
+  this.navCtrl.push(ListPage, d);
+}
 }

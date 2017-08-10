@@ -4579,4 +4579,79 @@ new qList(`Self Introduction (experience) - 2`,`<p>Thank you for giving me this 
 <li>Don’t put your personal plan like buying a new car or going for a long tour etc.</li>
 </ul>`)
    ];
+   public groupDiscusstion=[
+       new qList(`How to Prepare for Group Discussion?`,`<p>In short, the GD panel is testing whether you know the topic well, are able to present your point of view in a logical manner, are interested in understanding what others feel about the same subject and are able to conduct yourself with grace in a group situation. </p>
+<p>Outlined are some tips and suggestions that will help you prepare well for</p>
+<b>Group Discussion:  </b>
+
+<ol>
+<li>Train yourself to be a good listener. Develop the patience to listen attentively.</li>
+<li>Acknowledge that everyone has something valuable to say.</li>
+<li>When speaking in a GD, your job is to articulate your point of view in a way that is easy for others to comprehend.</li>
+<li>Inculcate the good habit of structuring your thoughts and presenting them logically.</li>
+<li>Writing essays on a variety of topics is good practice developing thought structure.</li>
+<li>The only way to prepare is to read more, develop a keen interest in current affairs.</li>
+<li>Seek opportunities to discuss these in groups.</li>
+<li>Learn to respect others for what they are.</li>
+<li>Learn to be open-minded and recognize the fact that people think differently about issues.</li>
+<li>Train your mind to think analytically.</li>
+<li>Your GD arguments should have ‘meat’.</li>
+</ol>
+
+<b>Tips for Personal Interview</b>
+<ol>
+<li>Don’t start with the phrase – Myself XYZ – there’s no better way ti put the panel off.</li>
+<li>Getting into details about siblings and cousins – especially the one who seem to have done well. Panelists want to know about you, not about your extended family.</li>
+<li>Don’t cite – ‘making friends’ or ‘meeting new people’ – as a hobby. Wonder how one pursues a hobby like ‘meeting new people’!</li>
+<li>Don’t say things like – I studied this in my first year – as an excuse for not knowing more basic stuff related to their subject of study. The panel members study this about 20 years back – they still remember about it.</li>
+</ol>`),
+new qList(`What skills are judged in group discussion?`,`<ul>
+<li>How good you are at communication with others.</li>
+<li>How you behave and interact with group.</li>
+<li>How open minded are you.</li>
+<li>Your listening skill.</li>
+<li>How you put forward your views.</li>
+<li>Your leadership and decision making skills.</li>
+<li>Your analysis skill and subject knowledge.</li>
+<li>Problem solving and critical thinking skill.</li>
+<li>Your attitude and confidence.</li>
+</ul>
+`),
+new qList(`Do’s and Don’ts of Group discussion`,`<b>1) Keep eye contact while speaking:</b>
+<p>Do not look at the evaluators only. Keep eye contact with every team member while speaking.</p>
+<b>2) Initiate the GD:</b>
+<p>Initiating the GD is a big plus. But keep in mind – Initiate the group discussion only when you understood the GD topic clearly and have some topic knowledge. Speaking without proper subject knowledge is bad impression.</p>
+<b>3) Allow others to speak:</b>
+<p>Do not interrupt anyone in-between while speaking. Even if you don’t agree with his/her thoughts do not snatch their chance to speak. Instead make some notes and clear the points when it’s your turn.</p>
+<b>4) Speak clearly:</b>
+<p>Speak politely and clearly. Use simple and understandable words while speaking. Don’t be too aggressive if you are disagreeing with someone. Express your feelings calmly and politely.</p>
+<b>5) Make sure to bring the discussion on track:</b>
+<p>If by any means group is distracting from the topic or goal then simply take initiative to bring the discussion on the track. Make all group members aware that you all need to come to some conclusion at the end of the discussion. So stick to the topic.</p>
+<b>6) Positive attitude:</b>
+<p>Be confident. Do not try to dominate anyone. Keep positive body language. Show interest in discussion.</p>
+<b>7) Speak sensibly:</b>
+<p>Do not speak just to increase your speaking time. Don’t worry even if you speak less. Your thoughts should be sensible and relevant instead of irrelevant speech.</p>
+<b>8 ) Listen carefully to others:</b>
+<p>Speak less and listen more! Pay attention while others are speaking. This will make coherent discussion and you will get involved in the group positively. You will surely make people agree with you.</p>
+<b>9) No need to go into much details:</b>
+<p>Some basic subject analysis is sufficient. No need to mention exact figures while giving any reference. You have limited time so be precise and convey your thoughts in short and simple language.</p>
+<b>10) Formal dressing:</b>
+<p>Do not take it casually. No fancy and funny dressing. You should be comfortable while speaking in group. Positive gesture and body language will make your work easy.</p>
+`),
+new qList(`Sample 1 : Are digital payments secure enough for the Indian economy to go cashless?`,`<p>I agree with most of you.</p>
+<p>Digital payment truly is the next big step towards our economic development. The demonetization has already made digital transactions common among the masses. It is fast, reliable and yes you don't have to worry for a change! No need to carry bags full of money. All you need is a mobile and data (which is also cheap nowadays).</p>
+<p>Now coming to the main point, whether it is secure enough to make the entire economy to go cashless?</p>
+<p>As of the current scenario, no it inst. A large majority of people living in the villages are still miles away from the word internet (the backbone of the digital transaction). Also, you have those rigid "why should I use digital transaction, if I have cash" people, who can be easily exploited.</p>
+<p>While some of you have mentioned about the recent ransomware attacks and issues regarding cyber securities, indeed it is a matter of concern but digital transaction websites are nowadays are investing both their time and money to improve this.</p>
+<p>I would like to end by saying that, to truly make our economy go cashless, it is necessary to educate people about it and then encourage them to practice the same. While it might take some time, cashless India can actually become a reality within the next decade.</p>`),
+new qList(`Sample 2: Ban 500, 1000 notes :: Corruption Uprooted or just changing clothes!`,`<p>After the demonetization of 500 and 1000 rupee currency in our India, we have seen a lot of change in our country.</p>
+<p>After the demonetization around 567 Naxal's group have surrendered in front of our govt because of the lack of money because most of the black money was in the form of 500 and 1000. Stone pelting incident in Kashmir was stopped.</p>
+<p>Around 2 lac crore, black money was caught by the income tax department.</p>
+<p>The people who did not had any black money was not affected by this policy of government But there was also some negative effects of this decision like workers who work on daily wages was very much affected.</p>
+<p>So, I would like to stop with that something is always better than nothing and demonetization was a very gutsy move by the central govt.</p>`),
+new qList(`Sample 3: Do we really need Smart Cities?`,`Well according to me, developing country like India should focus on the primary needs first. The Majority of the population lives in the villages. Most of them do not have even basic needs like roads, electricity, water supply, food and education. So rather than spending thousand of crore to make few smart city, the main target should be to improve the condition of villages, so that India develop evenly.<p>Secondly, our country is working on bullet trains, and the condition of the life line that is railways is getting worse day by day. Similarly rather than spending a huge amount of money to built bullet train, we should improve our railway and road system.</p>`),
+new qList(`Sample 4: Should we change the present system of education in our country?`,`The Education system must be changed. Today education system is focused on mark basis rather on practical observation. Students are trained to memorise the answer and should write in their exams. This kind of educational system is not beneficial to students in any way. Students who are a topper in classes are very much weak in practical knowledge. They must be taught on real time experiments. Mark is important, but their IQ level is very much low. In an interview, they suffer a lot. Lack of communication skill, technical knowledge, general knowledge etc. Students must be known all about this, it is a necessary one. The Education system must be changed for the benefits of students. Thank you.`),
+
+   ];
+
 }

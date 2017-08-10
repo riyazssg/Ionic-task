@@ -112,6 +112,8 @@ ionViewDidLoad(){
          this.questionList=this.questions.InterviewTips;
          else if(this.apiKey==="hrInterview")
          this.questionList=this.questions.hrInterview;
+         else if(this.apiKey==="groupDiscusstion")
+         this.questionList=this.questions.groupDiscusstion;
 
        this.Tempitems=this.questionList;
 console.log(this.questionList);
