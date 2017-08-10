@@ -15,15 +15,15 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding class="BackImg">
 
   
 
-<div *ngIf="qnsDetails">
+<div *ngIf="qnsDetails" class="trnsBack">
   <p text-wrap [innerHTML]="qnsDetails.ans"></p>
 </div>
 
-  <ion-list *ngIf="youMayLike">
+  <ion-list *ngIf="youMayLike" class="trnsBack">
     <ion-item color="light">
       <ion-title text-wrap center>You might also like</ion-title>
     </ion-item>

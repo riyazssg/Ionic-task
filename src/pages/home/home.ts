@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, ActionSheetController  } from 'ionic-angular';
+import { NavController } from 'ionic-angular';
 import { ListPage, AboutPage} from '../shared/pages'
 @Component({
   selector: 'page-home',
@@ -7,7 +7,7 @@ import { ListPage, AboutPage} from '../shared/pages'
 })
 export class HomePage {
 isFollowing=false;
-  constructor(public navCtrl: NavController, public actionsheetCtrl: ActionSheetController) {
+  constructor(public navCtrl: NavController) {
 
   }
 goToSelfIntro(){
@@ -24,55 +24,20 @@ let d={ title: 'HR Interview Q&A', apiKey: 'hrInterview' };
   this.navCtrl.push(ListPage, d);
 }
 goTogroupDiscusstion(){
-  let d={ title: 'Group Discusstion', apiKey: 'groupDiscusstion' };
+  let d={ title: 'Group Discussion', apiKey: 'groupDiscusstion' };
   this.navCtrl.push(ListPage, d);
 }
 goToconfident(){
   let d={ title: 'Confident', apiKey: 'confident' };
   this.navCtrl.push(ListPage, d);
 }
-openMenu() {
-    let actionSheet = this.actionsheetCtrl.create({
-      title: 'Quick Links',
-      cssClass: 'action-sheets-basic-page',
-      buttons: [
-        {
-          text: 'About',
-          role: 'destructive',
-          icon: 'information-circle',
-          handler: () => {
-            this.navCtrl.push(AboutPage);
 
-          }
-        },
-        {
-          text: 'Share This App',
-          icon: 'share',
-          handler: () => {
-            console.log('Share clicked');
-          }
-        },
-        {
-          text: 'Like',
-          icon: 'thumbs-up',
-          handler: () => {
-            console.log('Play clicked');
-          }
-        },        
-        {
-          text: 'Cancel',
-          role: 'cancel', // will always sort to be on the bottom
-          icon: 'close',
-          handler: () => {
-            console.log('Cancel clicked');
-          }
-        }
-      ]
-    });
-    actionSheet.present();
-  }
-pageShare(){
 
+goToshare(){
+
+}
+goToLike(){
+this.navCtrl.push(AboutPage);
 }
 
 }

@@ -15,10 +15,10 @@
  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding class="BackImg">
   <ion-label>Interview Questions</ion-label>
-  <ion-list *ngIf="questionList">   
-    <button text-wrap ion-item *ngFor="let item of Tempitems, let i=index" (click)="itemTapped(i)">      
+  <ion-list *ngIf="questionList" class="trnsBack">   
+    <button text-wrap class="trnsBack" ion-item *ngFor="let item of Tempitems, let i=index" (click)="itemTapped(i)">      
      {{i+1}}. {{item.qus}}     
     
     </button>

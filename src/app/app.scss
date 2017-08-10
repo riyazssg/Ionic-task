@@ -14,3 +14,16 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+
+.BackImg {
+    background: url("../assets/Images/bg.jpg") no-repeat center center fixed;     
+}
+
+.trnsBack,  .trnsBack .item-md {
+    background-color: transparent;
+}
+
+.trnsBack .item-divider-md{
+        border-bottom: 2px solid #ec6405;
+}

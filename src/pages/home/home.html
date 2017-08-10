@@ -5,17 +5,20 @@
     </button>
     <ion-title>IT Interview Scanner</ion-title>
  <ion-buttons end>
-   <button ion-button icon-only (click)="openMenu()" item-end>
-                        <ion-icon name="more"></ion-icon>                       
+   <button ion-button icon-only (click)="goToshare()" item-end>
+                        <ion-icon name="share"></ion-icon>                       
+                    </button>
+   <button ion-button icon-only (click)="goToLike()" item-end>
+                        <ion-icon name="thumbs-up"></ion-icon>                       
                     </button>    
-
+ 
     </ion-buttons>
 
   </ion-navbar>
 </ion-header>
 
-<ion-content>
- <ion-card>
+<ion-content class="BackImg">
+ <ion-card class="trnsBack">
     <ion-slides pager>
 
     <ion-slide>
@@ -33,7 +36,7 @@
   </ion-slides>
    </ion-card>
 
- <ion-card>
+ <ion-card class="BackImg">
 <ion-row>
 <ion-col>
   <button ion-button full menuToggle >Technical Q&A</button>
@@ -60,9 +63,3 @@
 </ion-row>
  </ion-card>
 </ion-content>
-
-<ion-footer>
-  <ion-toolbar>
-    <ion-title>Profunia</ion-title>
-  </ion-toolbar>
-</ion-footer>
