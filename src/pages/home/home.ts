@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, ActionSheetController  } from 'ionic-angular';
-import { ListPage} from '../list/list'
+import { ListPage, AboutPage} from '../shared/pages'
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -41,11 +41,12 @@ openMenu() {
           role: 'destructive',
           icon: 'information-circle',
           handler: () => {
-            console.log('Delete clicked');
+            this.navCtrl.push(AboutPage);
+
           }
         },
         {
-          text: 'Share',
+          text: 'Share This App',
           icon: 'share',
           handler: () => {
             console.log('Share clicked');
@@ -57,14 +58,7 @@ openMenu() {
           handler: () => {
             console.log('Play clicked');
           }
-        },
-        {
-          text: 'Favorite',
-          icon: 'heart-outline',
-          handler: () => {
-            console.log('Favorite clicked');
-          }
-        },
+        },        
         {
           text: 'Cancel',
           role: 'cancel', // will always sort to be on the bottom

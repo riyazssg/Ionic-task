@@ -6,13 +6,14 @@ import { MyApp } from './app.component';
 import { HttpModule } from '@angular/http';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { AnsDetailsPage, Questions,HomePage, ListPage } from '../pages/shared/pages'
+import { AnsDetailsPage, Questions,HomePage, ListPage, AboutPage } from '../pages/shared/pages'
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     ListPage,
+    AboutPage,
     AnsDetailsPage
   ],
   imports: [
@@ -25,6 +26,7 @@ import { AnsDetailsPage, Questions,HomePage, ListPage } from '../pages/shared/pa
     MyApp,
     HomePage,
     ListPage,
+    AboutPage,
     AnsDetailsPage
   ],
   providers: [
