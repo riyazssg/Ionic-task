@@ -2183,6 +2183,40 @@ Hello IT Interview Guide <br>
 Hey AngularJS! <br>
 Hi AngularJS! (rootScope)
 `),
+new qList(`How to call API using $http ?`,` The AngularJS $http service makes a request to the server, and returns a response.
+<pre>
+&ltdiv ng-app="myApp" ng-controller="myCtrl"> 
+
+&ltp>Today's welcome message is:&lt/p>
+&lth1>{{myWelcome}}&lt/h1>
+
+&lt/div>
+
+&ltscript>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope, $http) {
+    $http.get("welcome.htm")
+    .then(function(response) {
+        $scope.myWelcome = response.data;
+    });
+});
+&lt/script>
+</pre>
+<b>Another way to call $http with Error handling</b>
+<pre>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope, $http) {
+    $http({
+        method : "GET",
+        url : "welcome.htm"
+    }).then(function mySuccess(response) {
+        $scope.myWelcome = response.data;
+    }, function myError(response) {
+        $scope.myWelcome = response.statusText;
+    });
+});
+</pre>
+`),
 new qList(`What is the difference between $scope and scope?`, `<p>The module factory methods like controller, directive, factory, filter, service, animation, config and run receive arguments through dependency injection (DI). In case of DI, you inject the scope object with the dollar prefix i.e. $scope. The reason is the injected arguments must match to the names of injectable objects followed by dollar ($) prefix.</p>
 
 <p>For example, you can inject the scope and element objects into a controller as given below:</p>
@@ -2971,6 +3005,96 @@ export class AppComponent { }</pre>
 <li>In the child module routing, specify path as empty string ' ', the empty path. RouterModule.forChild again takes routes array for the child module components to load and configure router for child.</li>
 <li>Then, export const routing: <pre>ModuleWithProviders = RouterModule.forChild(routes);</pre></li>
 </ol>`),
+new qList(`How to create API call in Angular 2?`,`<b>Step 1:</b> In the app.module.ts file include the HttpModule for enable the HTTP call.
+<pre>
+import { NgModule }      from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { AppComponent }  from './app.component';
+<b>import { HttpModule } from '@angular/http';</b>
+
+@NgModule ({
+   imports:      [ BrowserModule,<b>HttpModule</b>],
+   declarations: [ AppComponent],
+   bootstrap:    [ AppComponent ]
+})
+export class AppModule { }
+</pre>
+
+
+<b>Step 2:</b> Create separate typescirpt file for Creating HTTP service for API Call. 
+
+<pre>
+import { Injectable } from '@angular/core';
+import { Http , Response } from '@angular/http';
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/do';
+import { IProduct } from './product';
+
+@Injectable()
+export class ProductService {
+   private _producturl='https://app/products.json';
+   constructor(private _http: Http){}
+   
+   getproducts(): Observable<IProduct[]> {
+      return this._http.get(this._producturl)
+      .map((response: Response) => <IProduct[]> response.json())
+      .do(data => console.log(JSON.stringify(data)));
+   }
+}
+</pre>
+
+Following points need to be noted about the above program.
+<ul>
+<li>The <b>import {Http, Response} from '@angular/http'</b> statement is used to ensure that the http function can be used to get the data from the products.json file.</li>
+<li>The following statements are used to make use of the Reactive framework which can be used to create an Observable variable. The Observable framework is used to detect any changes in the http response which can then be sent back to the main application.
+<pre>
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/do';
+</pre>
+</li>
+<li>The statement private _producturl = 'app/products.json' in the class is used to specify the location of our data source. It can also specify the location of web service if required.</li>
+<li>Next, we define a variable of the type Http which will be used to get the response from the data source.</li>
+<li>Once we get the data from the data source, we then use the JSON.stringify(data) command to send the data to the console in the browser.</li>
+
+</ul>
+
+
+
+
+<b>Step 3:</b> need to inject & Subscribe the created service for API HTTP call. 
+
+<pre>
+import { Component } from '@angular/core';
+import { IProduct } from './product';
+import { ProductService } from './products.service';
+import { appService } from './app.service';
+import { Http , Response } from '@angular/http';
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/map';
+
+@Component ({
+   selector: 'my-app',
+   template: '<div>Hello</div>',
+   providers: [<b>ProductService</b>]
+})
+
+export   class   ProductComponent  {
+   iproducts: IProduct[];
+   constructor(<b>private _product: ProductService</b>) {
+   }
+   
+   ngOnInit() : void {
+     <b> this._product.getproducts()
+      .subscribe(iproducts => this.iproducts = iproducts);</b>
+   }
+}</pre>
+
+<p>Here, the main thing in the code is the subscribe option which is used to listen to the Observable getproducts() function to listen for data from the data source.
+</p>
+
+`),
      new qList(`What are the security threats should we be aware of in angular 2 application?`,`<p>Just like any other client side or web application, angular 2 application should also follow some of the basic guidelines to mitigate the security risks. Some of them are:</p>
      <ul><li>Avoid using/injecting dynamic Html content to your component.</li>
      <li>If using external Html, that is coming from database or somewhere outside the application, sanitize it</li>
