@@ -4667,4 +4667,220 @@ public confident=[
     new qList(`Make friends with your anxiety, and smile`,`<p>A great confidence technique is to “make friends” with your anxiety, says mindfulness teacher Charlie Morley. “Before an interview, think to yourself ‘Ah my old friend anxiety. Thank you so much for coming. I know that you are there and I acknowledge you fully.’ Sounds a bit silly doesn’t it?</p>
 <p>“It’s actually a great technique to smile at the anxiety, rather than trying to suppress it or overpower it with positive thinking.”</p>`)
 ];
+public aspDotNetCore=[
+    new qList(`What is .NET Core?`,`<p>.NET Core is a newer version of .NET, which is cross-platform, supporting Windows, macOS and Linux, and can be used in device, cloud, and embedded/IoT scenarios.</p>
+<p>The following characteristics best define .NET Core:</p>
+<ul>
+<li><strong>Flexible deployment:</strong> Can be included in your app or installed side-by-side user- or machine-wide.</li>
+<li><strong>Cross-platform:</strong> Runs on Windows, macOS and Linux; can be ported to other OSes. The supported Operating Systems (OS), CPUs and application scenarios will grow over time, provided by Microsoft, other companies, and individuals.</li>
+<li><strong>Command-line tools</strong>: All product scenarios can be exercised at the command-line.</li>
+<li><strong>Compatible</strong>: .NET Core is compatible with .NET Framework, Xamarin and Mono, via the .NET Standard Library.</li>
+</ul>`),
+new qList(`How is it different from existing .NET framework?`,`<p><strong>.NET Core and the .NET Framework</strong> have (for the most part) a subset-superset relationship. .NET Core is named &#8220;Core&#8221; since it contains the core features from the .NET Framework, for both the runtime and framework libraries. For example, .NET Core and the .NET Framework share the GC, the JIT and types such as <code>String</code> and <code>List<T></code>. </p>
+<p><strong>.NET Core </strong>was created so that .NET could be open source, cross platform and be used in more resource-constrained environments. </p>
+<h3>Where these 2 fits with ASP.NET</h3>
+<p>Like .NET, ASP.NET now also has 2 flavors.</p>
+<ol>
+<li>ASP.NET 4.6</li>
+<li>ASP.NET Core 1.0</li>
+</ol>
+<p><strong>ASP.NET 4.6</strong> is upgraded version of ASP.NET which we all are using from last 13 years. It started with 1.0 back in 2012 and now it has reached at 4.6. Applications built using ASP.NET 4.6 or prior version of ASP.NET run only on windows platform.</p>
+<p>ASP.NET Core 1.0 is completely a new platform to build cross platform applications and it was written from scrath.</p>
+<img src="/assets/Images/Difference-between-.NET-Framework-and-.NET-Core.png">
+<p>So now you can build web application using ASP.NET Core 1.0 and you can target .NET Framework 4.6 and/or .NET Core. The .NET Framework 4.6 runs on top of Windows operating system, where .NET Core 1.0 is a cross platform framework and runs on top of Windows and Non-windows operating systems. Please note that .NET Core 1.0 doesn’t have all the features and functionality of .NET Framework 4.6 (at the time of writing).</p>`),
+new qList(`What is ASP.NET Core?`,`ASP.NET Core 1.0 is the next version of ASP.NET. It is open source and cross-platform framework (supports for Windows, Mac and Linux) suitable for building cloud based internet connected applications like web apps, IoT apps and mobile apps. ASP.NET Core apps can run on .NET Core or on the full .NET Framework.`),
+new qList(`What are the newly introduced functionalities in ASP.NET Core?`,`<ul>
+<li>The first and most important change is that “<strong>ASP.NET Core is open source and cross platform</strong>.”</li>
+<li>ASP.NET Core works with two runtime environment (.NET Core and .NET Framework). .NET core is for all platforms (windows, linux and OSx) where .NET framework is for windows.</li>
+<li>ASP.NET Core project is now much cleaner. When you create a new project, it includes only required dependencies.</li>
+<li><b>.NET Platform Standard</b> is the new approach for addressing real binary portability with PCL.</li>
+<li>ASP.NET Core applications are built and run using the new <b>.NET Execution Environment (DNX)</b>. Every ASP.NET Core project is a DNX project. There are two main flavors, DNX 4.6.X (the  full framework) and DNX Core 5.0 (the light-weight open source .NET version that also runs on Linux and Mac). DNX Core contains almost everything but is missing a few Windows namespaces like System.Drawing for example.</li>
+<li>We can use both the frameworks “<code>dotnet 4.6</code>” and “<code>dotnet core</code>” in our application. They are defined in <b>framework section of project.json file</b>. The advantage is that common compatible code can be shared, which works for both the frameworks. But there are some libraries which will not work with .NET core like reflection or drawing bit map. But we can separate code using #if directives. Like,
+<pre >
+#if DNX451
+   //code targeted for .NET 4.5.1
+#endif
+#if DNXCORE50
+   //Code targeted for core clr
+#endif
+</pre>
+</li>
+<li>There is also a command line tool named &#8220;<strong>DNVM &#8211; .NET version manager</strong>&#8220;. It allows to upgrade or install new dnx version.</li>
+<li>ASP.NET Core works on file system which allows faster development cycle. It detects the code changes (even outside visual studio), compiles into memory and loads the application.</li>
+<li>ASP.NET Core has inbuilt support for <strong>Dependency injection</strong>. ASP.NET Core includes a simple built-in container (represented by the <code>IServiceProvider</code> interface) that supports constructor injection by default, and ASP.NET makes certain services available through DI.</li>
+<li>ASP.NET Core is also <strong>cloud ready</strong> as it supports environment-based configuration. Read more about environment-based configuration in <b>launchSetting.json</b> file.
+<li>ASP.NET Core uses completly new light-weight and modular HTTP request pipeline.</li>
+<li><code>HTTPHandler</code> and <code>HTTPModules</code> are also gone. Now they are replaced with <b>Middleware</b>.</li>
+<li>The heart of ASP.NET application <strong>“System.web”</strong> DLL is no longer available.</li>
+<li>With ASP.NET Core, webforms are history. Though, you can use webforms using .NET 4.6 framework.</li>
+<li>JSON is preferred over XML for configuration settings.  </li>
+<li>There is no <code>web.config</code> and <code>global.asax</code> files now. <code>web.config</code> is replaced with <code>appsettings.json</code> and <code>global.asax</code> is now <code>Startup.cs</code>. Startup.cs is entry point for application itself. Also read &#8220;<b>Static Void Main in ASP.NET Core startup.cs</b>.</li>
+<li>The new <b>Project.json</b> file is heart of your project. It defines dependencies, runtime to use, and defines build and publish setup. It defines as project as DNX project.</li>
+<li><code>wwwroot</code> directory in project is for static content like css, Js, images. And it’s the<br />
+default root of your server. If a request comes in for a static file on disk, if the file is in this folder then it can go back to client. The name can be changed from project.json file. </li>
+<li>Now you can directly add the reference of any assembly just via typing. Add assembly name with version in project.json file and Visual studio will add the reference for you.</li>
+<li>ASP.NET Core is designed to integrate seamlessly with a variety of client-side frameworks, including <b>AngularJS</b>, <b>KnockoutJS</b> and <b>Bootstrap</b>.</li>
+<li>ASP.NET Core has also inbuilt support for client side package manager <b>bower</b>. It now also supports JavaScript task runners <b>grunt</b><b>gulp</b>, web project scaffolding tool, <b>Yeoman</b></li>
+<li>Bundling and minification is done using <b>grunt</b> or <b>gulp</b></a>, unlike defining bundles in BundleConfig file.</li>
+<li>ASP.NET Core also comes with <strong>Unified Programming Model</strong> for MVC6 and Web API. In previous versions of ASP.NET MVC, MVC controllers were different from Web API controllers. An MVC controller used the <strong>System.Web.MVC.Controller</strong> base class and a Web API controller used the <strong>System.Web.Http.ApiController</strong> base class.</li>
+<li><strong>.csproj becomes .xproj</strong>. The new project file doesn’t include manifest and list of all the files that are include in your project, as earlier with .csproj.</li>
+<li>By default, a class library project when compiled, becomes a <strong>nuget package instead of DLL</strong>.</li>
+<li>There is also a new code editor named &#8220;Visual studio code&#8221; to work on linux and mac. </li>
+</ul>`),
+new qList(`What is ASP.NET Core Middleware?`,`<p> Middleware in ASP.NET Core controls how our application responds to HTTP requests. It can also control how our application looks when there is an error, and it is a key piece in how we authenticate and authorize a user to perform specific actions.</p>
+<ul class="list">
+<li><p>Middleware are software components that are assembled into an application pipeline to handle requests and responses.</p></li>
+<li><p>Each component chooses whether to pass the request on to the next component in the pipeline, and can perform certain actions before and after the next component is invoked in the pipeline.</p></li>
+<li><p>Request delegates are used to build the request pipeline. The request delegates handle each HTTP request.</p></li>
+<li><p>Each piece of middleware in ASP.NET Core is an object, and each piece has a very specific, focused, and limited role.</p></li>
+<li><p>Ultimately, we need many pieces of middleware for an application to behave appropriately.</p></li>
+</ul>
+`),
+new qList(`Difference between Middleware and HttpModule?`,`<table border="1" >
+<tr>
+<th>HttpModule</th>
+<th>Middleware</th>
+</tr>
+<tr>
+<td >HttpModules are configured via web.config or global.asax</td>
+<td>Middleware are configured via code rather than web.config. ASP.NET Core 1.0 has <b>Startup.cs</b> file (entry point for application) where middlewares are added.</td>
+</tr>
+<tr>
+<td >As a developer, you don&#8217;t have control on their order of execution. As order of modules is mainly based on application life cycle events.</td>
+<td>Unlike modules, you are in full control of what get&#8217;s executed and in what order. As they are executed in the order in which they are added.</td>
+</tr>
+<tr>
+<td>The execution order remains same for requests and responses.</td>
+<td>Order of middleware for responses is the reverse from that for requests.</td>
+</tr>
+<tr>
+<td>HttpModules helps you to attach code specific to a application events.</td>
+<td>Middleware is independent of these events.</td>
+</tr>
+<tr>
+<td>HttpModules are tied to <code>System.web</code>.</td>
+<td>Middlewares are host independent.</td>
+</tr>
+</table>
+<h3>Built-in Middleware</h3>
+<p>ASP.NET Core 1.0 is shipped with the following Middleware components.</p>
+<table border="1" >
+<tr>
+<td>Authentication</td>
+<td>Provides authentication support.</td>
+</tr>
+<tr>
+<td>CORS</td>
+<td>Configures Cross-Origin Resource Sharing.</td>
+</tr>
+<tr>
+<td>Routing</td>
+<td>Define and constrain request routes.</td>
+</tr>
+<tr>
+<td>Session</td>
+<td>Provides support for managing user sessions.</td>
+</tr>
+<tr>
+<td>Routing</td>
+<td>Provides support for serving static files, and directory browsing.</td>
+</tr>
+<tr>
+<td>Diagnostics</td>
+<td>Includes support for error pages and runtime information.</td>
+</tr>
+</table>`),
+new qList(`What are the various Json files in ASP.NET Core?`,`<ul>
+<li><b>Global.json : </b> As the name suggests, the settings defined in the file should work for the solution as whole. The settings defined in global.json implies to all the projects in the solution. </li>
+<li> <b>appsettings.json  : </b> appsettings.json file is used to define application related settings like connection string, logging settings, or any other custom key which we used to define in web.config file.</li>
+<li> <b>Project.json  : </b> This file is used to define project settings and server side dependencies. It largely replaces the web.config file from previous versions of ASP.NET.</li>
+<li> <b>launchSetting.json  : </b> This json file holds project specific settings associated with each profile Visual Studio is configured to use to launch the application, including any environment variables that should be used. You can define framework for your project for compliation and debugging for specific profiles.</li>
+<li> <b>Bower.json  : </b> Bower is a package manager for the web. Bower can manage components that contain HTML, CSS, JavaScript, fonts or even image files. Bower doesn’t concatenate or minify code or do anything else – it just installs the right versions of the packages you need and their dependencies. With ASP.NET 5 web projects jQuery and bootstrap packages are already installed and bower, gulp and NPM are already in place.</li>
+<li> <b>Package.json : </b> npm is another package manager like bower. But npm is used for installing Node js modules where bower is used for managing front end components like html, css, js, etc</li>
+</ul>`),
+new qList(`What is Startup.cs file in ASP.NET Core?`,`In ASP.NET, Global.asax (though optional) acts as the entry point for your application. Startup.cs, it is entry point for application itself. The Startup class configures the request pipeline that handles all requests made to the application.`),
+new qList(`What ConfigureServices() method does in Startup.cs?`,`This method is optional. It is the place to add services required by the application. For example, if you wish to use Entity Framework in your application then you can add in this method.<pre>
+public void ConfigureServices(IServiceCollection services)  
+{
+    services.Configure<AppSettings>(Configuration.GetSubKey("AppSettings"));
+    services.AddEntityFramework()
+            .AddSqlServer()
+            .AddDbContext<SchoolContext>();
+    // Add MVC services to the services container.
+    services.AddMvc();
+}
+</pre>`),
+
+new qList(`What Configure() method does in Startup.cs?`,`The Configure method is used to specify how the ASP.NET application will respond to HTTP requests. The request pipeline is configured by adding middleware components to an IApplicationBuilder instance that is provided by dependency injection. There are some built-in middlewares for error handling, authentication, routing, session and diagnostic purpose.`),
+new qList(`What is the difference between app.Use vs app.Run while adding middlwares?`,`<p>Middleware are executed in the same order in which they are added. The difference is, middleware defined using <strong><pre>app.Use</pre> may call next middleware component in the pipeline. On the other hand, middlware defined using <pre>app.Run</pre> will never call subsequent middleware.</strong>.</p>`),
+new qList(`What is Kestral?`,`Kestrel is a cross-platform web server for ASP.NET Core based on libuv, a cross-platform asynchronous I/O library. Kestrel is the web server that is included by default in ASP.NET Core new project templates. If your application accepts requests only from an internal network, you can use Kestrel by itself.<p>If you expose your application to the Internet, you must use IIS, Nginx, or Apache as a reverse proxy server. A reverse proxy server receives HTTP requests from the Internet and forwards them to Kestrel after some preliminary handling. The most important reason for using a reverse proxy for edge deployments (exposed to traffic from the Internet) is security. Kestrel is relatively new and does not yet have a full complement of defenses against attacks.</p>`),
+new qList(`What is WebListener?`,`<p><strong>Ans:</strong> ASP.NET Core ships two server implementations <strong>Kestral</strong> and <strong>WebListener</strong>. WebListener is also a web server for ASP.NET Core that runs only on Windows. It&#8217;s built on the Http.Sys kernel mode driver. WebListener is an alternative to Kestrel that can be used for direct connection to the Internet without relying on IIS as a reverse proxy server.  </p>`),
+new qList(`What is ASP.NET Core Module (ANCM)?`,`<p><strong>Ans:</strong> ASP.NET Core Module (ANCM) lets you run ASP.NET Core applications behind IIS and it works only with Kestrel; it isn&#8217;t compatible with WebListener. ANCM is a native IIS module that hooks into the IIS pipeline and redirects traffic to the backend ASP.NET Core application. ASP.NET Core applications run in a process separate from the IIS worker process, ANCM also does process management. ANCM starts the process for the ASP.NET Core application when the first request comes in and restarts it when it crashes. In short, it sits in IIS and routes the request for ASP.NET Core application to Kestral.</p>`),
+new qList(`What are different ASP.NET Core diagnostic middlwares and how to do error handling?`,`<p>ASP.NET Core comes with many built-in and ready to use middleware, and you add them to your application in the <code>Startup.Configure</code> method. These built-in middleware can be classified in the following categories.</p>
+<b>Built-in Middleware</b>
+<table border="1">
+<tr>
+<td>Authentication</td>
+<td>Provides authentication support.</td>
+</tr>
+<tr>
+<td>CORS</td>
+<td>Configures Cross-Origin Resource Sharing.</td>
+</tr>
+<tr>
+<td>Routing</td>
+<td>Define and constrain request routes.</td>
+</tr>
+<tr>
+<td>Session</td>
+<td>Provides support for managing user sessions.</td>
+</tr>
+<tr>
+<td>Routing</td>
+<td>Provides support for serving static files, and directory browsing.</td>
+</tr>
+<tr>
+<td>Diagnostics</td>
+<td>Includes support for error pages and runtime information.</td>
+</tr>
+</table><b>Built-in diagnostics middleware</b>
+
+<ul>
+<li>UseDeveloperExceptionPage()</li>
+<li>UseDatabaseErrorPage()</a></li>
+<li>UseExceptionHandler()</a></li>
+<li>UseStatusCodePages()</a></li>
+<li>UseWelcomePage()</li>
+<li>UseElmPage() and UseElmCapture()</li>
+</ul>`),
+new qList(`What is a Host and what’s the importance of Host in ASP.NET Core application?`,`ASP.NET Core apps require a host in which to execute. The host is responsible for application startup and lifetime management. Other responsibility of host&#8217;s includes ensuring the application&#8217;s services and the server are available and properly configured. <strong>Don&#8217;t confuse yourself with a Server.</strong> The host is responsible for starting the app and its management, where the server is responsible for accepting HTTP requests. The host is configured to use a particular server; the server is unaware of its host.</p>
+<p>The host is typically created using an instance of a <code>WebHostBuilder</code>, which builds and returns a <code>WebHost</code> instance. The <code>WebHost</code> references the server that will handle requests.<br />`),
+new qList(`How to handle 404 error in ASP.NET Core 1.0?`,`I found 2 ways to handle 404 error. In fact using these solution you can handle any HTTP status code errors. To handle the error, both the solution are using configure() method of Startup.cs class. <ul>
+<li><b>Solution 1:</b> within configure method define a custom middleware via app.Use which checks for status code value in response object. And if is 404 then it redirects to Home controller. </li>
+<li><b>Solution 2:</b> The other solution is to use a built-in middlware StatusCodePagesMiddleware. This middleware can be used to handle the response status code is between 400 and 600. This middleware allows to return a generic error response or allows you to also redirect to any controller action or another middleware.</li>
+</ul>`),
+new qList(`What is launchsetting.json in ASP.NET Core?`,`This json file holds project specific settings associated with each debug profile, Visual Studio is configured to use to launch the application, including any environment variables that should be used. You can define framework for your project for compilation and debugging for specific profiles.`),
+new qList(`What are the differences between ASP.NET MVC 5 and ASP.NET MVC Core 1.0?`,`<ul>
+<li><b>ASP.NET CORE MVC 1.0 is Cross Platform.</b></li>
+<li><b>ASP.NET Core MVC 1.0 is Cloud Ready.</b></li>
+<li><b>MVC + Web API + Web Pages = ASP.NET Core MVC 1.0</b></li>
+<li><b>ASP.NET Core MVC 1.0 doesn't need IIS for hosting.</b> Since ASP.NET Core is to cross platform so you can host ASP.NET 5 applications not only on IIS but they can be self hosted or use kestrel web server on linux.</li>
+<li><b>ASP.NET Core MVC 1.0 has inbuilt support for Dependency Injection.</b> ASP.NET Core MVC includes a simple built-in container (represented by the IServiceProvider interface) that supports constructor injection by default, and MVC makes certain services available through DI.</li>
+<li><b>ASP.NET Core MVC 1.0 has a new project solution structure.</b> There is no App_Start, App_Data, Global.asax and root web.config file. App_Start is replaced by Startup.cs and web.config is replaced by appsetting.json. There is also a new configuration system, where JSON is preferred over XML for configuration settings.</li>
+<li><b>Roslyn compiler for compiling code dynamically.</b> Now no need to compile your code, on any code changes that you make. Thanks to Roslyn in memory compilation. Just make changes -> save it and view in browser.</li>
+<li><b>In ASP.NET Core MVC 1.0 "wwwroot" is now place for static files.</b> wwwroot directory in project is for static content like css, Js, images. And it’s the
+default root of your server. If a request comes in for a static file on disk, if the file is in this folder then it can go back to client. The name can be changed from project.json file. </li>
+<li><b>The new Project.json file defines dependencies, runtime to use, and defines build and publish setup, instead of .csproj file.</b></li>
+<li><b>Everything is Nuget package in Core MVC 1.0. There is no dll by default.</b></li>
+<li><b>Bundling and minification is done using Grunt or Gulp, unlike defining bundles in BundleConfig file.</b></li>
+<li><b>Manage client side dependencies via NPM and Bower.</b></li>
+<li><b>ASP.NET MVC 5 Child actions are gone. They are now replaced with View Components.</b></li>
+<li><b>Introduction of _ViewImports.cshtml in Core MVC 1.0</b> It provides namespaces which can be used by all other views. In previous MVC projects, this was provided by the web.config file in the Views folder; since the web.config no longer exists, global namespaces are now provided by this file.</li>
+<li><b>Introduction of Tag helpers.</b> Tag Helpers allows to enable server-side code to participate in creating and rendering HTML elements in Razor files.</li>
+<li><b>It also support RESTful style routes with attribute routing</b> That means you can even declare RESTful like routes like
+ [HttpGet("Our Route")] and [HttpPost("Our Route")]</li>
+<li><b>In Core MVC 1.0, routes have new [controller] and [action] tokens.</b> These tokens allows you to reference controller and action names in the route template. These token are helpful when in future if you rename the controller or action, there is no need to update the routes.</li>
+</ul>`)
+];
+
 }

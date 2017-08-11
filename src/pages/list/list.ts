@@ -104,18 +104,27 @@ ionViewDidLoad(){
 
        else if(this.apiKey==="EF") 
        this.questionList=this.questions.EF;
-        else if(this.apiKey==="oops")
-         this.questionList=this.questions.oops;
-         else if(this.apiKey==="selfIntro")
-         this.questionList=this.questions.selfIntro;
-          else if(this.apiKey==="InterviewTips")
-         this.questionList=this.questions.InterviewTips;
-         else if(this.apiKey==="hrInterview")
-         this.questionList=this.questions.hrInterview;
-         else if(this.apiKey==="groupDiscusstion")
-         this.questionList=this.questions.groupDiscusstion;
-         else if(this.apiKey==="confident")
-         this.questionList=this.questions.confident;
+
+      else if(this.apiKey==="oops")
+        this.questionList=this.questions.oops;
+
+      else if(this.apiKey==="selfIntro")
+      this.questionList=this.questions.selfIntro;
+
+      else if(this.apiKey==="InterviewTips")
+        this.questionList=this.questions.InterviewTips;
+
+      else if(this.apiKey==="hrInterview")
+       this.questionList=this.questions.hrInterview;
+
+      else if(this.apiKey==="groupDiscusstion")
+        this.questionList=this.questions.groupDiscusstion;
+
+      else if(this.apiKey==="confident")
+       this.questionList=this.questions.confident;
+
+else if(this.apiKey==="aspDotNetCore")
+       this.questionList=this.questions.aspDotNetCore;
 
        this.Tempitems=this.questionList;
 console.log(this.questionList);
