@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams, LoadingController } from 'ionic-angular';
+import { NavController, NavParams, LoadingController,AlertController } from 'ionic-angular';
 import {Questions} from '../shared/data';
 import { AnsDetailsPage} from '../ans-details/ans-details'
 import { HomePage} from '../home/home';
@@ -16,6 +16,8 @@ export class ListPage {
   constructor(public navCtrl: NavController,
    public navParams: NavParams,    
    public questions:Questions,
+   public alertController: AlertController,
+   
    public loadingController:LoadingController) {   
   
   }
@@ -45,7 +47,28 @@ items:any;
     }
 
   }
-
+  confirmedExit: boolean = false;
+ionViewWillLeave() {
+//  this.events.publish('menu:opened', '');
+//      console.log("Looks like I'm about to leave :(");
+  //  if (!this.confirmedExit) {
+  //     let confirm = this.alertController.create({
+  //       //title: 'Message?',
+  //       message: 'Are you sure you want to exit?',
+  //       buttons: [
+  //         {
+  //           text: 'Yes',
+  //           handler: () => {             
+  //             alert("adv");
+  //           this.confirmedExit=true;
+  //           }
+  //         },
+  //         { text: 'No' }
+  //       ]
+  //     });
+  //     confirm.present();
+  //   } 
+  }
 
 ionViewDidLoad(){ 
   
@@ -123,8 +146,16 @@ ionViewDidLoad(){
       else if(this.apiKey==="confident")
        this.questionList=this.questions.confident;
 
-else if(this.apiKey==="aspDotNetCore")
+       else if(this.apiKey==="aspDotNetCore")
        this.questionList=this.questions.aspDotNetCore;
+        else if(this.apiKey==="wcf")
+       this.questionList=this.questions.wcf;
+
+       else if(this.apiKey==="wpf")
+       this.questionList=this.questions.wpf;
+
+else if(this.apiKey==="testing")
+       this.questionList=this.questions.testing;
 
        this.Tempitems=this.questionList;
 console.log(this.questionList);

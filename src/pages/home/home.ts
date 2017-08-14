@@ -6,10 +6,13 @@ import { ListPage, AboutPage} from '../shared/pages'
   templateUrl: 'home.html'
 })
 export class HomePage {
-isFollowing=false;
   constructor(public navCtrl: NavController) {
 
   }
+
+
+
+
 goToSelfIntro(){
   let d={ title: 'Self Introduction', apiKey: 'selfIntro' };
   this.navCtrl.push(ListPage, d);
@@ -31,7 +34,10 @@ goToconfident(){
   let d={ title: 'Confident', apiKey: 'confident' };
   this.navCtrl.push(ListPage, d);
 }
-
+goTotesting(){
+  let d={ title: 'Software Testing Q&A', apiKey: 'testing' };
+  this.navCtrl.push(ListPage, d);
+}
 
 goToshare(){
 
